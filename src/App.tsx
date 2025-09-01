@@ -187,11 +187,11 @@ function App() {
               <div className="testimonial-content">
                 <div className="testimonial-stars">⭐⭐⭐⭐⭐</div>
                 <blockquote>
-                  "Our donation conversions increased <strong>220%</strong> after Causory optimized our giving pages and volunteer system. The new website brought in <strong>60 new volunteers in just 2 months</strong>. Their understanding of nonprofit needs is exceptional."
+                  "Our donation conversions increased <strong>220%</strong> after Causory optimized our giving pages and volunteer system. The new website brought in 60 new volunteers in just 2 months. Their understanding of nonprofit needs is exceptional."
                 </blockquote>
                 <div className="testimonial-author">
                   <h4>Mark Rodriguez</h4>
-                  <p>Executive Director • Hope Foundation Carlsbad</p>
+                  <p>Executive Director • Carlsbad, CA</p>
                 </div>
               </div>
             </div>
@@ -203,11 +203,11 @@ function App() {
               <div className="testimonial-content">
                 <div className="testimonial-stars">⭐⭐⭐⭐⭐</div>
                 <blockquote>
-                  "The crisis-ready design and clear admission pathways led to a <strong>180% increase in treatment inquiries</strong>. Our family resource section has become our most visited page. Causory truly understands the recovery community's needs."
+                  "The crisis-ready design and clear admission pathways have been transformative for our center. Our family resource section has become our most visited page. Causory truly understands the recovery community's needs."
                 </blockquote>
                 <div className="testimonial-author">
                   <h4>Lisa Thompson</h4>
-                  <p>Program Administrator • Oceanside Recovery Center</p>
+                  <p>Program Administrator • Oceanside, CA</p>
                 </div>
               </div>
             </div>
