@@ -26,16 +26,16 @@ function App() {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          <h2 className="hero-title">
+          <h2 className="hero-title animate-fade-in-up">
             Web Design That
             <span className="hero-accent">
               Stands Out
             </span>
           </h2>
-          <p className="hero-description">
+          <p className="hero-description animate-fade-in-up delay-200">
             We create stunning, modern websites that captivate your audience and drive results.
           </p>
-          <div className="hero-buttons">
+          <div className="hero-buttons animate-fade-in-up delay-400">
             <button className="btn-primary">
               View Our Work
             </button>
@@ -53,7 +53,7 @@ function App() {
       {/* Services Section */}
       <section id="services" className="services">
         <div className="container">
-          <h3 className="section-title">Our Services</h3>
+          <h3 className="section-title animate-fade-in-up">Our Services</h3>
           <div className="services-grid">
             <div className="service-card">
               <div className="service-icon">🎨</div>
@@ -77,15 +77,15 @@ function App() {
       {/* Portfolio Preview */}
       <section id="portfolio" className="portfolio">
         <div className="container">
-          <h3 className="section-title">Recent Projects</h3>
+          <h3 className="section-title animate-fade-in-up">Recent Projects</h3>
           <div className="portfolio-grid">
             {[
               { id: 1, image: "image-1.jpg", title: "Food Truck Catering Site", type: "Web Design & Development" },
               { id: 2, image: "image-2.jpg", title: "12 Step Journey Website", type: "Recovery & Wellness Platform" },
               { id: 4, image: "image-4.jpg", title: "Therapy & Wellness Center", type: "Mental Health & Healing" },
               { id: 5, image: "image-5.jpg", title: "Youth Empowerment Initiative", type: "Community Outreach & Prevention" }
-            ].map((project) => (
-              <div key={project.id} className="portfolio-item">
+            ].map((project, index) => (
+              <div key={project.id} className={`portfolio-item animate-scale-in delay-${(index + 1) * 100}`}>
                 <div className="portfolio-image">
                   <img src={`/${project.image}`} alt={project.title} />
                 </div>
@@ -286,9 +286,9 @@ function App() {
       {/* CTA Section */}
       <section className="cta">
         <div className="cta-content">
-          <h3 className="cta-title">Ready to Transform Your Digital Presence?</h3>
-          <p className="cta-description">Let's create something extraordinary together.</p>
-          <a href="#contact" className="cta-button">
+          <h3 className="cta-title animate-fade-in-up">Ready to Transform Your Digital Presence?</h3>
+          <p className="cta-description animate-fade-in-up delay-200">Let's create something extraordinary together.</p>
+          <a href="#contact" className="cta-button animate-scale-in delay-400">
             Start Your Project Today
           </a>
         </div>
