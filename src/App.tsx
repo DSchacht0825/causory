@@ -198,7 +198,7 @@ function App() {
 
             <div className="testimonial-card scroll-animate slide-right delay-3">
               <div className="testimonial-photo">
-                <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Lisa Thompson - Recovery Center Administrator in Oceanside" />
+                <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Lisa Thompson - Recovery Center Administrator in Oceanside" />
               </div>
               <div className="testimonial-content">
                 <div className="testimonial-stars">⭐⭐⭐⭐⭐</div>
