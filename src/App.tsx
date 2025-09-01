@@ -303,7 +303,6 @@ function App() {
           </div>
           
           <div className="footer-links">
-            <a href="https://twitter.com">Twitter</a>
             <a href="https://linkedin.com">LinkedIn</a>
             <a href="https://instagram.com">Instagram</a>
           </div>
