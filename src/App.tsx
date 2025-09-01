@@ -318,7 +318,7 @@ function App() {
               <a href="sms:6193008337" className="footer-button-bottom">
                 💬 Text Us
               </a>
-              <a href="https://calendly.com/causory/consultation" target="_blank" rel="noopener noreferrer" className="footer-button-bottom">
+              <a href="https://calendly.com/schacht-dan/30min" target="_blank" rel="noopener noreferrer" className="footer-button-bottom">
                 📅 Schedule Meet
               </a>
             </div>
