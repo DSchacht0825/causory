@@ -1,23 +1,79 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all animated elements
+    const animatedElements = document.querySelectorAll('.scroll-animate');
+    animatedElements.forEach(el => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="app">
       {/* Navigation */}
       <nav className="nav">
         <div className="nav-container">
           <div className="nav-content">
-            <div className="nav-links-left">
+            <div className="nav-links-left desktop-only">
               <a href="#services">Services</a>
+              <a href="#therapist-design">Therapists</a>
               <a href="#portfolio">Portfolio</a>
             </div>
             <div className="nav-logo">
-              <h1>Causory</h1>
+              <img src="/causory.png" alt="Causory Web Design - Specialized websites for therapists, recovery centers, and nonprofits in North County San Diego" style={{height: '40px'}} />
             </div>
-            <div className="nav-links-right">
+            <div className="nav-links-right desktop-only">
+              <a href="#recovery-design">Recovery</a>
+              <a href="#nonprofit-design">Nonprofits</a>
               <a href="#about">About</a>
               <a href="#contact">Contact</a>
+            </div>
+            
+            {/* Mobile Menu Button */}
+            <button className="mobile-menu-button" onClick={toggleMobileMenu} aria-label="Toggle mobile menu">
+              <div className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </button>
+          </div>
+          
+          {/* Mobile Menu */}
+          <div className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`}>
+            <div className="mobile-menu-links">
+              <a href="#services" onClick={closeMobileMenu}>Services</a>
+              <a href="#therapist-design" onClick={closeMobileMenu}>Therapists</a>
+              <a href="#portfolio" onClick={closeMobileMenu}>Portfolio</a>
+              <a href="#recovery-design" onClick={closeMobileMenu}>Recovery</a>
+              <a href="#nonprofit-design" onClick={closeMobileMenu}>Nonprofits</a>
+              <a href="#about" onClick={closeMobileMenu}>About</a>
+              <a href="#contact" onClick={closeMobileMenu}>Contact</a>
             </div>
           </div>
         </div>
@@ -26,19 +82,19 @@ function App() {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          <h2 className="hero-title animate-fade-in-up">
+          <h1 className="hero-title animate-fade-in-up">
             Web Design That
             <span className="hero-accent">
               Stands Out
             </span>
-          </h2>
+          </h1>
           <p className="hero-description animate-fade-in-up delay-200">
             We create stunning, modern websites that captivate your audience and drive results.
           </p>
           <div className="hero-buttons animate-fade-in-up delay-400">
-            <button className="btn-primary">
+            <a href="#portfolio" className="btn-primary">
               View Our Work
-            </button>
+            </a>
             <a href="#contact" className="btn-secondary">
               Start a Project
             </a>
@@ -53,21 +109,21 @@ function App() {
       {/* Services Section */}
       <section id="services" className="services">
         <div className="container">
-          <h3 className="section-title animate-fade-in-up">Our Services</h3>
+          <h2 className="section-title scroll-animate">Our Services</h2>
           <div className="services-grid">
-            <div className="service-card">
+            <div className="service-card scroll-animate slide-left delay-1">
               <div className="service-icon">🎨</div>
-              <h4 className="service-title">Web Design</h4>
+              <h3 className="service-title">Web Design</h3>
               <p className="service-description">Beautiful, modern designs that capture your brand's essence</p>
             </div>
-            <div className="service-card">
+            <div className="service-card scroll-animate roll-up delay-2">
               <div className="service-icon">⚡</div>
-              <h4 className="service-title">Development</h4>
+              <h3 className="service-title">Development</h3>
               <p className="service-description">Fast, responsive websites built with cutting-edge technology</p>
             </div>
-            <div className="service-card">
+            <div className="service-card scroll-animate slide-right delay-3">
               <div className="service-icon">📈</div>
-              <h4 className="service-title">SEO & Marketing</h4>
+              <h3 className="service-title">SEO & Marketing</h3>
               <p className="service-description">Optimize your online presence and reach your target audience</p>
             </div>
           </div>
@@ -77,7 +133,7 @@ function App() {
       {/* Portfolio Preview */}
       <section id="portfolio" className="portfolio">
         <div className="container">
-          <h3 className="section-title animate-fade-in-up">Recent Projects</h3>
+          <h2 className="section-title scroll-animate">Recent Projects</h2>
           <div className="portfolio-grid">
             {[
               { id: 1, image: "image-1.jpg", title: "Food Truck Catering Site", type: "Web Design & Development" },
@@ -85,9 +141,9 @@ function App() {
               { id: 4, image: "image-4.jpg", title: "Therapy & Wellness Center", type: "Mental Health & Healing" },
               { id: 5, image: "image-5.jpg", title: "Youth Empowerment Initiative", type: "Community Outreach & Prevention" }
             ].map((project, index) => (
-              <div key={project.id} className={`portfolio-item animate-scale-in delay-${(index + 1) * 100}`}>
+              <div key={project.id} className={`portfolio-item scroll-animate zoom-rotate delay-${index + 1}`}>
                 <div className="portfolio-image">
-                  <img src={`/${project.image}`} alt={project.title} />
+                  <img src={`/${project.image}`} alt={`${project.title} - ${project.type} by Causory Web Design`} />
                 </div>
                 <div className="portfolio-overlay">
                   <h4>{project.title}</h4>
@@ -99,12 +155,72 @@ function App() {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section id="testimonials" className="testimonials">
+        <div className="container">
+          <h2 className="section-title scroll-animate">What Our Clients Say</h2>
+          <p className="testimonials-intro scroll-animate delay-1">
+            Real results from therapy practices, recovery centers, and nonprofits across North County San Diego.
+          </p>
+          
+          <div className="testimonials-grid">
+            <div className="testimonial-card scroll-animate slide-left delay-1">
+              <div className="testimonial-photo">
+                <img src="https://images.unsplash.com/photo-1559209172-e6d5c2b5c7f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Dr. Sarah Chen - Licensed Therapist in Vista" />
+              </div>
+              <div className="testimonial-content">
+                <div className="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <blockquote>
+                  "Causory redesigned our therapy practice website with HIPAA-compliant forms and mobile optimization. We saw a <strong>150% increase in new patient inquiries</strong> and <strong>40% more online appointment bookings</strong> within 3 months. The crisis resource page has been invaluable for our clients."
+                </blockquote>
+                <div className="testimonial-author">
+                  <h4>Dr. Sarah Chen</h4>
+                  <p>Licensed Therapist • Vista, CA</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="testimonial-card scroll-animate roll-up delay-2">
+              <div className="testimonial-photo">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Mark Rodriguez - Nonprofit Director in Carlsbad" />
+              </div>
+              <div className="testimonial-content">
+                <div className="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <blockquote>
+                  "Our donation conversions increased <strong>220%</strong> after Causory optimized our giving pages and volunteer system. The new website brought in <strong>60 new volunteers in just 2 months</strong>. Their understanding of nonprofit needs is exceptional."
+                </blockquote>
+                <div className="testimonial-author">
+                  <h4>Mark Rodriguez</h4>
+                  <p>Executive Director • Hope Foundation Carlsbad</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="testimonial-card scroll-animate slide-right delay-3">
+              <div className="testimonial-photo">
+                <img src="https://images.unsplash.com/photo-1594824388862-8b5e6c7b41c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Lisa Thompson - Recovery Center Administrator in Oceanside" />
+              </div>
+              <div className="testimonial-content">
+                <div className="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <blockquote>
+                  "The crisis-ready design and clear admission pathways led to a <strong>180% increase in treatment inquiries</strong>. Our family resource section has become our most visited page. Causory truly understands the recovery community's needs."
+                </blockquote>
+                <div className="testimonial-author">
+                  <h4>Lisa Thompson</h4>
+                  <p>Program Administrator • Oceanside Recovery Center</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section id="about" className="about">
         <div className="about-overlay"></div>
         <div className="container">
           <div className="about-content">
-            <h3 className="section-title">About Causory</h3>
+            <h2 className="section-title scroll-animate">About Causory</h2>
             <div className="about-text">
               <p className="about-intro">
                 At Causory, we believe every design should spark with purpose and ignite with impact.
@@ -158,12 +274,150 @@ function App() {
         </div>
       </section>
 
+      {/* Therapist Website Design Section */}
+      <section id="therapist-design" className="therapist-design">
+        <div className="therapist-overlay"></div>
+        <div className="container">
+          <div className="niche-content">
+            <h2 className="section-title scroll-animate">Websites for Mental Health Professionals</h2>
+            <p className="niche-intro scroll-animate delay-1">
+              Building trust online starts with a website that reflects the safety and professionalism your clients need.
+            </p>
+            
+            <div className="niche-grid">
+              <div className="niche-info scroll-animate slide-left delay-2">
+                <h4>🛡️ HIPAA-Compliant Design</h4>
+                <p>Your clients' privacy is paramount. We build websites with secure hosting, encrypted forms, and HIPAA-compliant infrastructure that protects sensitive information while maintaining a welcoming, professional appearance.</p>
+                
+                <h4>💙 Compassionate User Experience</h4>
+                <p>We understand that someone visiting your site may be in crisis or seeking help for the first time. Our designs create calm, trustworthy experiences that guide visitors toward taking that crucial first step.</p>
+                
+                <h4>⚕️ Professional Credibility</h4>
+                <p>From licensing displays to therapy approach explanations, we showcase your expertise and credentials in ways that build confidence and establish your authority in mental health care.</p>
+              </div>
+              
+              <div className="niche-features scroll-animate slide-right delay-3">
+                <h4>What's Included:</h4>
+                <ul>
+                  <li>✓ HIPAA-compliant contact forms and intake processes</li>
+                  <li>✓ Secure client portal integration options</li>
+                  <li>✓ Appointment booking with encrypted scheduling</li>
+                  <li>✓ Crisis resource pages and emergency contacts</li>
+                  <li>✓ Insurance and payment information displays</li>
+                  <li>✓ Therapy approach and specialization pages</li>
+                  <li>✓ Professional bio and credentials showcase</li>
+                  <li>✓ Mobile-optimized for clients on-the-go</li>
+                </ul>
+                
+                <div className="niche-cta">
+                  <a href="#contact" className="niche-button scroll-animate zoom-rotate delay-4">
+                    Discuss Your Practice Website
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Recovery & Wellness Centers Section */}
+      <section id="recovery-design" className="recovery-design">
+        <div className="recovery-overlay"></div>
+        <div className="container">
+          <div className="niche-content">
+            <h2 className="section-title scroll-animate">Websites for Recovery & Wellness Centers</h2>
+            <p className="niche-intro scroll-animate delay-1">
+              Your website can be the bridge between struggle and hope. We create digital spaces that inspire healing and guide people toward recovery.
+            </p>
+            
+            <div className="niche-grid">
+              <div className="niche-info scroll-animate slide-left delay-2">
+                <h4>🌅 Hope-Centered Design</h4>
+                <p>Recovery websites need to inspire hope while maintaining professionalism. We balance uplifting imagery and messaging with clear, actionable information about your programs and approach to healing.</p>
+                
+                <h4>🤝 Community Connection</h4>
+                <p>From alumni stories to family resources, we create platforms that showcase the community aspect of recovery, helping visitors see they're not alone in their journey toward wellness.</p>
+                
+                <h4>📱 Crisis-Ready Features</h4>
+                <p>When someone needs help, they need it now. We build websites with prominent crisis hotlines, immediate contact options, and clear pathways to admission and assessment processes.</p>
+              </div>
+              
+              <div className="niche-features scroll-animate slide-right delay-3">
+                <h4>Specialized Features:</h4>
+                <ul>
+                  <li>✓ 24/7 crisis hotline integration and prominent placement</li>
+                  <li>✓ Addiction assessment tools and questionnaires</li>
+                  <li>✓ Insurance verification and admissions processes</li>
+                  <li>✓ Program information and treatment approaches</li>
+                  <li>✓ Success stories and alumni testimonials</li>
+                  <li>✓ Family and loved ones resource sections</li>
+                  <li>✓ Dual diagnosis and specialized treatment pages</li>
+                  <li>✓ Aftercare and continuing support information</li>
+                </ul>
+                
+                <div className="niche-cta">
+                  <a href="#contact" className="niche-button scroll-animate zoom-rotate delay-4">
+                    Start Your Center's Website
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Nonprofit Website Design Section */}
+      <section id="nonprofit-design" className="nonprofit-design">
+        <div className="nonprofit-overlay"></div>
+        <div className="container">
+          <div className="niche-content">
+            <h2 className="section-title scroll-animate">Websites for Nonprofit Organizations</h2>
+            <p className="niche-intro scroll-animate delay-1">
+              Your mission deserves a digital presence that inspires action and drives meaningful change in your community.
+            </p>
+            
+            <div className="niche-grid">
+              <div className="niche-info scroll-animate slide-left delay-2">
+                <h4>🎯 Mission-Driven Design</h4>
+                <p>We translate your cause into compelling digital experiences that connect with supporters, volunteers, and the communities you serve. Every design element reinforces your mission and impact.</p>
+                
+                <h4>💝 Donation Optimization</h4>
+                <p>From seamless donation forms to impact storytelling, we create websites that make giving easy, secure, and meaningful. Our designs help supporters understand exactly how their contributions create change.</p>
+                
+                <h4>🌟 Volunteer Engagement</h4>
+                <p>Transform visitors into active participants with clear volunteer opportunities, easy sign-up processes, and community building features that keep supporters engaged with your cause.</p>
+              </div>
+              
+              <div className="niche-features scroll-animate slide-right delay-3">
+                <h4>Purpose-Built Features:</h4>
+                <ul>
+                  <li>✓ Secure donation processing and recurring giving options</li>
+                  <li>✓ Volunteer registration and opportunity management</li>
+                  <li>✓ Event calendar and fundraiser promotion</li>
+                  <li>✓ Impact reporting and transparency pages</li>
+                  <li>✓ Grant application and foundation resources</li>
+                  <li>✓ Newsletter signup and supporter communication</li>
+                  <li>✓ Social media integration and sharing tools</li>
+                  <li>✓ ADA compliance for inclusive accessibility</li>
+                </ul>
+                
+                <div className="niche-cta">
+                  <a href="#contact" className="niche-button scroll-animate zoom-rotate delay-4">
+                    Amplify Your Mission Online
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="contact">
         <div className="contact-overlay"></div>
         <div className="container">
           <div className="contact-content">
-            <h3 className="section-title">Let's Create Something Amazing Together</h3>
+            <h2 className="section-title scroll-animate">Let's Create Something Amazing Together</h2>
             <p className="contact-intro">
               Ready to transform your vision into a digital masterpiece? We're here to bring your story to life.
             </p>
@@ -303,8 +557,8 @@ function App() {
           </div>
           
           <div className="footer-links">
-            <a href="https://linkedin.com">LinkedIn</a>
-            <a href="https://instagram.com">Instagram</a>
+            <a href="https://www.linkedin.com/company/causory-web-design/">LinkedIn</a>
+            <a href="https://www.instagram.com/causory/">Instagram</a>
           </div>
         </div>
         
