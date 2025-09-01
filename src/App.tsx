@@ -166,7 +166,7 @@ function App() {
           <div className="testimonials-grid">
             <div className="testimonial-card scroll-animate slide-left delay-1">
               <div className="testimonial-photo">
-                <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Dr. Sarah Chen - Licensed Therapist in Vista" />
+                <img src="https://images.unsplash.com/photo-1594824388862-8b5e6c7b41c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Dr. Sarah Chen - Licensed Therapist in Vista" />
               </div>
               <div className="testimonial-content">
                 <div className="testimonial-stars">⭐⭐⭐⭐⭐</div>
@@ -198,7 +198,7 @@ function App() {
 
             <div className="testimonial-card scroll-animate slide-right delay-3">
               <div className="testimonial-photo">
-                <img src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Lisa Thompson - Recovery Center Administrator in Oceanside" />
+                <img src="https://images.unsplash.com/photo-1559209172-e6d5c2b5c7f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Lisa Thompson - Recovery Center Administrator in Oceanside" />
               </div>
               <div className="testimonial-content">
                 <div className="testimonial-stars">⭐⭐⭐⭐⭐</div>
