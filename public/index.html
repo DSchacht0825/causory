@@ -108,13 +108,20 @@
     }
     </script>
     
-    <!-- Schema Markup for Reviews/Testimonials -->
+    <!-- Consolidated Schema Markup with Reviews and AggregateRating -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Causory Web Design",
       "url": "https://causory.com",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "12"
+      },
       "review": [
         {
           "@type": "Review",
