@@ -1964,3 +1964,164 @@
     width: 150px;
   }
 }
+
+/* Portfolio Mini Cards Animation - 312elements.com style */
+.portfolio-mini-cards-intro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: showcaseIntro 0.5s ease-out forwards;
+}
+
+.mini-cards-container {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.cards-heading {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 3rem;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.5s forwards;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.mini-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.mini-card {
+  perspective: 1000px;
+  height: 150px;
+  animation: cardFlipIn 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.mini-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  animation: flipCard 2s ease-in-out infinite;
+}
+
+.mini-card-front, .mini-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.mini-card-front {
+  background: white;
+}
+
+.mini-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mini-card-back {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  transform: rotateY(180deg);
+}
+
+.mini-card-back h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  text-align: center;
+}
+
+.mini-card-back p {
+  font-size: 0.8rem;
+  margin: 0;
+  opacity: 0.9;
+  text-align: center;
+}
+
+@keyframes cardFlipIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8) rotateY(-90deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotateY(0deg);
+  }
+}
+
+@keyframes flipCard {
+  0%, 45% {
+    transform: rotateY(0deg);
+  }
+  50%, 95% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile adjustments for mini cards */
+@media (max-width: 768px) {
+  .mini-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .mini-card {
+    height: 120px;
+  }
+
+  .cards-heading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .mini-card-back h4 {
+    font-size: 0.9rem;
+  }
+
+  .mini-card-back p {
+    font-size: 0.7rem;
+  }
+}

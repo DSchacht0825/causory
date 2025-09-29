@@ -28,30 +28,16 @@ function App() {
   };
 
   useEffect(() => {
-    // Portfolio intro animation sequence - cycle through once
+    // Portfolio intro animation - show mini cards that flip simultaneously
     if (showPortfolioIntro) {
-      let totalImagesShown = 0;
-      const totalImagesToShow = portfolioImages.length; // Show once
+      // Show the card flip animation for 3 seconds, then transition to hero
+      const flipTimeout = setTimeout(() => {
+        setShowPortfolioIntro(false);
+      }, 3000);
 
-      const imageInterval = setInterval(() => {
-        setCurrentImageIndex(prev => {
-          totalImagesShown++;
-
-          if (totalImagesShown >= totalImagesToShow) {
-            // After showing all images once, hide portfolio intro
-            setTimeout(() => setShowPortfolioIntro(false), 300);
-            return prev;
-          }
-
-          // Cycle through images
-          const nextIndex = (prev + 1) % portfolioImages.length;
-          return nextIndex;
-        });
-      }, 200); // Show each image for 200ms (even faster)
-
-      return () => clearInterval(imageInterval);
+      return () => clearTimeout(flipTimeout);
     }
-  }, [showPortfolioIntro, portfolioImages.length]);
+  }, [showPortfolioIntro]);
 
   useEffect(() => {
     const observerOptions = {
@@ -191,27 +177,29 @@ function App() {
 
       {/* Hero Section */}
       <section className="hero">
-        {/* Portfolio Showcase Intro */}
+        {/* Portfolio Showcase Intro - Mini Cards */}
         {showPortfolioIntro && (
-          <div className="portfolio-showcase-intro">
-            <div className="showcase-grid">
-              {portfolioImages.map((image, index) => (
-                <div
-                  key={index}
-                  className={`showcase-item ${index <= currentImageIndex ? 'active' : ''} ${index === currentImageIndex ? 'current' : ''}`}
-                >
-                  <img src={`/${image.src}`} alt={image.title} />
-                  <div className="showcase-title">
-                    <h3>{image.title}</h3>
-                    <p>{image.type}</p>
+          <div className="portfolio-mini-cards-intro">
+            <div className="mini-cards-container">
+              <h2 className="cards-heading">Our Recent Work</h2>
+              <div className="mini-cards-grid">
+                {portfolioImages.map((image, index) => (
+                  <div
+                    key={index}
+                    className="mini-card"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <div className="mini-card-inner">
+                      <div className="mini-card-front">
+                        <img src={`/${image.src}`} alt={image.title} />
+                      </div>
+                      <div className="mini-card-back">
+                        <h4>{image.title}</h4>
+                        <p>{image.type}</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
-            <div className="showcase-overlay">
-              <h2 className="showcase-heading">Our Recent Work</h2>
-              <div className="showcase-loader">
-                <div className="loader-bar" style={{width: `${((currentImageIndex + 1) / portfolioImages.length) * 100}%`}}></div>
+                ))}
               </div>
             </div>
           </div>
