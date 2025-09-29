@@ -30,10 +30,10 @@ function App() {
   useEffect(() => {
     // Portfolio intro animation - show mini cards that flip simultaneously
     if (showPortfolioIntro) {
-      // Show the card flip animation for 3 seconds, then transition to hero
+      // Show the card flip animation for 6 seconds to ensure all cards flip fully, then transition to hero
       const flipTimeout = setTimeout(() => {
         setShowPortfolioIntro(false);
-      }, 3000);
+      }, 6000);
 
       return () => clearTimeout(flipTimeout);
     }
