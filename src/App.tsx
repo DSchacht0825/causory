@@ -28,17 +28,17 @@ function App() {
   };
 
   useEffect(() => {
-    // Portfolio intro animation sequence - very fast transitions, go through twice
+    // Portfolio intro animation sequence - cycle through once
     if (showPortfolioIntro) {
       let totalImagesShown = 0;
-      const totalImagesToShow = portfolioImages.length * 2; // Show twice
+      const totalImagesToShow = portfolioImages.length; // Show once
 
       const imageInterval = setInterval(() => {
         setCurrentImageIndex(prev => {
           totalImagesShown++;
 
           if (totalImagesShown >= totalImagesToShow) {
-            // After showing all images twice, hide portfolio intro
+            // After showing all images once, hide portfolio intro
             setTimeout(() => setShowPortfolioIntro(false), 300);
             return prev;
           }
