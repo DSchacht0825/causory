@@ -1,8 +1,23 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import './App.css';
 
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showPortfolioIntro, setShowPortfolioIntro] = useState(true);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const portfolioImages = [
+    { src: "portfolio-1.jpg", title: "Professional Services Website", type: "Modern Business Design" },
+    { src: "portfolio-2.jpg", title: "E-Commerce Platform", type: "Online Retail Solution" },
+    { src: "portfolio-3.jpg", title: "Corporate Landing Page", type: "Brand Identity & Web Presence" },
+    { src: "portfolio-4.jpg", title: "Spiritual Coaching", type: "Wellness & Life Guidance" },
+    { src: "portfolio-5.png", title: "Technology Startup", type: "SaaS Platform Design" },
+    { src: "image-1.jpg", title: "Food Truck Catering Site", type: "Web Design & Development" },
+    { src: "image-2.jpg", title: "12 Step Journey Website", type: "Recovery & Wellness Platform" },
+    { src: "image-4.jpg", title: "Therapy & Wellness Center", type: "Mental Health & Healing" },
+    { src: "image-5.jpg", title: "Youth Empowerment Initiative", type: "Community Outreach & Prevention" }
+  ];
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -11,6 +26,32 @@ function App() {
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
   };
+
+  useEffect(() => {
+    // Portfolio intro animation sequence - very fast transitions, go through twice
+    if (showPortfolioIntro) {
+      let totalImagesShown = 0;
+      const totalImagesToShow = portfolioImages.length * 2; // Show twice
+
+      const imageInterval = setInterval(() => {
+        setCurrentImageIndex(prev => {
+          totalImagesShown++;
+
+          if (totalImagesShown >= totalImagesToShow) {
+            // After showing all images twice, hide portfolio intro
+            setTimeout(() => setShowPortfolioIntro(false), 300);
+            return prev;
+          }
+
+          // Cycle through images
+          const nextIndex = (prev + 1) % portfolioImages.length;
+          return nextIndex;
+        });
+      }, 200); // Show each image for 200ms (even faster)
+
+      return () => clearInterval(imageInterval);
+    }
+  }, [showPortfolioIntro, portfolioImages.length]);
 
   useEffect(() => {
     const observerOptions = {
@@ -35,6 +76,75 @@ function App() {
 
   return (
     <div className="app">
+      <Helmet>
+        <title>Causory | Web Design North County San Diego | Therapist & Nonprofit Sites</title>
+        <meta name="description" content="Professional web design for therapists, recovery centers & nonprofits in North County San Diego. HIPAA-compliant, mobile-responsive websites that connect you with clients & donors." />
+        <meta name="keywords" content="web design North County San Diego, therapist website design, nonprofit web design, recovery center websites, HIPAA compliant web design, Oceanside web design, Carlsbad web designer, Vista website development, Escondido web development, Encinitas website design" />
+        <link rel="canonical" href="https://causory.com/" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Causory | Specialized Web Design North County San Diego" />
+        <meta property="og:description" content="Professional websites for therapy practices, recovery centers & nonprofits in Oceanside, Carlsbad & Vista. HIPAA-compliant designs that drive results." />
+        <meta property="og:url" content="https://causory.com/" />
+        <meta property="og:image" content="https://causory.com/causory.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Causory Web Design" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Causory | Web Design for Therapists & Nonprofits" />
+        <meta name="twitter:description" content="Specialized websites for mental health professionals & nonprofits in North County San Diego." />
+        <meta name="twitter:image" content="https://causory.com/causory.png" />
+
+        {/* Local Business Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Causory Web Design",
+            "description": "Professional web design for therapists, recovery centers & nonprofits in North County San Diego",
+            "address": {
+              "@type": "PostalAddress",
+              "addressRegion": "CA",
+              "addressLocality": "North County San Diego"
+            },
+            "telephone": "(619) 300-8337",
+            "email": "hello@causory.com",
+            "url": "https://causory.com",
+            "areaServed": ["Oceanside", "Carlsbad", "Vista", "Escondido", "Encinitas", "San Marcos", "Solana Beach", "Del Mar"],
+            "serviceType": "Web Design",
+            "priceRange": "$5,000-$50,000",
+            "sameAs": [
+              "https://www.linkedin.com/company/causory-web-design/",
+              "https://www.instagram.com/causory/"
+            ]
+          })}
+        </script>
+
+        {/* Professional Service Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": "Causory Web Design",
+            "alternateName": "Causory",
+            "description": "Specialized web design for therapists, recovery centers, and nonprofit organizations",
+            "serviceType": ["Web Design", "Website Development", "HIPAA Compliant Websites", "Nonprofit Web Design"],
+            "areaServed": {
+              "@type": "GeoCircle",
+              "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": "33.1958",
+                "longitude": "-117.3792"
+              },
+              "geoRadius": "50000"
+            },
+            "url": "https://causory.com",
+            "telephone": "(619) 300-8337",
+            "email": "hello@causory.com"
+          })}
+        </script>
+      </Helmet>
       {/* Navigation */}
       <nav className="nav">
         <div className="nav-container">
@@ -81,7 +191,34 @@ function App() {
 
       {/* Hero Section */}
       <section className="hero">
-        <div className="hero-content">
+        {/* Portfolio Showcase Intro */}
+        {showPortfolioIntro && (
+          <div className="portfolio-showcase-intro">
+            <div className="showcase-grid">
+              {portfolioImages.map((image, index) => (
+                <div
+                  key={index}
+                  className={`showcase-item ${index <= currentImageIndex ? 'active' : ''} ${index === currentImageIndex ? 'current' : ''}`}
+                >
+                  <img src={`/${image.src}`} alt={image.title} />
+                  <div className="showcase-title">
+                    <h3>{image.title}</h3>
+                    <p>{image.type}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="showcase-overlay">
+              <h2 className="showcase-heading">Our Recent Work</h2>
+              <div className="showcase-loader">
+                <div className="loader-bar" style={{width: `${((currentImageIndex + 1) / portfolioImages.length) * 100}%`}}></div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Main Hero Content */}
+        <div className={`hero-content ${!showPortfolioIntro ? 'show' : ''}`}>
           <h1 className="hero-title animate-fade-in-up">
             Web Design That
             <span className="hero-accent">
@@ -100,10 +237,10 @@ function App() {
             </a>
           </div>
         </div>
-        
+
         {/* Animated gradient orbs */}
-        <div className="orb orb-1"></div>
-        <div className="orb orb-2"></div>
+        <div className={`orb orb-1 ${!showPortfolioIntro ? 'show' : ''}`}></div>
+        <div className={`orb orb-2 ${!showPortfolioIntro ? 'show' : ''}`}></div>
       </section>
 
       {/* Services Section */}
