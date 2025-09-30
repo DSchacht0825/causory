@@ -4,20 +4,6 @@ import './App.css';
 
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [showPortfolioIntro, setShowPortfolioIntro] = useState(true);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  const portfolioImages = [
-    { src: "portfolio-1.jpg", title: "Professional Services Website", type: "Modern Business Design" },
-    { src: "portfolio-2.jpg", title: "E-Commerce Platform", type: "Online Retail Solution" },
-    { src: "portfolio-3.jpg", title: "Corporate Landing Page", type: "Brand Identity & Web Presence" },
-    { src: "portfolio-4.jpg", title: "Spiritual Coaching", type: "Wellness & Life Guidance" },
-    { src: "portfolio-5.png", title: "Technology Startup", type: "SaaS Platform Design" },
-    { src: "image-1.jpg", title: "Food Truck Catering Site", type: "Web Design & Development" },
-    { src: "image-2.jpg", title: "12 Step Journey Website", type: "Recovery & Wellness Platform" },
-    { src: "image-4.jpg", title: "Therapy & Wellness Center", type: "Mental Health & Healing" },
-    { src: "image-5.jpg", title: "Youth Empowerment Initiative", type: "Community Outreach & Prevention" }
-  ];
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -26,18 +12,6 @@ function App() {
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
   };
-
-  useEffect(() => {
-    // Portfolio intro animation - show mini cards that flip simultaneously
-    if (showPortfolioIntro) {
-      // Show the card flip animation for 8 seconds to ensure all cards flip fully, then transition to hero
-      const flipTimeout = setTimeout(() => {
-        setShowPortfolioIntro(false);
-      }, 8000);
-
-      return () => clearTimeout(flipTimeout);
-    }
-  }, [showPortfolioIntro]);
 
   useEffect(() => {
     const observerOptions = {
@@ -177,36 +151,8 @@ function App() {
 
       {/* Hero Section */}
       <section className="hero">
-        {/* Portfolio Showcase Intro - Mini Cards */}
-        {showPortfolioIntro && (
-          <div className="portfolio-mini-cards-intro">
-            <div className="mini-cards-container">
-              <h2 className="cards-heading">Our Recent Work</h2>
-              <div className="mini-cards-grid">
-                {portfolioImages.map((image, index) => (
-                  <div
-                    key={index}
-                    className="mini-card"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    <div className="mini-card-inner">
-                      <div className="mini-card-front">
-                        <img src={`/${image.src}`} alt={image.title} />
-                      </div>
-                      <div className="mini-card-back">
-                        <h4>{image.title}</h4>
-                        <p>{image.type}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
-
         {/* Main Hero Content */}
-        <div className={`hero-content ${!showPortfolioIntro ? 'show' : ''}`}>
+        <div className="hero-content show">
           <h1 className="hero-title animate-fade-in-up">
             Web Design That
             <span className="hero-accent">
@@ -227,8 +173,8 @@ function App() {
         </div>
 
         {/* Animated gradient orbs */}
-        <div className={`orb orb-1 ${!showPortfolioIntro ? 'show' : ''}`}></div>
-        <div className={`orb orb-2 ${!showPortfolioIntro ? 'show' : ''}`}></div>
+        <div className="orb orb-1 show"></div>
+        <div className="orb orb-2 show"></div>
       </section>
 
       {/* Services Section */}
