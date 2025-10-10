@@ -1,3 +1,14 @@
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(96, 165, 250, 0.2);
+  -webkit-touch-callout: none;
+}
+
 /* Modern CSS with gradient backgrounds and animations */
 .app {
   min-height: 100vh;
@@ -684,7 +695,7 @@
 }
 
 /* Sections */
-.services, .portfolio, .testimonials, .about, .therapist-design, .recovery-design, .nonprofit-design, .contact, .cta {
+.services, .portfolio, .testimonials, .about, .therapist-design, .recovery-design, .nonprofit-design, .ai-consulting, .contact, .cta {
   padding: 5rem 1rem;
   overflow-x: hidden;
   width: 100%;
@@ -707,8 +718,10 @@
 /* Services Grid */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .service-card {
@@ -728,6 +741,7 @@
 .service-card:nth-child(1) { animation-delay: 0.1s; }
 .service-card:nth-child(2) { animation-delay: 0.2s; }
 .service-card:nth-child(3) { animation-delay: 0.3s; }
+.service-card:nth-child(4) { animation-delay: 0.4s; }
 
 .service-card::before {
   content: '';
@@ -752,6 +766,10 @@
 
 .service-card:nth-child(3)::before {
   background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+}
+
+.service-card:nth-child(4)::before {
+  background-image: url('https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
 }
 
 .service-card:hover {
@@ -787,6 +805,10 @@
   animation-delay: -2s;
 }
 
+.service-card:nth-child(4) .service-icon {
+  animation-delay: -3s;
+}
+
 .service-title {
   font-size: 1.5rem;
   font-weight: bold;
@@ -801,6 +823,24 @@
   line-height: 1.6;
   position: relative;
   z-index: 1;
+  margin-bottom: 1rem;
+}
+
+.service-link {
+  color: #60a5fa;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-top: 0.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.service-link:hover {
+  color: #93c5fd;
+  transform: translateX(5px);
 }
 
 /* About Section */
@@ -1339,6 +1379,69 @@
   z-index: 1;
 }
 
+/* AI Consulting Design */
+.ai-consulting {
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.ai-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 58, 138, 0.9), rgba(59, 130, 246, 0.9));
+  z-index: 1;
+}
+
+.ai-industries {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ai-industries h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.ai-industries ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ai-industries li {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0.6rem;
+  padding-left: 0.5rem;
+  line-height: 1.5;
+}
+
+.ai-philosophy {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ai-philosophy p {
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.ai-philosophy strong {
+  color: #60a5fa;
+  font-weight: 700;
+}
+
 /* Shared Niche Styling */
 .niche-content {
   position: relative;
@@ -1596,11 +1699,26 @@
     overflow-x: hidden !important;
     width: 100% !important;
     max-width: 100% !important;
+    -webkit-overflow-scrolling: touch;
   }
 
   .app {
     overflow-x: hidden !important;
     width: 100% !important;
+  }
+
+  /* Optimize touch targets for mobile */
+  a, button {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Better spacing on mobile */
+  .services, .portfolio, .testimonials, .about, .ai-consulting, .contact, .cta {
+    padding: 3rem 1rem;
   }
 
   .desktop-only {
@@ -1613,32 +1731,69 @@
     right: 1rem;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 1002;
   }
-  
+
   .nav-content {
     justify-content: center;
     position: relative;
+    padding: 1rem 0;
+  }
+
+  .mobile-menu {
+    touch-action: pan-y;
+  }
+
+  .mobile-menu-links a {
+    font-size: 1.25rem;
+    padding: 0.75rem 1.5rem;
   }
   
+  .hero {
+    min-height: 80vh;
+    padding: 6rem 1rem 4rem;
+  }
+
   .hero-title {
     font-size: 2.5rem;
+    line-height: 1.2;
   }
-  
+
   .hero-description {
     font-size: 1rem;
+    padding: 0 1rem;
   }
-  
+
   .hero-buttons {
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    padding: 0 1rem;
   }
-  
+
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    max-width: 300px;
+    padding: 1rem 1.5rem;
+  }
+
   .section-title {
     font-size: 2rem;
+    padding: 0 1rem;
   }
   
   .cta-title {
     font-size: 2rem;
+    padding: 0 1rem;
+  }
+
+  .cta-description {
+    padding: 0 1rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 300px;
   }
   
   .footer-content {
@@ -1664,8 +1819,22 @@
   
   .footer-button-bottom {
     min-width: 200px;
-    max-width: 250px;
+    max-width: 280px;
     width: 100%;
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .footer {
+    padding: 2rem 1rem;
+  }
+
+  .footer-brand h4 {
+    font-size: 1.25rem;
+  }
+
+  .footer-brand p {
+    font-size: 0.9rem;
   }
   
   .about-grid {
@@ -1674,49 +1843,114 @@
   }
   
   .about-intro {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
+    padding: 0 1rem;
   }
-  
+
   .about-text {
     font-size: 1rem;
+  }
+
+  .about-text p {
+    padding: 0 1rem;
+  }
+
+  .about-section {
+    padding: 0 1rem;
+  }
+
+  .about-why {
+    margin: 2rem 1rem !important;
+    padding: 1.5rem !important;
   }
   
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
+  .contact-intro {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
   .form-row {
     grid-template-columns: 1fr;
   }
-  
+
   .contact-form-container {
-    padding: 2rem;
+    padding: 1.5rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .submit-button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
   }
   
   /* Niche Section Mobile Styles */
   .niche-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2rem;
   }
-  
+
   .niche-intro {
-    font-size: 1.1rem;
-    margin-bottom: 3rem;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
   }
-  
+
   .niche-features {
-    padding: 2rem;
+    padding: 1.5rem;
   }
-  
+
+  .niche-info {
+    padding: 0 1rem;
+  }
+
   .niche-info h4 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
   }
-  
+
+  .niche-info h4:first-child {
+    margin-top: 0;
+  }
+
+  .niche-info p {
+    font-size: 0.95rem;
+  }
+
   .niche-button {
-    min-width: 200px;
-    padding: 0.875rem 2rem;
-    font-size: 0.9rem;
+    width: 100%;
+    max-width: 300px;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .ai-industries {
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .ai-industries ul,
+  .niche-features ul {
+    font-size: 0.95rem;
+  }
+
+  .ai-philosophy {
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+  }
+
+  .ai-philosophy p {
+    font-size: 0.95rem;
   }
   
   /* Testimonials Mobile Styles */
@@ -1726,16 +1960,23 @@
   }
   
   .testimonial-card {
-    padding: 2rem;
+    padding: 1.5rem;
   }
-  
+
   .testimonials-intro {
-    font-size: 1.1rem;
-    margin-bottom: 3rem;
-  }
-  
-  .testimonial-content blockquote {
     font-size: 1rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+
+  .testimonial-content blockquote {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .testimonial-photo {
+    width: 60px;
+    height: 60px;
   }
 }
 
@@ -1898,23 +2139,57 @@
   }
 
   /* Fix portfolio grid overflow */
+  .portfolio-intro {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
   .portfolio-grid {
     grid-template-columns: 1fr;
     max-width: 100%;
+    gap: 1.5rem;
   }
 
   .portfolio-item {
     max-width: 100%;
   }
 
+  .portfolio-overlay h4 {
+    font-size: 1.1rem;
+  }
+
+  .portfolio-overlay p {
+    font-size: 0.9rem;
+  }
+
   /* Fix service cards */
   .services-grid {
     grid-template-columns: 1fr;
     max-width: 100%;
+    margin: 0;
+    gap: 1.5rem;
   }
 
   .service-card {
     max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .service-icon {
+    font-size: 2.5rem;
+  }
+
+  .service-title {
+    font-size: 1.3rem;
+  }
+
+  .service-description {
+    font-size: 0.95rem;
+  }
+
+  .service-link {
+    font-size: 0.85rem;
+    margin-top: 0.75rem;
   }
 
   /* Ensure buttons don't overflow */
