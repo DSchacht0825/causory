@@ -95,54 +95,54 @@ const Home: React.FC = () => {
         <div className="container">
           <h2 className="section-title scroll-animate">What Our Clients Say</h2>
           <p className="testimonials-intro scroll-animate delay-1">
-            Real results from therapy practices, recovery centers, and nonprofits across North County San Diego.
+            Real results from businesses across the country who've transformed their digital presence.
           </p>
 
           <div className="testimonials-grid">
             <div className="testimonial-card scroll-animate slide-left delay-1">
               <div className="testimonial-photo">
-                <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Dr. Sarah Chen - Licensed Therapist in Vista" />
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Michael Torres - Tech Startup Founder" />
               </div>
               <div className="testimonial-content">
                 <div className="testimonial-stars">⭐⭐⭐⭐⭐</div>
                 <blockquote>
-                  "Causory redesigned our therapy practice website with HIPAA-compliant forms and mobile optimization. We saw a <strong>150% increase in new patient inquiries</strong> and <strong>40% more online appointment bookings</strong> within 3 months. The crisis resource page has been invaluable for our clients."
+                  "The AI chatbot Causory built for our site has been incredible. It handles customer questions 24/7 and we've seen a <strong>40% reduction in support tickets</strong>. The automation alone saves our team about 15 hours per week. Worth every penny."
                 </blockquote>
                 <div className="testimonial-author">
-                  <h4>Dr. Sarah Chen</h4>
-                  <p>Licensed Therapist • Vista, CA</p>
+                  <h4>Michael Torres</h4>
+                  <p>Founder • Austin, TX</p>
                 </div>
               </div>
             </div>
 
             <div className="testimonial-card scroll-animate roll-up delay-2">
               <div className="testimonial-photo">
-                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Mark Rodriguez - Nonprofit Director in Carlsbad" />
+                <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Jessica Martinez - Small Business Owner" />
               </div>
               <div className="testimonial-content">
                 <div className="testimonial-stars">⭐⭐⭐⭐⭐</div>
                 <blockquote>
-                  "Our donation conversions increased <strong>220%</strong> after Causory optimized our giving pages and volunteer system. The new website brought in 60 new volunteers in just 2 months. Their understanding of nonprofit needs is exceptional."
+                  "Causory completely redesigned our website and the results speak for themselves. Our <strong>online inquiries doubled</strong> in the first month and the site looks absolutely stunning on mobile. Professional work from start to finish."
                 </blockquote>
                 <div className="testimonial-author">
-                  <h4>Mark Rodriguez</h4>
-                  <p>Executive Director • Carlsbad, CA</p>
+                  <h4>Jessica Martinez</h4>
+                  <p>Business Owner • Denver, CO</p>
                 </div>
               </div>
             </div>
 
             <div className="testimonial-card scroll-animate slide-right delay-3">
               <div className="testimonial-photo">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Lisa Thompson - Recovery Center Administrator in Oceanside" />
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Rachel Kim - Marketing Director" />
               </div>
               <div className="testimonial-content">
                 <div className="testimonial-stars">⭐⭐⭐⭐⭐</div>
                 <blockquote>
-                  "The crisis-ready design and clear admission pathways have been transformative for our center. Our family resource section has become our most visited page. Causory truly understands the recovery community's needs."
+                  "We hired Causory to modernize our site and implement some AI workflows. The new design is beautiful and the automation they set up has streamlined our lead qualification process. Highly recommend for anyone looking to level up their digital presence."
                 </blockquote>
                 <div className="testimonial-author">
-                  <h4>Lisa Thompson</h4>
-                  <p>Program Administrator • Oceanside, CA</p>
+                  <h4>Rachel Kim</h4>
+                  <p>Marketing Director • Seattle, WA</p>
                 </div>
               </div>
             </div>
