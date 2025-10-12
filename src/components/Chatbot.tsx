@@ -23,6 +23,7 @@ const Chatbot: React.FC = () => {
   const [isTyping, setIsTyping] = useState(false);
   const [leadInfo, setLeadInfo] = useState<LeadInfo>({});
   const [conversationStage, setConversationStage] = useState<'greeting' | 'chatting' | 'lead_capture'>('greeting');
+  const [showAttention, setShowAttention] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -33,6 +34,17 @@ const Chatbot: React.FC = () => {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  // Add attention-grabbing animation after 20 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (!isOpen) {
+        setShowAttention(true);
+      }
+    }, 20000); // 20 seconds
+
+    return () => clearTimeout(timer);
+  }, [isOpen]);
 
   useEffect(() => {
     if (isOpen && messages.length === 0) {
@@ -180,7 +192,7 @@ const Chatbot: React.FC = () => {
       {/* Chat Bubble Button */}
       {!isOpen && (
         <button
-          className="chatbot-bubble"
+          className={`chatbot-bubble ${showAttention ? 'chatbot-bubble-attention' : ''}`}
           onClick={toggleChat}
           aria-label="Open chat"
         >
