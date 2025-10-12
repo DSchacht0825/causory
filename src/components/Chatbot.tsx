@@ -48,6 +48,7 @@ const Chatbot: React.FC = () => {
         );
       }, 500);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen]);
 
   const addBotMessage = (text: string) => {
