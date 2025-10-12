@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import Chatbot from './Chatbot';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -90,13 +91,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <h4>Causory</h4>
             <p>Premium Web Design & Development</p>
           </div>
-          
+
           <div className="footer-links">
             <a href="https://www.linkedin.com/company/causory-web-design/">LinkedIn</a>
             <a href="https://www.instagram.com/causory/">Instagram</a>
           </div>
         </div>
-        
+
         <div className="footer-actions-bottom">
           <div className="container">
             <div className="footer-buttons-row">
@@ -113,6 +114,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </div>
         </div>
       </footer>
+
+      <Chatbot />
     </div>
   );
 };
