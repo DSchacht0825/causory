@@ -6,6 +6,8 @@ const Anthropic = require('@anthropic-ai/sdk');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+console.log('Starting server on port:', PORT);
+
 // Middleware
 app.use(cors());
 app.use(express.json());
@@ -140,6 +142,7 @@ app.post('/api/lead', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`🤖 Chatbot API server running on http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🤖 Chatbot API server running on port ${PORT}`);
+  console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
 });
