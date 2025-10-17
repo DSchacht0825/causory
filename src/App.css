@@ -695,7 +695,7 @@ html {
 }
 
 /* Sections */
-.services, .portfolio, .testimonials, .about, .therapist-design, .recovery-design, .nonprofit-design, .ai-consulting, .contact, .cta {
+.services, .portfolio, .testimonials, .about, .therapist-design, .recovery-design, .nonprofit-design, .ai-consulting, .contact, .cta, .why-choose, .process, .industries {
   padding: 5rem 1rem;
   overflow-x: hidden;
   width: 100%;
@@ -1322,6 +1322,213 @@ html {
   font-size: 0.95rem;
 }
 
+/* Why Choose Section */
+.why-choose {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+  position: relative;
+}
+
+.section-intro {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #d1d5db;
+  margin-bottom: 4rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.why-item {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  transition: all 0.3s ease;
+}
+
+.why-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.why-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+}
+
+.why-item:nth-child(2) .why-icon {
+  animation-delay: -1s;
+}
+
+.why-item:nth-child(3) .why-icon {
+  animation-delay: -2s;
+}
+
+.why-item:nth-child(4) .why-icon {
+  animation-delay: -3s;
+}
+
+.why-item h3 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.why-item p {
+  color: #e5e7eb;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+/* Process Section */
+.process {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  position: relative;
+}
+
+.process-timeline {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.process-step {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.process-step:hover {
+  transform: translateX(10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.process-number {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1;
+  min-width: 80px;
+  text-align: center;
+}
+
+.process-content {
+  flex: 1;
+}
+
+.process-content h3 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.process-content p {
+  color: #e5e7eb;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+/* Industries Section */
+.industries {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+  position: relative;
+}
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.industry-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.industry-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.industry-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+}
+
+.industry-card:nth-child(2) .industry-icon {
+  animation-delay: -0.5s;
+}
+
+.industry-card:nth-child(3) .industry-icon {
+  animation-delay: -1s;
+}
+
+.industry-card:nth-child(4) .industry-icon {
+  animation-delay: -1.5s;
+}
+
+.industry-card:nth-child(5) .industry-icon {
+  animation-delay: -2s;
+}
+
+.industry-card:nth-child(6) .industry-icon {
+  animation-delay: -2.5s;
+}
+
+.industry-card h3 {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.industry-card p {
+  color: #d1d5db;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
 /* Niche Sections - Therapist Design */
 .therapist-design {
   position: relative;
@@ -1717,7 +1924,7 @@ html {
   }
 
   /* Better spacing on mobile */
-  .services, .portfolio, .testimonials, .about, .ai-consulting, .contact, .cta {
+  .services, .portfolio, .testimonials, .about, .ai-consulting, .contact, .cta, .why-choose, .process, .industries {
     padding: 3rem 1rem;
   }
 
@@ -1977,6 +2184,82 @@ html {
   .testimonial-photo {
     width: 60px;
     height: 60px;
+  }
+
+  /* Why Choose Mobile Styles */
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .why-item {
+    padding: 2rem;
+  }
+
+  .why-item h3 {
+    font-size: 1.3rem;
+  }
+
+  .why-item p {
+    font-size: 0.95rem;
+  }
+
+  .why-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .section-intro {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+
+  /* Process Mobile Styles */
+  .process-timeline {
+    gap: 2rem;
+  }
+
+  .process-step {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    gap: 1rem;
+  }
+
+  .process-number {
+    font-size: 2.5rem;
+    min-width: auto;
+    text-align: left;
+  }
+
+  .process-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .process-content p {
+    font-size: 0.95rem;
+  }
+
+  /* Industries Mobile Styles */
+  .industries-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .industry-card {
+    padding: 1.5rem;
+  }
+
+  .industry-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .industry-card p {
+    font-size: 0.95rem;
+  }
+
+  .industry-icon {
+    font-size: 2.5rem;
   }
 }
 

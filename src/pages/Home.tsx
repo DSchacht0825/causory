@@ -37,26 +37,182 @@ const Home: React.FC = () => {
             <div className="service-card scroll-animate slide-left delay-1">
               <div className="service-icon">🎨</div>
               <h3 className="service-title">Web Design</h3>
-              <p className="service-description">Beautiful, modern designs that capture your brand's essence</p>
+              <p className="service-description">Beautiful, modern designs that capture your brand's essence and convert visitors into customers</p>
               <Link to="/services" className="service-link">Learn More →</Link>
             </div>
             <div className="service-card scroll-animate roll-up delay-2">
               <div className="service-icon">⚡</div>
               <h3 className="service-title">Development</h3>
-              <p className="service-description">Fast, responsive websites built with cutting-edge technology</p>
+              <p className="service-description">Fast, responsive websites built with cutting-edge technology that performs flawlessly on every device</p>
               <Link to="/services" className="service-link">Learn More →</Link>
             </div>
             <div className="service-card scroll-animate slide-right delay-3">
               <div className="service-icon">📈</div>
               <h3 className="service-title">SEO & Marketing</h3>
-              <p className="service-description">Optimize your online presence and reach your target audience</p>
+              <p className="service-description">Optimize your online presence and reach your target audience with data-driven strategies</p>
               <Link to="/services" className="service-link">Learn More →</Link>
             </div>
             <div className="service-card scroll-animate fade-in delay-4">
               <div className="service-icon">🤖</div>
               <h3 className="service-title">AI Consulting</h3>
-              <p className="service-description">Transform your workflow with intelligent automation and AI strategy</p>
+              <p className="service-description">Transform your workflow with intelligent automation, custom chatbots, and AI-powered solutions</p>
               <Link to="/ai-consulting" className="service-link">Learn More →</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Causory Section */}
+      <section className="why-choose">
+        <div className="container">
+          <h2 className="section-title scroll-animate">Why Choose Causory?</h2>
+          <p className="section-intro scroll-animate delay-1">
+            We're not just another web design agency. We combine stunning visual design with cutting-edge AI technology to create websites that don't just look great—they work harder for your business.
+          </p>
+
+          <div className="why-grid">
+            <div className="why-item scroll-animate slide-left delay-1">
+              <div className="why-icon">💡</div>
+              <h3>Design That Converts</h3>
+              <p>
+                Every design decision is backed by psychology and user behavior research. We create intuitive interfaces that guide visitors seamlessly toward taking action—whether that's booking a consultation, making a purchase, or reaching out. Beautiful design meets strategic conversion optimization to turn your website into your most powerful sales tool.
+              </p>
+            </div>
+
+            <div className="why-item scroll-animate roll-up delay-2">
+              <div className="why-icon">🚀</div>
+              <h3>AI-Powered Solutions</h3>
+              <p>
+                We integrate intelligent automation that saves you time and money. From AI chatbots that answer customer questions 24/7 to automated lead qualification systems, we implement technology that lets you focus on what you do best. Our AI consulting helps you work smarter, not harder, with custom solutions tailored to your business needs.
+              </p>
+            </div>
+
+            <div className="why-item scroll-animate slide-right delay-3">
+              <div className="why-icon">🎯</div>
+              <h3>Results-Driven Approach</h3>
+              <p>
+                We measure success by your success. Our clients see an average 150% increase in qualified leads within the first three months. We don't just build websites—we build growth engines. Every project includes analytics setup, performance tracking, and ongoing optimization recommendations to ensure your investment delivers real ROI.
+              </p>
+            </div>
+
+            <div className="why-item scroll-animate fade-in delay-4">
+              <div className="why-icon">⚡</div>
+              <h3>Lightning-Fast Performance</h3>
+              <p>
+                Speed matters. A one-second delay can reduce conversions by 7%. We build websites optimized for blazing-fast load times using modern frameworks like React and cutting-edge performance techniques. Your site will rank higher in Google, keep visitors engaged, and deliver a premium experience across all devices and connection speeds.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Process Section */}
+      <section className="process">
+        <div className="container">
+          <h2 className="section-title scroll-animate">Our Process</h2>
+          <p className="section-intro scroll-animate delay-1">
+            We've refined our approach over dozens of successful projects. Here's how we transform your vision into a powerful digital presence.
+          </p>
+
+          <div className="process-timeline">
+            <div className="process-step scroll-animate slide-left delay-1">
+              <div className="process-number">01</div>
+              <div className="process-content">
+                <h3>Discovery & Strategy</h3>
+                <p>
+                  We start by understanding your business goals, target audience, and competitive landscape. Through in-depth discovery sessions, we identify opportunities and challenges, define success metrics, and create a strategic roadmap. This foundation ensures every design and development decision supports your business objectives.
+                </p>
+              </div>
+            </div>
+
+            <div className="process-step scroll-animate slide-right delay-2">
+              <div className="process-number">02</div>
+              <div className="process-content">
+                <h3>Design & Prototyping</h3>
+                <p>
+                  Our designers craft custom mockups that bring your brand to life. We create interactive prototypes so you can experience the user journey before a single line of code is written. This collaborative phase includes multiple revision rounds to ensure the design perfectly captures your vision and resonates with your audience.
+                </p>
+              </div>
+            </div>
+
+            <div className="process-step scroll-animate slide-left delay-3">
+              <div className="process-number">03</div>
+              <div className="process-content">
+                <h3>Development & Integration</h3>
+                <p>
+                  Once designs are approved, our developers build your site using modern, scalable technology. We implement advanced features like AI chatbots, booking systems, e-commerce functionality, and custom integrations. Every element is built mobile-first, rigorously tested across devices and browsers, and optimized for search engines.
+                </p>
+              </div>
+            </div>
+
+            <div className="process-step scroll-animate slide-right delay-4">
+              <div className="process-number">04</div>
+              <div className="process-content">
+                <h3>Launch & Growth</h3>
+                <p>
+                  Launch day is just the beginning. We provide comprehensive training, detailed analytics setup, and performance monitoring. You'll receive ongoing support and optimization recommendations to continuously improve results. We track key metrics and provide insights to help you maximize your website's impact and ROI over time.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Industries We Serve Section */}
+      <section className="industries">
+        <div className="container">
+          <h2 className="section-title scroll-animate">Industries We Serve</h2>
+          <p className="section-intro scroll-animate delay-1">
+            We specialize in creating tailored digital solutions for specific industries, understanding the unique challenges and opportunities each sector faces.
+          </p>
+
+          <div className="industries-grid">
+            <div className="industry-card scroll-animate zoom-rotate delay-1">
+              <div className="industry-icon">🧠</div>
+              <h3>Therapists & Mental Health</h3>
+              <p>
+                HIPAA-compliant websites with secure booking, teletherapy integration, and content that builds trust with potential clients seeking mental health support.
+              </p>
+            </div>
+
+            <div className="industry-card scroll-animate zoom-rotate delay-2">
+              <div className="industry-icon">🌟</div>
+              <h3>Recovery Centers</h3>
+              <p>
+                Compassionate, conversion-optimized websites for addiction treatment facilities with admissions tools and resources that guide families through difficult decisions.
+              </p>
+            </div>
+
+            <div className="industry-card scroll-animate zoom-rotate delay-3">
+              <div className="industry-icon">❤️</div>
+              <h3>Nonprofits</h3>
+              <p>
+                Affordable, impactful websites with donation platforms, volunteer management, and storytelling that inspires action and drives your mission forward.
+              </p>
+            </div>
+
+            <div className="industry-card scroll-animate zoom-rotate delay-4">
+              <div className="industry-icon">🏢</div>
+              <h3>Professional Services</h3>
+              <p>
+                Sophisticated websites for consultants, lawyers, accountants, and coaches that establish authority and generate high-quality leads.
+              </p>
+            </div>
+
+            <div className="industry-card scroll-animate zoom-rotate delay-5">
+              <div className="industry-icon">🛍️</div>
+              <h3>E-Commerce</h3>
+              <p>
+                High-converting online stores with seamless checkout experiences, inventory management, and AI-powered product recommendations.
+              </p>
+            </div>
+
+            <div className="industry-card scroll-animate zoom-rotate delay-6">
+              <div className="industry-icon">🚀</div>
+              <h3>Startups & Tech</h3>
+              <p>
+                Modern, scalable web applications with custom functionality, API integrations, and automation that helps you move fast and scale efficiently.
+              </p>
             </div>
           </div>
         </div>

@@ -7,8 +7,8 @@
     <meta name="theme-color" content="#1e3a8a" />
     
     <!-- Primary Meta Tags -->
-    <title>Causory | Professional Web Design & AI Solutions for Businesses Nationwide</title>
-    <meta name="title" content="Causory | Professional Web Design & AI Solutions for Businesses Nationwide" />
+    <title>Causory | Professional Web Design & AI Automation Services</title>
+    <meta name="title" content="Causory | Professional Web Design & AI Automation Services" />
     <meta name="description" content="Transform your business with custom web design, intelligent AI automation, and cutting-edge digital solutions. We build stunning websites and implement AI-powered systems that drive growth for businesses across the United States." />
     <meta name="keywords" content="web design, AI consulting, website development, AI automation, custom websites, AI integration, business automation, chatbot development, web development, AI solutions, digital transformation" />
     <meta name="author" content="Causory" />
@@ -35,9 +35,35 @@
     <!-- Favicon -->
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/causory.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://causory.com/" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K8VX31EL2V"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K8VX31EL2V');
+    </script>
+
+    <!-- Facebook Pixel (placeholder - add your pixel ID when ready) -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      // fbq('init', 'YOUR_PIXEL_ID_HERE'); // Uncomment and add your Facebook Pixel ID
+      // fbq('track', 'PageView');
+    </script>
+    <noscript>
+      <!-- <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1" /> -->
+    </noscript>
     
     <!-- Schema Markup for Organization -->
     <script type="application/ld+json">
@@ -51,6 +77,10 @@
       "email": "schacht.dan@gmail.com",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "San Diego",
+        "addressLocality": "San Diego",
+        "addressRegion": "CA",
+        "postalCode": "92101",
         "addressCountry": "US"
       },
       "sameAs": [
