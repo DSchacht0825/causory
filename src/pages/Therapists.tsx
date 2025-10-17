@@ -1,9 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const Therapists: React.FC = () => {
   return (
     <>
+      <Helmet>
+        <title>Web Design for Therapists & Mental Health Professionals | Causory</title>
+        <meta name="description" content="HIPAA-compliant websites designed specifically for therapists, counselors, and mental health professionals. Secure booking, teletherapy integration, and compassionate design that builds trust with clients seeking mental health support." />
+        <meta name="keywords" content="therapist web design, mental health website design, therapy practice website, HIPAA compliant websites, counselor website design, psychologist web design, teletherapy website, therapy booking system" />
+        <link rel="canonical" href="https://causory.com/therapists" />
+      </Helmet>
+
       <section id="therapist-design" className="therapist-design">
         <div className="therapist-overlay"></div>
         <div className="container">

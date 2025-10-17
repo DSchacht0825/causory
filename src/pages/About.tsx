@@ -1,9 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const About: React.FC = () => {
   return (
     <>
+      <Helmet>
+        <title>About Causory | Professional Web Design & AI Consulting Team</title>
+        <meta name="description" content="Learn about Causory's mission to transform businesses through intelligent web design and AI automation. We create stunning websites and implement AI solutions that amplify human potential across the United States." />
+        <meta name="keywords" content="about causory, web design team, AI consulting company, digital transformation experts, business automation specialists, web development agency" />
+        <link rel="canonical" href="https://causory.com/about" />
+      </Helmet>
+
       <section id="about" className="about">
         <div className="about-overlay"></div>
         <div className="container">

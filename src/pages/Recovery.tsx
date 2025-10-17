@@ -1,9 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const Recovery: React.FC = () => {
   return (
     <>
+      <Helmet>
+        <title>Website Design for Addiction Recovery Centers | Causory</title>
+        <meta name="description" content="Compassionate, conversion-optimized websites for addiction treatment facilities and recovery centers. Crisis-ready features, admissions tools, and hope-centered design that guides families toward healing and recovery." />
+        <meta name="keywords" content="recovery center website design, addiction treatment website, rehab facility web design, recovery center marketing, substance abuse treatment website, dual diagnosis web design, admissions website design" />
+        <link rel="canonical" href="https://causory.com/recovery" />
+      </Helmet>
+
       <section id="recovery-design" className="recovery-design">
         <div className="recovery-overlay"></div>
         <div className="container">

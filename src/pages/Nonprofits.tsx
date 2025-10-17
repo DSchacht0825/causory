@@ -1,9 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const Nonprofits: React.FC = () => {
   return (
     <>
+      <Helmet>
+        <title>Affordable Web Design for Nonprofit Organizations | Causory</title>
+        <meta name="description" content="Mission-driven websites for nonprofits with secure donation platforms, volunteer management, and impact storytelling that inspires action. Professional, affordable web design that amplifies your cause and drives meaningful change." />
+        <meta name="keywords" content="nonprofit web design, charity website design, nonprofit website development, donation website design, volunteer management website, nonprofit marketing, mission-driven web design, affordable nonprofit websites" />
+        <link rel="canonical" href="https://causory.com/nonprofits" />
+      </Helmet>
+
       <section id="nonprofit-design" className="nonprofit-design">
         <div className="nonprofit-overlay"></div>
         <div className="container">

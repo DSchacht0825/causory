@@ -1,8 +1,16 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 const Contact: React.FC = () => {
   return (
     <>
+      <Helmet>
+        <title>Contact Causory | Get Your Free Web Design & AI Consultation</title>
+        <meta name="description" content="Ready to transform your business with custom web design or AI automation? Contact Causory for a free consultation. Call (619) 300-8337 or email hello@causory.com. Response within 24 hours." />
+        <meta name="keywords" content="contact web designer, free consultation, web design quote, AI consulting inquiry, website project inquiry, get started" />
+        <link rel="canonical" href="https://causory.com/contact" />
+      </Helmet>
+
       <section id="contact" className="contact">
         <div className="contact-overlay"></div>
         <div className="container">

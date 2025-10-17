@@ -1,9 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const AIConsulting: React.FC = () => {
   return (
     <>
+      <Helmet>
+        <title>AI Consulting & Automation Services | ChatGPT Integration | Causory</title>
+        <meta name="description" content="Transform your business with AI consulting and intelligent automation. We help organizations implement ChatGPT, workflow automation, custom chatbots, and AI-powered solutions. Work smarter with AI strategy and training." />
+        <meta name="keywords" content="AI consulting, AI automation, ChatGPT integration, workflow automation, business AI solutions, AI strategy, chatbot development, AI training, prompt engineering, AI consulting services" />
+        <link rel="canonical" href="https://causory.com/ai-consulting" />
+      </Helmet>
+
       <section id="ai-consulting" className="ai-consulting">
         <div className="ai-overlay"></div>
         <div className="container">

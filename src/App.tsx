@@ -13,9 +13,10 @@ function App() {
   return (
     <Router>
       <Helmet>
-        <title>Causory | Web Design & AI Solutions</title>
-        <meta name="description" content="Professional web design and AI consulting services. We build stunning websites and implement intelligent automation solutions to help businesses work smarter." />
-        <meta name="keywords" content="web design, AI consulting, website development, automation, AI integration, business technology, web development" />
+        <title>Causory | Professional Web Design & AI Automation Services</title>
+        <meta name="description" content="Transform your business with custom web design, intelligent AI automation, and cutting-edge digital solutions. We build stunning websites and implement AI-powered systems that drive growth for businesses across the United States." />
+        <meta name="keywords" content="web design, AI consulting, website development, AI automation, custom websites, AI integration, business automation, chatbot development, web development, AI solutions, digital transformation" />
+        <link rel="canonical" href="https://causory.com/" />
       </Helmet>
 
       <Layout>
