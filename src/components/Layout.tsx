@@ -53,7 +53,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </div>
             <div className="nav-logo">
               <Link to="/">
-                <img src="/causory.png" alt="Causory Web Design & AI Solutions" style={{height: '40px'}} />
+                <img src="/causory.png" alt="Causory Web Design & AI Solutions" style={{height: '80px'}} />
               </Link>
             </div>
             <div className="nav-links-right desktop-only">
