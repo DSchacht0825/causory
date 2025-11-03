@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import Chatbot from './Chatbot';
 
 interface LayoutProps {
@@ -44,6 +45,72 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <div className="app">
+      <Helmet>
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Causory",
+              "image": "https://causory.com/causory.png",
+              "description": "San Diego's leading AI assistant, AI booking system, and web design agency. Custom websites and intelligent automation for businesses throughout San Diego County.",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "San Diego",
+                "addressRegion": "CA",
+                "postalCode": "92037",
+                "addressCountry": "US"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 32.8328,
+                "longitude": -117.2713
+              },
+              "url": "https://causory.com",
+              "telephone": "+1-619-300-8337",
+              "priceRange": "$$",
+              "areaServed": [
+                {
+                  "@type": "City",
+                  "name": "San Diego"
+                },
+                {
+                  "@type": "City",
+                  "name": "La Jolla"
+                },
+                {
+                  "@type": "City",
+                  "name": "Del Mar"
+                },
+                {
+                  "@type": "City",
+                  "name": "Carlsbad"
+                },
+                {
+                  "@type": "City",
+                  "name": "Encinitas"
+                },
+                {
+                  "@type": "City",
+                  "name": "Solana Beach"
+                }
+              ],
+              "serviceType": [
+                "AI Assistant Development",
+                "AI Booking System",
+                "Web Design",
+                "Web Development",
+                "AI Automation",
+                "Chatbot Development"
+              ],
+              "sameAs": [
+                "https://www.linkedin.com/company/causory-web-design/",
+                "https://www.instagram.com/causory/"
+              ]
+            }
+          `}
+        </script>
+      </Helmet>
       <nav className="nav">
         <div className="nav-container">
           <div className="nav-content">
@@ -53,7 +120,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </div>
             <div className="nav-logo">
               <Link to="/">
-                <img src="/causory.png" alt="Causory Web Design & AI Solutions" style={{height: '80px'}} />
+                <img src="/causory.png" alt="Causory Web Design & AI Solutions" style={{height: '60px'}} />
               </Link>
             </div>
             <div className="nav-links-right desktop-only">

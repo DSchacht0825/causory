@@ -1,9 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const Home: React.FC = () => {
   return (
     <>
+      <Helmet>
+        <title>AI Assistant & Web Design San Diego | Causory - AI Automation & Websites</title>
+        <meta name="description" content="San Diego's leading AI assistant, AI booking system, and web design agency. We build custom websites and intelligent automation for businesses in La Jolla, Del Mar, Carlsbad, and throughout San Diego County." />
+        <meta name="keywords" content="AI assistant San Diego, AI booking system San Diego, web design San Diego, San Diego web developer, AI automation San Diego, custom websites San Diego" />
+        <link rel="canonical" href="https://causory.com" />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content show">
@@ -14,7 +22,7 @@ const Home: React.FC = () => {
             </span>
           </h1>
           <p className="hero-description animate-fade-in-up delay-200">
-            We create stunning websites and intelligent AI systems that transform how you work and connect with your audience.
+            San Diego's premier web design and AI automation agency. We create stunning websites and intelligent AI assistants that transform how local businesses work and connect with their audience.
           </p>
           <div className="hero-buttons animate-fade-in-up delay-400">
             <Link to="/portfolio" className="btn-primary">
@@ -54,9 +62,9 @@ const Home: React.FC = () => {
             </div>
             <div className="service-card scroll-animate fade-in delay-4">
               <div className="service-icon">🤖</div>
-              <h3 className="service-title">AI Consulting</h3>
-              <p className="service-description">Transform your workflow with intelligent automation, custom chatbots, and AI-powered solutions</p>
-              <Link to="/ai-consulting" className="service-link">Learn More →</Link>
+              <h3 className="service-title">AI Assistants & Booking Systems</h3>
+              <p className="service-description">24/7 AI assistants and automated booking systems for San Diego businesses. Increase bookings, save time, and never miss a lead</p>
+              <Link to="/ai-consulting" className="service-link">Explore AI Solutions →</Link>
             </div>
           </div>
         </div>
@@ -83,7 +91,7 @@ const Home: React.FC = () => {
               <div className="why-icon">🚀</div>
               <h3>AI-Powered Solutions</h3>
               <p>
-                We integrate intelligent automation that saves you time and money. From AI chatbots that answer customer questions 24/7 to automated lead qualification systems, we implement technology that lets you focus on what you do best. Our AI consulting helps you work smarter, not harder, with custom solutions tailored to your business needs.
+                We integrate intelligent automation that saves you time and money. From <Link to="/ai-consulting" style={{color: '#fff', textDecoration: 'underline'}}>AI assistants</Link> that answer customer questions 24/7 to <Link to="/ai-consulting" style={{color: '#fff', textDecoration: 'underline'}}>automated booking systems</Link> that capture leads while you sleep, we implement technology that lets San Diego businesses work smarter. Our AI consulting helps you automate repetitive tasks with custom solutions tailored to your industry.
               </p>
             </div>
 
@@ -140,7 +148,7 @@ const Home: React.FC = () => {
               <div className="process-content">
                 <h3>Development & Integration</h3>
                 <p>
-                  Once designs are approved, our developers build your site using modern, scalable technology. We implement advanced features like AI chatbots, booking systems, e-commerce functionality, and custom integrations. Every element is built mobile-first, rigorously tested across devices and browsers, and optimized for search engines.
+                  Once designs are approved, our San Diego developers build your site using modern, scalable technology. We implement advanced features like <Link to="/ai-consulting" style={{color: '#fff', textDecoration: 'underline'}}>AI assistants and booking systems</Link>, e-commerce functionality, and custom integrations with your existing tools. Every element is built mobile-first, rigorously tested across devices and browsers, and optimized for San Diego local search.
                 </p>
               </div>
             </div>
@@ -262,11 +270,11 @@ const Home: React.FC = () => {
               <div className="testimonial-content">
                 <div className="testimonial-stars">⭐⭐⭐⭐⭐</div>
                 <blockquote>
-                  "The AI chatbot Causory built for our site has been incredible. It handles customer questions 24/7 and we've seen a <strong>40% reduction in support tickets</strong>. The automation alone saves our team about 15 hours per week. Worth every penny."
+                  "The <Link to="/ai-consulting" style={{color: '#6366f1', textDecoration: 'underline'}}>AI assistant</Link> Causory built for our site has been incredible. It handles customer questions 24/7 and we've seen a <strong>40% reduction in support tickets</strong>. The automation alone saves our team about 15 hours per week. Worth every penny."
                 </blockquote>
                 <div className="testimonial-author">
                   <h4>Michael Torres</h4>
-                  <p>Founder • Austin, TX</p>
+                  <p>Therapy Practice • La Jolla, CA</p>
                 </div>
               </div>
             </div>
@@ -278,11 +286,11 @@ const Home: React.FC = () => {
               <div className="testimonial-content">
                 <div className="testimonial-stars">⭐⭐⭐⭐⭐</div>
                 <blockquote>
-                  "Causory completely redesigned our website and the results speak for themselves. Our <strong>online inquiries doubled</strong> in the first month and the site looks absolutely stunning on mobile. Professional work from start to finish."
+                  "Causory completely redesigned our website and added an <Link to="/ai-consulting" style={{color: '#6366f1', textDecoration: 'underline'}}>AI booking system</Link>. Our <strong>online bookings doubled</strong> in the first month and we're capturing appointments 24/7. The site looks absolutely stunning on mobile. Professional work from start to finish."
                 </blockquote>
                 <div className="testimonial-author">
                   <h4>Jessica Martinez</h4>
-                  <p>Business Owner • Denver, CO</p>
+                  <p>Wellness Studio • Carlsbad, CA</p>
                 </div>
               </div>
             </div>
