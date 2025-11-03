@@ -147,9 +147,14 @@ app.post('/api/lead', async (req, res) => {
 });
 
 // Serve React app for all other routes (must be after API routes)
-// Express 5 syntax - use /* instead of *
-app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+// Express 5 compatible - use middleware instead of wildcard route
+app.use((req, res, next) => {
+  // Only serve index.html for GET requests that aren't API calls
+  if (req.method === 'GET' && !req.path.startsWith('/api')) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  } else {
+    next();
+  }
 });
 
 app.listen(PORT, '0.0.0.0', () => {
