@@ -106,7 +106,9 @@ const Chatbot: React.FC = () => {
         }
       };
 
-      const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3001';
+      // In production, API is on same domain. In dev, use localhost:3001
+      const apiUrl = process.env.REACT_APP_API_URL ||
+        (process.env.NODE_ENV === 'production' ? window.location.origin : 'http://localhost:3001');
       const response = await fetch(`${apiUrl}/api/chat`, {
         method: 'POST',
         headers: {

@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const Anthropic = require('@anthropic-ai/sdk');
 
 const app = express();
@@ -11,6 +12,9 @@ console.log('Starting server on port:', PORT);
 // Middleware
 app.use(cors());
 app.use(express.json());
+
+// Serve static files from React build
+app.use(express.static(path.join(__dirname, 'build')));
 
 // Initialize Anthropic client
 const anthropic = new Anthropic({
@@ -142,7 +146,13 @@ app.post('/api/lead', async (req, res) => {
   }
 });
 
+// Serve React app for all other routes (must be after API routes)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`🤖 Chatbot API server running on port ${PORT}`);
   console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
+  console.log(`Serving React app from: ${path.join(__dirname, 'build')}`);
 });
