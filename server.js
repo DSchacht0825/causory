@@ -147,7 +147,8 @@ app.post('/api/lead', async (req, res) => {
 });
 
 // Serve React app for all other routes (must be after API routes)
-app.get('*', (req, res) => {
+// Express 5 syntax - use /* instead of *
+app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
