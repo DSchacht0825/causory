@@ -21,6 +21,13 @@ const anthropic = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
 });
 
+// Check if API key is configured
+if (!process.env.ANTHROPIC_API_KEY) {
+  console.error('❌ WARNING: ANTHROPIC_API_KEY is not set! The chatbot will not work.');
+} else {
+  console.log('✅ ANTHROPIC_API_KEY is configured');
+}
+
 // Store conversation history in memory (in production, use a database)
 const conversations = {};
 
@@ -114,16 +121,28 @@ Be conversational and natural. Don't be too salesy. Focus on understanding needs
     });
   } catch (error) {
     console.error('Error communicating with Claude API:', error);
+    console.error('Error details:', {
+      message: error.message,
+      status: error.status,
+      type: error.type,
+      stack: error.stack
+    });
     res.status(500).json({
       error: 'Failed to process message',
       details: error.message,
+      ...(process.env.NODE_ENV !== 'production' && { stack: error.stack })
     });
   }
 });
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'ok', message: 'Chatbot API is running' });
+  res.json({
+    status: 'ok',
+    message: 'Chatbot API is running',
+    hasApiKey: !!process.env.ANTHROPIC_API_KEY,
+    nodeEnv: process.env.NODE_ENV || 'development'
+  });
 });
 
 // Lead capture endpoint (for future use - storing to database)
