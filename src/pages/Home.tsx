@@ -265,48 +265,48 @@ const Home: React.FC = () => {
           <div className="testimonials-grid">
             <div className="testimonial-card scroll-animate slide-left delay-1">
               <div className="testimonial-photo">
-                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Michael Torres - Tech Startup Founder" />
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Yvonne Araujo - Owner of Teresita's Birria" />
               </div>
               <div className="testimonial-content">
                 <div className="testimonial-stars">⭐⭐⭐⭐⭐</div>
                 <blockquote>
-                  "The <Link to="/ai-consulting" style={{color: '#6366f1', textDecoration: 'underline'}}>AI assistant</Link> Causory built for our site has been incredible. It handles customer questions 24/7 and we've seen a <strong>40% reduction in support tickets</strong>. The automation alone saves our team about 15 hours per week. Worth every penny."
+                  "Working with Causory was such a great experience. They were super helpful, friendly, and patient every step of the way. They really listened to my ideas and brought my thoughts to life on the site even better than I imagined. I'm so thankful for their creativity and professionalism—<strong>highly recommend Causory</strong> to anyone looking for a beautiful, well-designed website!"
                 </blockquote>
                 <div className="testimonial-author">
-                  <h4>Michael Torres</h4>
-                  <p>Therapy Practice • La Jolla, CA</p>
+                  <h4>Yvonne Araujo</h4>
+                  <p>Owner • Teresita's Birria</p>
                 </div>
               </div>
             </div>
 
             <div className="testimonial-card scroll-animate roll-up delay-2">
               <div className="testimonial-photo">
-                <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Jessica Martinez - Small Business Owner" />
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Scott Miner - Founder of Restoring San Diego" />
               </div>
               <div className="testimonial-content">
                 <div className="testimonial-stars">⭐⭐⭐⭐⭐</div>
                 <blockquote>
-                  "Causory completely redesigned our website and added an <Link to="/ai-consulting" style={{color: '#6366f1', textDecoration: 'underline'}}>AI booking system</Link>. Our <strong>online bookings doubled</strong> in the first month and we're capturing appointments 24/7. The site looks absolutely stunning on mobile. Professional work from start to finish."
+                  "When Restoring San Diego was still finding its footing, Causory became our launchpad. Their web design completely transformed our online presence—our <strong>SEO traffic skyrocketed, our visibility exploded</strong>, and our message reached audiences we could never have reached before. The craftsmanship, ongoing maintenance, and attention to detail have been second to none. We'll always choose Causory—because they didn't just build a website, they built momentum for change."
                 </blockquote>
                 <div className="testimonial-author">
-                  <h4>Jessica Martinez</h4>
-                  <p>Wellness Studio • Carlsbad, CA</p>
+                  <h4>Scott Miner</h4>
+                  <p>Founder & CEO • Restoring San Diego</p>
                 </div>
               </div>
             </div>
 
             <div className="testimonial-card scroll-animate slide-right delay-3">
               <div className="testimonial-photo">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Rachel Kim - Marketing Director" />
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="San Diego Business Owner" />
               </div>
               <div className="testimonial-content">
                 <div className="testimonial-stars">⭐⭐⭐⭐⭐</div>
                 <blockquote>
-                  "We hired Causory to modernize our site and implement some AI workflows. The new design is beautiful and the automation they set up has streamlined our lead qualification process. Highly recommend for anyone looking to level up their digital presence."
+                  "Customer service is everything to me! Not only are they attentive to what details you ask but they also have a lot of knowledge and deliver results of your website with tons of care. It's customizable and if you have questions the response timing is quick! If I ever launch any other businesses I will <strong>100 percent use Causory every single time!</strong>"
                 </blockquote>
                 <div className="testimonial-author">
-                  <h4>Rachel Kim</h4>
-                  <p>Marketing Director • Seattle, WA</p>
+                  <h4>Verified Client</h4>
+                  <p>Business Owner • San Diego, CA</p>
                 </div>
               </div>
             </div>
