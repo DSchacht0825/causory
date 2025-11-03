@@ -16,7 +16,7 @@ function App() {
         <title>Causory | Professional Web Design & AI Automation Services</title>
         <meta name="description" content="Transform your business with custom web design, intelligent AI automation, and cutting-edge digital solutions. We build stunning websites and implement AI-powered systems that drive growth for businesses across the United States." />
         <meta name="keywords" content="web design, AI consulting, website development, AI automation, custom websites, AI integration, business automation, chatbot development, web development, AI solutions, digital transformation" />
-        <link rel="canonical" href="https://causory.com/" />
+        <link rel="canonical" href="https://www.causory.com/" />
       </Helmet>
 
       <Layout>
