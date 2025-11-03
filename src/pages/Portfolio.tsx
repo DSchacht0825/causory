@@ -20,21 +20,35 @@ const Portfolio: React.FC = () => {
           </p>
           <div className="portfolio-grid">
             {[
-              { id: 1, image: "image-1.jpg", title: "Food Truck Catering Site", type: "Web Design & Development" },
-              { id: 2, image: "image-2.jpg", title: "12 Step Journey Website", type: "Recovery & Wellness Platform" },
-              { id: 4, image: "image-4.jpg", title: "Therapy & Wellness Center", type: "Mental Health & Healing" },
-              { id: 5, image: "image-5.jpg", title: "Youth Empowerment Initiative", type: "Community Outreach & Prevention" },
-              { id: 6, image: "image-1.jpg", title: "Nonprofit Foundation", type: "Charitable Organization" },
-              { id: 7, image: "image-2.jpg", title: "Wellness Coaching", type: "Health & Fitness" }
+              { id: 1, image: "image-1.jpg", title: "Teresita's Birria", type: "Food Truck Catering", url: "https://www.teresitasbirria.com" },
+              { id: 2, image: "image-2.jpg", title: "Serenity Collective", type: "Faith-Based Recovery Programs", url: "https://www.serenitycollective.org" },
+              { id: 3, image: "image-3.jpg", title: "Casandra's Cleaning", type: "Professional Cleaning Services", url: "https://www.casandrascleaning.com" },
+              { id: 4, image: "image-4.jpg", title: "M&M Lawn Service", type: "Lawn Care & Landscaping", url: "https://www.mmlawnservice.com" },
+              { id: 5, image: "image-5.jpg", title: "Restoring San Diego", type: "Youth Empowerment & Arts", url: "https://www.restoringsandiego.org" },
+              { id: 6, image: "image-6.jpg", title: "You and I Organize", type: "Home Organizing & Cleaning", url: "https://youandiorganize.com" }
             ].map((project, index) => (
               <div key={project.id} className={`portfolio-item scroll-animate zoom-rotate delay-${index + 1}`}>
-                <div className="portfolio-image">
-                  <img src={`/${project.image}`} alt={`${project.title} - ${project.type} by Causory Web Design`} />
-                </div>
-                <div className="portfolio-overlay">
-                  <h4>{project.title}</h4>
-                  <p>{project.type}</p>
-                </div>
+                {project.url ? (
+                  <a href={project.url} target="_blank" rel="noopener noreferrer" className="portfolio-link">
+                    <div className="portfolio-image">
+                      <img src={`/${project.image}`} alt={`${project.title} - ${project.type} by Causory Web Design`} />
+                    </div>
+                    <div className="portfolio-overlay">
+                      <h4>{project.title}</h4>
+                      <p>{project.type}</p>
+                    </div>
+                  </a>
+                ) : (
+                  <>
+                    <div className="portfolio-image">
+                      <img src={`/${project.image}`} alt={`${project.title} - ${project.type} by Causory Web Design`} />
+                    </div>
+                    <div className="portfolio-overlay">
+                      <h4>{project.title}</h4>
+                      <p>{project.type}</p>
+                    </div>
+                  </>
+                )}
               </div>
             ))}
           </div>
