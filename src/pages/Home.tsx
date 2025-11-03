@@ -9,7 +9,7 @@ const Home: React.FC = () => {
         <title>AI Assistant & Web Design San Diego | Causory - AI Automation & Websites</title>
         <meta name="description" content="San Diego's leading AI assistant, AI booking system, and web design agency. We build custom websites and intelligent automation for businesses in La Jolla, Del Mar, Carlsbad, and throughout San Diego County." />
         <meta name="keywords" content="AI assistant San Diego, AI booking system San Diego, web design San Diego, San Diego web developer, AI automation San Diego, custom websites San Diego" />
-        <link rel="canonical" href="https://causory.com" />
+        <link rel="canonical" href="https://www.causory.com" />
       </Helmet>
 
       {/* Hero Section */}

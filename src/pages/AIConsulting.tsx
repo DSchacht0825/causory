@@ -9,7 +9,7 @@ const AIConsulting: React.FC = () => {
         <title>AI Assistant & Booking System San Diego | AI Automation | Causory</title>
         <meta name="description" content="Leading AI assistant and AI booking system provider in San Diego. Transform your business with custom AI chatbots, intelligent booking automation, and workflow solutions. Serving La Jolla, Del Mar, Carlsbad, and all of San Diego County." />
         <meta name="keywords" content="AI assistant San Diego, AI booking system San Diego, AI chatbot San Diego, AI automation San Diego, custom AI solutions, intelligent booking, San Diego AI consulting" />
-        <link rel="canonical" href="https://causory.com/ai-consulting" />
+        <link rel="canonical" href="https://www.causory.com/ai-consulting" />
       </Helmet>
 
       <section id="ai-consulting" className="ai-consulting">

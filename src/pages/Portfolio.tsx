@@ -9,7 +9,7 @@ const Portfolio: React.FC = () => {
         <title>Web Design Portfolio | Causory Projects & Case Studies</title>
         <meta name="description" content="Explore Causory's portfolio of custom websites for therapy practices, recovery centers, nonprofits, and businesses nationwide. See real results from our web design and AI consulting projects." />
         <meta name="keywords" content="web design portfolio, website examples, case studies, therapy website design, nonprofit web design, recovery center websites, custom website projects" />
-        <link rel="canonical" href="https://causory.com/portfolio" />
+        <link rel="canonical" href="https://www.causory.com/portfolio" />
       </Helmet>
 
       <section id="portfolio" className="portfolio" style={{paddingTop: '8rem'}}>

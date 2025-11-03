@@ -66,7 +66,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 "latitude": 32.8328,
                 "longitude": -117.2713
               },
-              "url": "https://causory.com",
+              "url": "https://www.causory.com",
               "telephone": "+1-619-300-8337",
               "priceRange": "$$",
               "areaServed": [
