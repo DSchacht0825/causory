@@ -106,6 +106,49 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               "sameAs": [
                 "https://www.linkedin.com/company/causory-web-design/",
                 "https://www.instagram.com/causory/"
+              ],
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "bestRating": "5",
+                "worstRating": "1",
+                "ratingCount": "2"
+              },
+              "review": [
+                {
+                  "@type": "Review",
+                  "author": {
+                    "@type": "Person",
+                    "name": "Yvonne Araujo"
+                  },
+                  "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                  },
+                  "reviewBody": "Working with Causory was such a great experience. They were super helpful, friendly, and patient every step of the way. They really listened to my ideas and brought my thoughts to life on the site even better than I imagined. I'm so thankful for their creativity and professionalism—highly recommend Causory to anyone looking for a beautiful, well-designed website!",
+                  "publisher": {
+                    "@type": "Organization",
+                    "name": "Teresita's Birria"
+                  }
+                },
+                {
+                  "@type": "Review",
+                  "author": {
+                    "@type": "Person",
+                    "name": "Scott Miner"
+                  },
+                  "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                  },
+                  "reviewBody": "When Restoring San Diego was still finding its footing, Causory became our launchpad. Their web design completely transformed our online presence—our SEO traffic skyrocketed, our visibility exploded, and our message reached audiences we could never have reached before. The craftsmanship, ongoing maintenance, and attention to detail have been second to none. We'll always choose Causory—because they didn't just build a website, they built momentum for change.",
+                  "publisher": {
+                    "@type": "Organization",
+                    "name": "Restoring San Diego"
+                  }
+                }
               ]
             }
           `}
