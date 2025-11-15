@@ -6,9 +6,9 @@ const AIConsulting: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Assistant & Booking System San Diego | AI Automation | Causory</title>
-        <meta name="description" content="Leading AI assistant and AI booking system provider in San Diego. Transform your business with custom AI chatbots, intelligent booking automation, and workflow solutions. Serving La Jolla, Del Mar, Carlsbad, and all of San Diego County." />
-        <meta name="keywords" content="AI assistant San Diego, AI booking system San Diego, AI chatbot San Diego, AI automation San Diego, custom AI solutions, intelligent booking, San Diego AI consulting" />
+        <title>AI Voice Assistant & AI Booking System San Diego | AI Automation | Causory</title>
+        <meta name="description" content="Leading AI voice assistant, AI phone assistant, and AI booking system provider in San Diego. Transform your business with custom AI chatbots, voice AI, intelligent booking automation, and workflow solutions. Serving La Jolla, Del Mar, Carlsbad, and all of San Diego County." />
+        <meta name="keywords" content="AI voice assistant San Diego, AI phone assistant San Diego, AI assistant San Diego, AI booking system San Diego, AI chatbot San Diego, AI automation San Diego, custom AI solutions, intelligent booking, San Diego AI consulting, voice AI San Diego" />
         <link rel="canonical" href="https://www.causory.com/ai-consulting" />
       </Helmet>
 
@@ -16,9 +16,9 @@ const AIConsulting: React.FC = () => {
         <div className="ai-overlay"></div>
         <div className="container">
           <div className="niche-content">
-            <h1 className="section-title scroll-animate">AI Assistants & Booking Systems in San Diego</h1>
+            <h1 className="section-title scroll-animate">AI Voice Assistants, AI Phone Systems & Booking Automation in San Diego</h1>
             <p className="niche-intro scroll-animate delay-1">
-              Transform your San Diego business with intelligent AI assistants and automated booking systems that work 24/7. We help local businesses in La Jolla, Del Mar, Carlsbad, and throughout San Diego County implement cutting-edge AI technology that saves time, increases revenue, and delivers exceptional customer experiences.
+              Transform your San Diego business with intelligent AI voice assistants, AI phone systems, chat assistants, and automated booking systems that work 24/7. We help local businesses in La Jolla, Del Mar, Carlsbad, and throughout San Diego County implement cutting-edge AI voice technology that answers calls, books appointments, saves time, increases revenue, and delivers exceptional customer experiences.
             </p>
 
             {/* Main Content Section */}
@@ -29,6 +29,17 @@ const AIConsulting: React.FC = () => {
               </p>
               <p style={{fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '1.5rem', color: 'rgba(255,255,255,0.9)'}}>
                 Our AI assistants are trained specifically for San Diego businesses. They understand your local market, can answer common questions about your services, qualify leads automatically, and seamlessly hand off to your team when needed. Unlike traditional chatbots that frustrate users with rigid scripts, our AI assistants use advanced natural language processing to have genuine, helpful conversations.
+              </p>
+
+              <h2 style={{fontSize: '2rem', marginTop: '3rem', marginBottom: '1.5rem', color: '#fff'}}>AI Voice Assistants: Answer Every Call, Never Miss a Lead</h2>
+              <p style={{fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '1.5rem', color: 'rgba(255,255,255,0.9)'}}>
+                The phone rings at your San Diego business. It's a potential client ready to book your services—but you're with another client, in a session, or it's after hours. With a traditional phone system, that's a missed opportunity. With an <strong>AI voice assistant</strong>, every call is answered professionally, instantly, 24/7.
+              </p>
+              <p style={{fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '1.5rem', color: 'rgba(255,255,255,0.9)'}}>
+                Our AI phone assistants for San Diego businesses use advanced voice AI technology to handle inbound calls with natural, human-like conversations. They can answer questions about your services, check availability, schedule appointments, qualify leads, collect information, and seamlessly transfer to your team when needed. Unlike basic voicemail or rigid IVR systems, our AI voice assistants understand context, accents, and can handle complex conversations.
+              </p>
+              <p style={{fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '1.5rem', color: 'rgba(255,255,255,0.9)'}}>
+                Whether you're a therapist in La Jolla who can't answer calls during sessions, a recovery center in North County handling crisis calls 24/7, or a professional service provider downtown juggling multiple clients, our AI voice assistant becomes your always-available front desk. It speaks naturally, understands San Diego area codes and neighborhoods, and can even handle bilingual English-Spanish conversations for our diverse San Diego community.
               </p>
 
               <h2 style={{fontSize: '2rem', marginTop: '3rem', marginBottom: '1.5rem', color: '#fff'}}>AI Booking Systems That Convert</h2>
@@ -52,9 +63,14 @@ const AIConsulting: React.FC = () => {
 
             <div className="niche-grid">
               <div className="niche-info scroll-animate slide-left delay-2">
-                <h3 style={{fontSize: '1.5rem', marginBottom: '1rem'}}>🤖 Custom AI Assistants</h3>
+                <h3 style={{fontSize: '1.5rem', marginBottom: '1rem'}}>📞 AI Voice Assistants & Phone Systems</h3>
                 <p style={{fontSize: '1.05rem', lineHeight: '1.7', marginBottom: '2rem'}}>
-                  We build AI assistants trained on your specific business, services, and frequently asked questions. Perfect for therapists, medical practices, law firms, and service providers who want to pre-qualify leads and answer common questions instantly. Our AI assistants can handle appointment requests, provide service information, collect contact details, and escalate complex inquiries to your team.
+                  Never miss another call with our AI voice assistant that answers your business phone 24/7. Using advanced voice AI technology, our AI phone assistants handle inbound calls with natural conversations, answer questions, schedule appointments, qualify leads, and transfer to your team when needed. Perfect for San Diego therapists, medical practices, law firms, and professional services who can't answer every call. Works seamlessly with your existing phone number—callers won't know they're talking to AI until you tell them.
+                </p>
+
+                <h3 style={{fontSize: '1.5rem', marginBottom: '1rem'}}>🤖 Custom AI Chat Assistants</h3>
+                <p style={{fontSize: '1.05rem', lineHeight: '1.7', marginBottom: '2rem'}}>
+                  We build AI chat assistants trained on your specific business, services, and frequently asked questions. Live on your website 24/7, these intelligent chatbots engage visitors, answer questions instantly, pre-qualify leads, and guide them toward booking. Perfect for San Diego businesses who want to capture website visitors after hours. Our AI chat assistants integrate with your CRM and can hand off conversations to your team seamlessly.
                 </p>
 
                 <h3 style={{fontSize: '1.5rem', marginBottom: '1rem'}}>📅 Intelligent Booking Systems</h3>
@@ -76,16 +92,20 @@ const AIConsulting: React.FC = () => {
               <div className="niche-features scroll-animate slide-right delay-3">
                 <h3 style={{fontSize: '1.5rem', marginBottom: '1.5rem'}}>What We Deliver:</h3>
                 <ul style={{fontSize: '1.05rem', lineHeight: '2'}}>
-                  <li>✓ 24/7 AI assistants that never sleep</li>
+                  <li>✓ AI voice assistants that answer phone calls 24/7</li>
+                  <li>✓ AI phone systems with natural voice conversations</li>
+                  <li>✓ 24/7 AI chat assistants for your website</li>
                   <li>✓ Automated booking with calendar integration</li>
-                  <li>✓ Lead qualification and routing</li>
-                  <li>✓ Appointment reminders (SMS & email)</li>
-                  <li>✓ Custom AI trained on your business</li>
+                  <li>✓ Lead qualification and intelligent routing</li>
+                  <li>✓ Appointment reminders (SMS, email & voice)</li>
+                  <li>✓ Custom AI trained specifically on your business</li>
+                  <li>✓ Call recording and conversation analytics</li>
                   <li>✓ CRM and software integrations</li>
-                  <li>✓ Analytics and performance tracking</li>
+                  <li>✓ Performance tracking and insights</li>
                   <li>✓ Mobile-responsive chat interfaces</li>
                   <li>✓ HIPAA-compliant solutions (for healthcare)</li>
-                  <li>✓ Bilingual support (English/Spanish)</li>
+                  <li>✓ Bilingual voice & chat (English/Spanish)</li>
+                  <li>✓ Works with your existing phone number</li>
                 </ul>
 
                 <div className="ai-industries" style={{marginTop: '2.5rem'}}>
@@ -117,18 +137,18 @@ const AIConsulting: React.FC = () => {
 
               <div style={{display: 'grid', gap: '2rem', marginBottom: '3rem'}}>
                 <div style={{background: 'rgba(255,255,255,0.1)', padding: '2rem', borderRadius: '8px'}}>
-                  <h4 style={{fontSize: '1.3rem', marginBottom: '0.5rem', color: '#fff'}}>Therapy Practice in La Jolla</h4>
-                  <p style={{fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)', marginBottom: '1rem'}}>Challenge: Missing 60% of calls during sessions, losing potential clients</p>
+                  <h4 style={{fontSize: '1.3rem', marginBottom: '0.5rem', color: '#fff'}}>Therapy Practice in La Jolla - AI Voice Assistant</h4>
+                  <p style={{fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)', marginBottom: '1rem'}}>Challenge: Missing 60% of phone calls during therapy sessions, losing potential clients</p>
                   <p style={{fontSize: '1.05rem', lineHeight: '1.7'}}>
-                    After implementing our AI assistant and booking system, this practice saw a <strong>156% increase in new client bookings</strong> within 90 days. The AI assistant answers common questions about specializations, insurance, and availability, then routes qualified leads directly to the booking system. No-shows decreased by 38% thanks to automated SMS reminders.
+                    After implementing our AI voice assistant, this practice now answers <strong>100% of incoming calls</strong> with natural voice conversations. The AI phone assistant answers questions about therapy specializations, insurance coverage, and availability, then seamlessly books appointments or schedules callbacks. Result: <strong>156% increase in new client bookings</strong> within 90 days and zero missed opportunities. The therapist can focus on clients during sessions knowing every call is handled professionally.
                   </p>
                 </div>
 
                 <div style={{background: 'rgba(255,255,255,0.1)', padding: '2rem', borderRadius: '8px'}}>
-                  <h4 style={{fontSize: '1.3rem', marginBottom: '0.5rem', color: '#fff'}}>Recovery Center in North County</h4>
-                  <p style={{fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)', marginBottom: '1rem'}}>Challenge: Families calling 24/7 in crisis, limited staff to handle inquiries</p>
+                  <h4 style={{fontSize: '1.3rem', marginBottom: '0.5rem', color: '#fff'}}>Recovery Center in North County - 24/7 AI Phone System</h4>
+                  <p style={{fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)', marginBottom: '1rem'}}>Challenge: Families calling 24/7 in crisis, limited staff to handle inquiries after hours</p>
                   <p style={{fontSize: '1.05rem', lineHeight: '1.7'}}>
-                    Our AI assistant handles initial inquiries at any hour, provides information about programs, verifies insurance eligibility, and schedules assessments. The center now <strong>captures 100% of inquiries</strong> instead of missing after-hours calls. Staff time spent on repetitive questions dropped by 22 hours per week, allowing them to focus on patient care.
+                    Our AI voice assistant handles crisis calls at any hour with empathy and professionalism. It provides information about programs, verifies insurance eligibility, schedules assessments, and immediately notifies on-call staff for urgent situations. The center now <strong>captures 100% of inquiries</strong> instead of missing after-hours calls. Staff time spent on repetitive questions dropped by 22 hours per week, allowing them to focus on patient care. Bilingual English-Spanish support ensures no family is turned away.
                   </p>
                 </div>
               </div>
@@ -140,9 +160,16 @@ const AIConsulting: React.FC = () => {
 
               <div style={{display: 'grid', gap: '2rem'}}>
                 <div>
-                  <h4 style={{fontSize: '1.2rem', marginBottom: '0.5rem', color: '#fff'}}>How long does it take to implement an AI assistant?</h4>
+                  <h4 style={{fontSize: '1.2rem', marginBottom: '0.5rem', color: '#fff'}}>How does an AI voice assistant answer my business phone?</h4>
                   <p style={{fontSize: '1.05rem', lineHeight: '1.7'}}>
-                    Most AI assistants are live within 2-3 weeks. We start with a discovery call to understand your business, then spend 1-2 weeks training the AI on your services, FAQs, and booking process. After testing and refinement, we launch and provide training for your team.
+                    Our AI voice assistant integrates with your existing business phone number. When someone calls, the AI answers with a natural, human-like voice, understands what they're asking using advanced speech recognition, and responds intelligently. It can schedule appointments, answer questions, qualify leads, collect information, and transfer to your team when needed. Most callers are amazed at how natural the conversation feels—many don't realize they're speaking with AI until you tell them. Works with any phone system in San Diego.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 style={{fontSize: '1.2rem', marginBottom: '0.5rem', color: '#fff'}}>How long does it take to implement an AI voice assistant or chat assistant?</h4>
+                  <p style={{fontSize: '1.05rem', lineHeight: '1.7'}}>
+                    Most AI voice assistants and chat assistants are live within 2-3 weeks. We start with a discovery call to understand your San Diego business, then spend 1-2 weeks training the AI on your services, FAQs, call flows, and booking process. After rigorous testing and voice refinement, we launch and provide comprehensive training for your team. You'll be answering calls 24/7 before the month is over.
                   </p>
                 </div>
 
@@ -161,9 +188,9 @@ const AIConsulting: React.FC = () => {
                 </div>
 
                 <div>
-                  <h4 style={{fontSize: '1.2rem', marginBottom: '0.5rem', color: '#fff'}}>How much does an AI assistant or booking system cost?</h4>
+                  <h4 style={{fontSize: '1.2rem', marginBottom: '0.5rem', color: '#fff'}}>How much does an AI voice assistant, chat assistant, or booking system cost?</h4>
                   <p style={{fontSize: '1.05rem', lineHeight: '1.7'}}>
-                    Investment varies based on complexity, integrations, and features. Most San Diego businesses invest between $2,500-$7,500 for initial setup, with monthly maintenance starting at $150-$500. We offer flexible payment plans and can discuss ROI based on your current lead volume. <Link to="/contact" style={{color: '#fff', textDecoration: 'underline'}}>Schedule a free consultation</Link> for a custom quote.
+                    Investment varies based on complexity, integrations, and features. Most San Diego businesses invest between $2,500-$7,500 for initial setup of an AI voice assistant or comprehensive chat system, with monthly maintenance starting at $150-$500 depending on call/chat volume. Simpler chat assistants start lower. We offer flexible payment plans and can discuss ROI based on your current lead volume and missed calls. <Link to="/contact" style={{color: '#fff', textDecoration: 'underline'}}>Schedule a free consultation</Link> for a custom quote and we'll calculate how much revenue you're losing to missed calls.
                   </p>
                 </div>
 

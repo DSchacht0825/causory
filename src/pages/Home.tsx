@@ -6,9 +6,9 @@ const Home: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Assistant & Web Design San Diego | Causory - AI Automation & Websites</title>
-        <meta name="description" content="San Diego's leading AI assistant, AI booking system, and web design agency. We build custom websites and intelligent automation for businesses in La Jolla, Del Mar, Carlsbad, and throughout San Diego County." />
-        <meta name="keywords" content="AI assistant San Diego, AI booking system San Diego, web design San Diego, San Diego web developer, AI automation San Diego, custom websites San Diego" />
+        <title>AI Voice Assistant & Web Design San Diego | Causory - AI Phone Systems & Websites</title>
+        <meta name="description" content="San Diego's leading AI voice assistant, AI phone system, AI booking system, and web design agency. We build custom websites and intelligent AI voice automation for businesses in La Jolla, Del Mar, Carlsbad, and throughout San Diego County." />
+        <meta name="keywords" content="AI voice assistant San Diego, AI phone assistant San Diego, AI phone system San Diego, AI assistant San Diego, AI booking system San Diego, web design San Diego, San Diego web developer, AI automation San Diego, custom websites San Diego" />
         <link rel="canonical" href="https://www.causory.com" />
       </Helmet>
 
@@ -22,7 +22,7 @@ const Home: React.FC = () => {
             </span>
           </h1>
           <p className="hero-description animate-fade-in-up delay-200">
-            San Diego's premier web design and AI automation agency. We create stunning websites and intelligent AI assistants that transform how local businesses work and connect with their audience.
+            San Diego's premier web design and AI automation agency. We create stunning websites, AI voice assistants that answer your phones, and intelligent AI systems that transform how local businesses work and connect with their audience.
           </p>
           <div className="hero-buttons animate-fade-in-up delay-400">
             <Link to="/portfolio" className="btn-primary">
@@ -62,9 +62,9 @@ const Home: React.FC = () => {
             </div>
             <div className="service-card scroll-animate fade-in delay-4">
               <div className="service-icon">🤖</div>
-              <h3 className="service-title">AI Assistants & Booking Systems</h3>
-              <p className="service-description">24/7 AI assistants and automated booking systems for San Diego businesses. Increase bookings, save time, and never miss a lead</p>
-              <Link to="/ai-consulting" className="service-link">Explore AI Solutions →</Link>
+              <h3 className="service-title">AI Voice Assistants & Phone Systems</h3>
+              <p className="service-description">24/7 AI voice assistants that answer your phones, AI chat assistants, and automated booking systems for San Diego businesses. Never miss a call or lead again</p>
+              <Link to="/ai-consulting" className="service-link">Explore AI Voice Solutions →</Link>
             </div>
           </div>
         </div>
@@ -89,9 +89,9 @@ const Home: React.FC = () => {
 
             <div className="why-item scroll-animate roll-up delay-2">
               <div className="why-icon">🚀</div>
-              <h3>AI-Powered Solutions</h3>
+              <h3>AI-Powered Voice & Automation Solutions</h3>
               <p>
-                We integrate intelligent automation that saves you time and money. From <Link to="/ai-consulting" style={{color: '#fff', textDecoration: 'underline'}}>AI assistants</Link> that answer customer questions 24/7 to <Link to="/ai-consulting" style={{color: '#fff', textDecoration: 'underline'}}>automated booking systems</Link> that capture leads while you sleep, we implement technology that lets San Diego businesses work smarter. Our AI consulting helps you automate repetitive tasks with custom solutions tailored to your industry.
+                We integrate intelligent automation that saves you time and money. From <Link to="/ai-consulting" style={{color: '#fff', textDecoration: 'underline'}}>AI voice assistants</Link> that answer your business phone calls 24/7 with natural conversations to <Link to="/ai-consulting" style={{color: '#fff', textDecoration: 'underline'}}>AI chat assistants and automated booking systems</Link> that capture leads while you sleep, we implement cutting-edge technology that lets San Diego businesses work smarter. Our AI consulting helps you automate phone calls, chat, appointments, and repetitive tasks with custom solutions tailored to your industry. Never miss another call or lead.
               </p>
             </div>
 
@@ -148,7 +148,7 @@ const Home: React.FC = () => {
               <div className="process-content">
                 <h3>Development & Integration</h3>
                 <p>
-                  Once designs are approved, our San Diego developers build your site using modern, scalable technology. We implement advanced features like <Link to="/ai-consulting" style={{color: '#fff', textDecoration: 'underline'}}>AI assistants and booking systems</Link>, e-commerce functionality, and custom integrations with your existing tools. Every element is built mobile-first, rigorously tested across devices and browsers, and optimized for San Diego local search.
+                  Once designs are approved, our San Diego developers build your site using modern, scalable technology. We implement advanced features like <Link to="/ai-consulting" style={{color: '#fff', textDecoration: 'underline'}}>AI voice assistants, AI phone systems, chat assistants, and booking systems</Link>, e-commerce functionality, and custom integrations with your existing tools. Every element is built mobile-first, rigorously tested across devices and browsers, and optimized for San Diego local search and AI voice integration.
                 </p>
               </div>
             </div>
