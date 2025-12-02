@@ -175,29 +175,29 @@ const Home: React.FC = () => {
           </p>
 
           <div className="industries-grid">
-            <div className="industry-card scroll-animate zoom-rotate delay-1">
+            <Link to="/therapists" className="industry-card scroll-animate zoom-rotate delay-1">
               <div className="industry-icon">🧠</div>
               <h3>Therapists & Mental Health</h3>
               <p>
                 HIPAA-compliant websites with secure booking, teletherapy integration, and content that builds trust with potential clients seeking mental health support.
               </p>
-            </div>
+            </Link>
 
-            <div className="industry-card scroll-animate zoom-rotate delay-2">
+            <Link to="/recovery" className="industry-card scroll-animate zoom-rotate delay-2">
               <div className="industry-icon">🌟</div>
               <h3>Recovery Centers</h3>
               <p>
                 Compassionate, conversion-optimized websites for addiction treatment facilities with admissions tools and resources that guide families through difficult decisions.
               </p>
-            </div>
+            </Link>
 
-            <div className="industry-card scroll-animate zoom-rotate delay-3">
+            <Link to="/nonprofits" className="industry-card scroll-animate zoom-rotate delay-3">
               <div className="industry-icon">❤️</div>
               <h3>Nonprofits</h3>
               <p>
                 Affordable, impactful websites with donation platforms, volunteer management, and storytelling that inspires action and drives your mission forward.
               </p>
-            </div>
+            </Link>
 
             <div className="industry-card scroll-animate zoom-rotate delay-4">
               <div className="industry-icon">🏢</div>

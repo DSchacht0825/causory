@@ -8,6 +8,9 @@ import AIConsulting from './pages/AIConsulting';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Portfolio from './pages/Portfolio';
+import Therapists from './pages/Therapists';
+import Recovery from './pages/Recovery';
+import Nonprofits from './pages/Nonprofits';
 
 function App() {
   return (
@@ -26,6 +29,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/therapists" element={<Therapists />} />
+          <Route path="/recovery" element={<Recovery />} />
+          <Route path="/nonprofits" element={<Nonprofits />} />
         </Routes>
       </Layout>
     </Router>
