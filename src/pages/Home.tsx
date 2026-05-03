@@ -22,7 +22,7 @@ const Home: React.FC = () => {
             </span>
           </h1>
           <p className="hero-description animate-fade-in-up delay-200">
-            San Diego's premier web design and AI automation agency. We create stunning websites, AI voice assistants that answer your phones, and intelligent AI systems that transform how local businesses work and connect with their audience.
+            Get more customers while you sleep. We build websites that turn visitors into paying clients and AI phone systems that book appointments 24/7—so you never miss a lead.
           </p>
           <div className="hero-buttons animate-fade-in-up delay-400">
             <Link to="/portfolio" className="btn-primary">
@@ -44,27 +44,27 @@ const Home: React.FC = () => {
           <div className="services-grid">
             <div className="service-card scroll-animate slide-left delay-1">
               <div className="service-icon">🎨</div>
-              <h3 className="service-title">Web Design</h3>
-              <p className="service-description">Beautiful, modern designs that capture your brand's essence and convert visitors into customers</p>
+              <h3 className="service-title">Websites That Sell</h3>
+              <p className="service-description">Sites designed to convert visitors into customers—not just look pretty. More clicks, more calls, more sales.</p>
               <Link to="/services" className="service-link">Learn More →</Link>
             </div>
             <div className="service-card scroll-animate roll-up delay-2">
               <div className="service-icon">⚡</div>
-              <h3 className="service-title">Development</h3>
-              <p className="service-description">Fast, responsive websites built with cutting-edge technology that performs flawlessly on every device</p>
+              <h3 className="service-title">Fast-Loading Sites</h3>
+              <p className="service-description">Slow sites lose customers. We build lightning-fast pages that keep visitors engaged and ready to buy.</p>
               <Link to="/services" className="service-link">Learn More →</Link>
             </div>
             <div className="service-card scroll-animate slide-right delay-3">
               <div className="service-icon">📈</div>
-              <h3 className="service-title">SEO & Marketing</h3>
-              <p className="service-description">Optimize your online presence and reach your target audience with data-driven strategies</p>
+              <h3 className="service-title">Get Found on Google</h3>
+              <p className="service-description">Show up when customers search for what you offer. More visibility = more leads walking through your door.</p>
               <Link to="/services" className="service-link">Learn More →</Link>
             </div>
             <div className="service-card scroll-animate fade-in delay-4">
               <div className="service-icon">🤖</div>
-              <h3 className="service-title">AI Voice Assistants & Phone Systems</h3>
-              <p className="service-description">24/7 AI voice assistants that answer your phones, AI chat assistants, and automated booking systems for San Diego businesses. Never miss a call or lead again</p>
-              <Link to="/ai-consulting" className="service-link">Explore AI Voice Solutions →</Link>
+              <h3 className="service-title">AI That Answers Your Phone</h3>
+              <p className="service-description">Never miss a call again. Our AI books appointments and captures leads 24/7—even at 2am.</p>
+              <Link to="/ai-consulting" className="service-link">See How It Works →</Link>
             </div>
           </div>
         </div>
@@ -75,39 +75,39 @@ const Home: React.FC = () => {
         <div className="container">
           <h2 className="section-title scroll-animate">Why Choose Causory?</h2>
           <p className="section-intro scroll-animate delay-1">
-            We're not just another web design agency. We combine stunning visual design with cutting-edge AI technology to create websites that don't just look great—they work harder for your business.
+            Your website should be your best salesperson—working around the clock to bring in new business.
           </p>
 
           <div className="why-grid">
             <div className="why-item scroll-animate slide-left delay-1">
-              <div className="why-icon">💡</div>
-              <h3>Design That Converts</h3>
+              <div className="why-icon">💰</div>
+              <h3>More Sales, Not Just Clicks</h3>
               <p>
-                Every design decision is backed by psychology and user behavior research. We create intuitive interfaces that guide visitors seamlessly toward taking action—whether that's booking a consultation, making a purchase, or reaching out. Beautiful design meets strategic conversion optimization to turn your website into your most powerful sales tool.
+                A pretty website means nothing if it doesn't bring in customers. We design every page to guide visitors toward booking, buying, or calling you. Our clients see 150% more leads within 3 months.
               </p>
             </div>
 
             <div className="why-item scroll-animate roll-up delay-2">
-              <div className="why-icon">🚀</div>
-              <h3>AI-Powered Voice & Automation Solutions</h3>
+              <div className="why-icon">📱</div>
+              <h3>Works on Every Device</h3>
               <p>
-                We integrate intelligent automation that saves you time and money. From <Link to="/ai-consulting" style={{color: '#fff', textDecoration: 'underline'}}>AI voice assistants</Link> that answer your business phone calls 24/7 with natural conversations to <Link to="/ai-consulting" style={{color: '#fff', textDecoration: 'underline'}}>AI chat assistants and automated booking systems</Link> that capture leads while you sleep, we implement cutting-edge technology that lets San Diego businesses work smarter. Our AI consulting helps you automate phone calls, chat, appointments, and repetitive tasks with custom solutions tailored to your industry. Never miss another call or lead.
+                60% of your customers are on their phones. We build sites that look great and work perfectly whether someone's on a laptop, tablet, or smartphone—so you never lose a sale.
               </p>
             </div>
 
             <div className="why-item scroll-animate slide-right delay-3">
-              <div className="why-icon">🎯</div>
-              <h3>Results-Driven Approach</h3>
+              <div className="why-icon">🔍</div>
+              <h3>Customers Find You First</h3>
               <p>
-                We measure success by your success. Our clients see an average 150% increase in qualified leads within the first three months. We don't just build websites—we build growth engines. Every project includes analytics setup, performance tracking, and ongoing optimization recommendations to ensure your investment delivers real ROI.
+                We build your site to rank on Google from day one. When people search for what you offer, you show up—not your competitors. More visibility means more business.
               </p>
             </div>
 
             <div className="why-item scroll-animate fade-in delay-4">
-              <div className="why-icon">⚡</div>
-              <h3>Lightning-Fast Performance</h3>
+              <div className="why-icon">🤖</div>
+              <h3>Never Miss a Lead</h3>
               <p>
-                Speed matters. A one-second delay can reduce conversions by 7%. We build websites optimized for blazing-fast load times using modern frameworks like React and cutting-edge performance techniques. Your site will rank higher in Google, keep visitors engaged, and deliver a premium experience across all devices and connection speeds.
+                Add <Link to="/ai-consulting" style={{color: '#fff', textDecoration: 'underline'}}>AI phone answering</Link> to capture calls 24/7. Customers get instant responses and you get booked appointments—even while you sleep.
               </p>
             </div>
           </div>
@@ -317,10 +317,10 @@ const Home: React.FC = () => {
       {/* CTA Section */}
       <section className="cta">
         <div className="cta-content">
-          <h3 className="cta-title animate-fade-in-up">Ready to Transform Your Digital Presence?</h3>
-          <p className="cta-description animate-fade-in-up delay-200">Let's create something extraordinary together.</p>
+          <h3 className="cta-title animate-fade-in-up">Ready to Get More Customers?</h3>
+          <p className="cta-description animate-fade-in-up delay-200">Let's build a website that actually grows your business.</p>
           <Link to="/contact" className="cta-button animate-scale-in delay-400">
-            Start Your Project Today
+            Get a Free Consultation
           </Link>
         </div>
       </section>
