@@ -70,6 +70,73 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* What We Build Section */}
+      <section className="capabilities">
+        <div className="container">
+          <h2 className="section-title scroll-animate">What We Build</h2>
+          <p className="section-intro scroll-animate delay-1">
+            Beyond beautiful websites — we engineer full-stack digital tools that run your business.
+          </p>
+
+          <div className="capabilities-featured">
+            <div className="capability-featured-card pwa-card scroll-animate slide-left delay-2">
+              <div className="cap-badge pwa-badge">Progressive Web Apps</div>
+              <div className="cap-icon">📱</div>
+              <h3>App-Like Experiences, Zero Downloads</h3>
+              <p>We build PWAs that work offline, load instantly, and feel like native apps — no App Store required. Backed by SQL databases for real, persistent data that scales with your business.</p>
+              <ul className="cap-features">
+                <li><span className="cap-check">✓</span> Works offline on any device</li>
+                <li><span className="cap-check">✓</span> SQL database integration (PostgreSQL, MySQL)</li>
+                <li><span className="cap-check">✓</span> Push notifications & home screen install</li>
+                <li><span className="cap-check">✓</span> Secure user accounts & data sync</li>
+              </ul>
+              <div className="cap-tags">
+                <span>React</span><span>PostgreSQL</span><span>Service Workers</span><span>Node.js</span>
+              </div>
+            </div>
+
+            <div className="capability-featured-card dashboard-card scroll-animate slide-right delay-2">
+              <div className="cap-badge dashboard-badge">Web Dashboards</div>
+              <div className="cap-icon">📊</div>
+              <h3>Data That Tells Your Story</h3>
+              <p>Custom web-based dashboards that transform your raw data into clear, actionable insights. Real-time charts, KPI tracking, and filterable reports — all in your browser, accessible anywhere.</p>
+              <ul className="cap-features">
+                <li><span className="cap-check purple">✓</span> Real-time data visualization & charts</li>
+                <li><span className="cap-check purple">✓</span> Custom KPI & metrics tracking</li>
+                <li><span className="cap-check purple">✓</span> Role-based access & multi-user support</li>
+                <li><span className="cap-check purple">✓</span> CSV / PDF exports & automated reports</li>
+              </ul>
+              <div className="cap-tags">
+                <span>React</span><span>SQL</span><span>Chart.js</span><span>REST API</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="capabilities-sub-grid">
+            <div className="capability-sub-card scroll-animate zoom-rotate delay-1">
+              <div className="cap-sub-icon">🌐</div>
+              <h4>Custom Websites</h4>
+              <p>Conversion-focused sites built to rank on Google and turn visitors into customers.</p>
+            </div>
+            <div className="capability-sub-card scroll-animate zoom-rotate delay-2">
+              <div className="cap-sub-icon">🛒</div>
+              <h4>E-Commerce Stores</h4>
+              <p>High-converting online stores with seamless checkout and inventory management.</p>
+            </div>
+            <div className="capability-sub-card scroll-animate zoom-rotate delay-3">
+              <div className="cap-sub-icon">🤖</div>
+              <h4>AI Automation</h4>
+              <p>Smart phone systems, chatbots, and booking tools that run your business 24/7.</p>
+            </div>
+            <div className="capability-sub-card scroll-animate zoom-rotate delay-4">
+              <div className="cap-sub-icon">🔗</div>
+              <h4>API Integrations</h4>
+              <p>Connect your CRM, payment processors, scheduling tools, and more in one system.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Causory Section */}
       <section className="why-choose">
         <div className="container">
@@ -259,54 +326,98 @@ const Home: React.FC = () => {
         <div className="container">
           <h2 className="section-title scroll-animate">What Our Clients Say</h2>
           <p className="testimonials-intro scroll-animate delay-1">
-            Real results from businesses across the country who've transformed their digital presence.
+            Real reviews from real clients — verified on Google.
           </p>
 
           <div className="testimonials-grid">
             <div className="testimonial-card scroll-animate slide-left delay-1">
-              <div className="testimonial-photo">
-                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Yvonne Araujo - Owner of Teresita's Birria" />
+              <div className="google-review-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                </svg>
+                <span>Google Review</span>
               </div>
+              <div className="testimonial-avatar" style={{background: 'linear-gradient(135deg, #4285F4, #34A853)'}}>AS</div>
               <div className="testimonial-content">
                 <div className="testimonial-stars">⭐⭐⭐⭐⭐</div>
                 <blockquote>
-                  "Working with Causory was such a great experience. They were super helpful, friendly, and patient every step of the way. They really listened to my ideas and brought my thoughts to life on the site even better than I imagined. I'm so thankful for their creativity and professionalism—<strong>highly recommend Causory</strong> to anyone looking for a beautiful, well-designed website!"
+                  "Daniel exceeded expectations on our Soul Tide website. From kickoff to launch, he kept everything simple and stress-free, providing clear timelines, proactive updates, and thoughtful guidance. He translated our brand beautifully, optimized the site for speed and mobile, and handled all the technical pieces without any hassle. <strong>Incredibly communicative, informative, and easy to work with. Five stars without hesitation.</strong>"
                 </blockquote>
                 <div className="testimonial-author">
-                  <h4>Yvonne Araujo</h4>
-                  <p>Owner • Teresita's Birria</p>
+                  <h4>Ashley Sellers</h4>
+                  <p>Local Guide · Soul Tide Therapy</p>
                 </div>
               </div>
             </div>
 
             <div className="testimonial-card scroll-animate roll-up delay-2">
-              <div className="testimonial-photo">
-                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Scott Miner - Founder of Restoring San Diego" />
+              <div className="google-review-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                </svg>
+                <span>Google Review</span>
               </div>
+              <div className="testimonial-avatar" style={{background: 'linear-gradient(135deg, #EA4335, #FBBC05)'}}>SM</div>
               <div className="testimonial-content">
                 <div className="testimonial-stars">⭐⭐⭐⭐⭐</div>
                 <blockquote>
-                  "When Restoring San Diego was still finding its footing, Causory became our launchpad. Their web design completely transformed our online presence—our <strong>SEO traffic skyrocketed, our visibility exploded</strong>, and our message reached audiences we could never have reached before. The craftsmanship, ongoing maintenance, and attention to detail have been second to none. We'll always choose Causory—because they didn't just build a website, they built momentum for change."
+                  "When Restoring San Diego was still finding its footing, Causory became our launchpad. Their web design completely transformed our online presence — our <strong>SEO traffic skyrocketed, our visibility exploded</strong>, and our message reached audiences we could never have reached before. The craftsmanship, ongoing maintenance, and attention to detail have been second to none. We'll always choose Causory — because they didn't just build a website, <strong>they built momentum for change.</strong>"
                 </blockquote>
                 <div className="testimonial-author">
                   <h4>Scott Miner</h4>
-                  <p>Founder & CEO • Restoring San Diego</p>
+                  <p>Founder & CEO · Restoring San Diego</p>
                 </div>
               </div>
             </div>
 
             <div className="testimonial-card scroll-animate slide-right delay-3">
-              <div className="testimonial-photo">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="San Diego Business Owner" />
+              <div className="google-review-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                </svg>
+                <span>Google Review</span>
               </div>
+              <div className="testimonial-avatar" style={{background: 'linear-gradient(135deg, #34A853, #0ea5e9)'}}>CM</div>
               <div className="testimonial-content">
                 <div className="testimonial-stars">⭐⭐⭐⭐⭐</div>
                 <blockquote>
                   "Customer service is everything to me! Not only are they attentive to what details you ask but they also have a lot of knowledge and deliver results of your website with tons of care. It's customizable and if you have questions the response timing is quick! If I ever launch any other businesses I will <strong>100 percent use Causory every single time!</strong>"
                 </blockquote>
                 <div className="testimonial-author">
-                  <h4>Verified Client</h4>
-                  <p>Business Owner • San Diego, CA</p>
+                  <h4>Casandra Martinez</h4>
+                  <p>Owner · Casandra's Cleaning</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="testimonial-card scroll-animate fade-in delay-4">
+              <div className="google-review-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                </svg>
+                <span>Google Review</span>
+              </div>
+              <div className="testimonial-avatar" style={{background: 'linear-gradient(135deg, #f59e0b, #ec4899)'}}>YA</div>
+              <div className="testimonial-content">
+                <div className="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                <blockquote>
+                  "Working with Causory was such a great experience. They were super helpful, friendly, and patient every step of the way. They really listened to my ideas and brought my thoughts to life on the site even better than I imagined. I'm so thankful for their creativity and professionalism — <strong>highly recommend Causory</strong> to anyone looking for a beautiful, well-designed website!"
+                </blockquote>
+                <div className="testimonial-author">
+                  <h4>Yvonne</h4>
+                  <p>Owner · Teresita's Birria</p>
                 </div>
               </div>
             </div>
