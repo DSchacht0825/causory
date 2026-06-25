@@ -1,14 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
+const faqs = [
+  {
+    q: "What services does Causory offer?",
+    a: "Causory is a full-service digital agency offering custom website design, progressive web apps (PWAs) with SQL databases, web-based dashboards, AI phone systems, AI chatbots, e-commerce stores, SEO, and API integrations. We handle your entire digital presence under one roof."
+  },
+  {
+    q: "Can you build a web app with a database?",
+    a: "Yes. We build progressive web apps backed by real SQL databases (PostgreSQL, MySQL). These apps work offline, support user accounts, sync data in real time, and can be installed on any device — no App Store required. Great for businesses that need custom software without the cost of native mobile development."
+  },
+  {
+    q: "Do you build web dashboards and data visualization tools?",
+    a: "Yes. We build custom browser-based dashboards that display real-time KPIs, charts, and reports. Features include role-based access control, multi-user support, automated CSV/PDF exports, and REST API connections to your existing data sources."
+  },
+  {
+    q: "Do you build websites for therapists and mental health professionals?",
+    a: "Yes — it's one of our specialties. We build HIPAA-aware websites for therapists, psychologists, and mental health practices with secure online booking, teletherapy integration, and content that builds trust with potential clients."
+  },
+  {
+    q: "Do you offer AI phone systems for businesses?",
+    a: "Yes. Our AI phone systems answer calls 24/7, book appointments, handle FAQs, and qualify leads automatically — so you never miss a call, even outside business hours. It integrates directly with your calendar and CRM."
+  },
+  {
+    q: "Do you work with clients outside San Diego?",
+    a: "Absolutely. While we're based in San Diego, CA, we work with businesses across the United States. Our entire process is remote-friendly — discovery, design, development, and launch all happen online."
+  },
+  {
+    q: "How long does it take to build a website?",
+    a: "A standard marketing website typically takes 2–4 weeks from kickoff to launch. Progressive web apps, dashboards, and e-commerce stores vary based on complexity. We always provide a clear timeline during your free consultation."
+  },
+  {
+    q: "Do you build websites for nonprofits?",
+    a: "Yes. We have extensive experience with nonprofits and community organizations. We offer affordable builds with donation platforms, volunteer management, and storytelling designed to help you grow your mission and reach."
+  }
+];
+
 const Home: React.FC = () => {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant & Web Design San Diego | Causory - AI Phone Systems & Websites</title>
-        <meta name="description" content="San Diego's leading AI voice assistant, AI phone system, AI booking system, and web design agency. We build custom websites and intelligent AI voice automation for businesses in La Jolla, Del Mar, Carlsbad, and throughout San Diego County." />
-        <meta name="keywords" content="AI voice assistant San Diego, AI phone assistant San Diego, AI phone system San Diego, AI assistant San Diego, AI booking system San Diego, web design San Diego, San Diego web developer, AI automation San Diego, custom websites San Diego" />
+        <title>Causory | Web Design, Web Apps, AI Systems & Dashboards | San Diego</title>
+        <meta name="description" content="Causory is your complete digital partner — custom websites, progressive web apps with SQL databases, web dashboards, AI phone systems, and e-commerce. 5-star rated. Serving businesses nationwide from San Diego, CA." />
+        <meta name="keywords" content="web design San Diego, progressive web app developer, SQL database web app, web dashboard development, AI phone system, custom web application, e-commerce development, therapist website design, nonprofit web design, recovery center website, web app developer San Diego" />
         <link rel="canonical" href="https://www.causory.com" />
       </Helmet>
 
@@ -16,14 +53,21 @@ const Home: React.FC = () => {
       <section className="hero">
         <div className="hero-content show">
           <h1 className="hero-title animate-fade-in-up">
-            Web Design &
+            Your Complete
             <span className="hero-accent">
-              AI Solutions
+              Digital Partner
             </span>
           </h1>
           <p className="hero-description animate-fade-in-up delay-200">
-            Get more customers while you sleep. We build websites that turn visitors into paying clients and AI phone systems that book appointments 24/7—so you never miss a lead.
+            We design, build, and automate your entire digital presence — from stunning websites and custom web apps to AI phone systems, real-time dashboards, and e-commerce stores. One team, end-to-end.
           </p>
+          <div className="hero-pills animate-fade-in-up delay-300">
+            <span className="hero-pill">🌐 Web Design</span>
+            <span className="hero-pill">📱 Web Apps</span>
+            <span className="hero-pill">🤖 AI Systems</span>
+            <span className="hero-pill">📊 Dashboards</span>
+            <span className="hero-pill">🛒 E-Commerce</span>
+          </div>
           <div className="hero-buttons animate-fade-in-up delay-400">
             <Link to="/portfolio" className="btn-primary">
               View Our Work
@@ -421,6 +465,38 @@ const Home: React.FC = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="faq-section">
+        <div className="container">
+          <h2 className="section-title scroll-animate">Frequently Asked Questions</h2>
+          <p className="section-intro scroll-animate delay-1">
+            Everything you need to know about working with Causory.
+          </p>
+          <div className="faq-list">
+            {faqs.map((item, i) => (
+              <div
+                key={i}
+                className={`faq-item scroll-animate delay-${(i % 4) + 1} ${openFaq === i ? 'faq-open' : ''}`}
+              >
+                <button
+                  className="faq-question"
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  aria-expanded={openFaq === i}
+                >
+                  <span>{item.q}</span>
+                  <span className="faq-icon">{openFaq === i ? '−' : '+'}</span>
+                </button>
+                {openFaq === i && (
+                  <div className="faq-answer">
+                    <p>{item.a}</p>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>

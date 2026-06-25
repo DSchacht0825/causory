@@ -558,6 +558,32 @@ html {
   margin-right: auto;
 }
 
+.hero-pills {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.hero-pill {
+  padding: 0.35rem 0.9rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.hero-pill:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: white;
+}
+
 .hero-buttons {
   display: flex;
   gap: 1rem;
@@ -695,7 +721,7 @@ html {
 }
 
 /* Sections */
-.services, .portfolio, .testimonials, .about, .therapist-design, .recovery-design, .nonprofit-design, .ai-consulting, .contact, .cta, .why-choose, .process, .industries, .capabilities {
+.services, .portfolio, .testimonials, .about, .therapist-design, .recovery-design, .nonprofit-design, .ai-consulting, .contact, .cta, .why-choose, .process, .industries, .capabilities, .faq-section {
   padding: 5rem 1rem;
   overflow-x: hidden;
   width: 100%;
@@ -2037,6 +2063,92 @@ html {
   box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
 }
 
+/* FAQ Section */
+.faq-section {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  position: relative;
+}
+
+.faq-list {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.faq-item {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.faq-item.faq-open {
+  border-color: rgba(96, 165, 250, 0.3);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.4rem 1.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  text-align: left;
+  color: white;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
+  transition: background 0.2s ease;
+}
+
+.faq-question:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #60a5fa;
+  flex-shrink: 0;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  padding: 0 1.75rem 1.4rem;
+  animation: faqOpen 0.25s ease;
+}
+
+.faq-answer p {
+  color: #cbd5e1;
+  line-height: 1.75;
+  font-size: 0.975rem;
+  margin: 0;
+}
+
+@keyframes faqOpen {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .faq-question {
+    padding: 1.2rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .faq-answer {
+    padding: 0 1.25rem 1.2rem;
+  }
+}
+
 /* CTA Section */
 .cta {
   text-align: center;
@@ -2259,6 +2371,16 @@ html {
   .hero-description {
     font-size: 1rem;
     padding: 0 1rem;
+  }
+
+  .hero-pills {
+    gap: 0.4rem;
+    padding: 0 0.5rem;
+  }
+
+  .hero-pill {
+    font-size: 0.78rem;
+    padding: 0.3rem 0.7rem;
   }
 
   .hero-buttons {
