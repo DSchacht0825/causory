@@ -51,12 +51,13 @@ const Chatbot: React.FC = () => {
       // Send initial greeting
       setTimeout(() => {
         addBotMessage(
-          "Hi! I'm Causory AI, your digital assistant. I can help you with:\n\n" +
-          "🎨 Web design & development services\n" +
-          "🤖 AI consulting & automation\n" +
-          "📊 Portfolio examples\n" +
-          "📅 Schedule a consultation\n\n" +
-          "What brings you here today?"
+          "Hi! I'm Causory AI 👋 I can help you with:\n\n" +
+          "🌐 Custom websites & web design\n" +
+          "📱 Progressive web apps + SQL databases\n" +
+          "📊 Web dashboards & analytics\n" +
+          "🤖 AI phone systems & automation\n" +
+          "🛒 E-commerce stores\n\n" +
+          "What kind of project are you thinking about?"
         );
       }, 500);
     }
@@ -90,18 +91,31 @@ const Chatbot: React.FC = () => {
       // Prepare context for Claude
       const context = {
         leadInfo,
-        conversationHistory: messages.slice(-5), // Last 5 messages for context
+        conversationHistory: messages.slice(-6),
         companyInfo: {
           name: "Causory",
-          services: ["Web Design", "Web Development", "AI Consulting", "SEO & Marketing"],
-          specialization: "Therapy practices, recovery centers, and nonprofits in North County San Diego",
+          tagline: "Your Complete Digital Partner",
+          services: [
+            "Custom Websites",
+            "Progressive Web Apps (PWAs) with SQL Databases",
+            "Web-Based Dashboards & Analytics",
+            "AI Phone Systems & Voice Assistants",
+            "AI Chatbots & Automation",
+            "E-Commerce Stores",
+            "SEO & Google Visibility",
+            "API Integrations"
+          ],
+          specializations: ["Therapists & Mental Health", "Recovery Centers", "Nonprofits", "Restaurants", "Professional Services", "Startups"],
           calendlyLink: "https://calendly.com/schacht-dan/30min",
           phone: "619-300-8337",
+          email: "schacht.dan@gmail.com",
           portfolio: [
-            "Food Truck Catering Site",
-            "12 Step Journey Website (Recovery & Wellness)",
-            "Therapy & Wellness Center",
-            "Youth Empowerment Initiative"
+            "Teresita's Birria — Food truck catering site",
+            "Soul Tide Therapy — Mental health practice",
+            "Restoring San Diego — Nonprofit, SEO skyrocketed",
+            "Casandra's Cleaning — Service business site",
+            "12 Step Journey — Recovery & wellness platform",
+            "Youth Empowerment Initiative — Community outreach"
           ]
         }
       };
