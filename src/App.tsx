@@ -11,6 +11,7 @@ import Portfolio from './pages/Portfolio';
 import Therapists from './pages/Therapists';
 import Recovery from './pages/Recovery';
 import Nonprofits from './pages/Nonprofits';
+import Privacy from './pages/Privacy';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/therapists" element={<Therapists />} />
           <Route path="/recovery" element={<Recovery />} />
           <Route path="/nonprofits" element={<Nonprofits />} />
+          <Route path="/privacy" element={<Privacy />} />
         </Routes>
       </Layout>
     </Router>
