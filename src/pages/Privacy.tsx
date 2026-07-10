@@ -63,7 +63,7 @@ const Privacy: React.FC = () => {
                 <h4>Your Choices</h4>
                 <p>
                   You can request access to, correction of, or deletion of your personal information at any time by contacting us at{' '}
-                  <a href="mailto:hello@causory.com">hello@causory.com</a>.
+                  <a href="mailto:info@causory.com">info@causory.com</a>.
                 </p>
               </div>
 
@@ -71,7 +71,7 @@ const Privacy: React.FC = () => {
                 <h4>Contact Us</h4>
                 <p>
                   Questions about this policy? Reach us at{' '}
-                  <a href="mailto:hello@causory.com">hello@causory.com</a> or{' '}
+                  <a href="mailto:info@causory.com">info@causory.com</a> or{' '}
                   <a href="tel:6193008337">(619) 300-8337</a>.
                 </p>
               </div>
