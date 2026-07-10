@@ -6,7 +6,7 @@ const Contact: React.FC = () => {
     <>
       <Helmet>
         <title>Contact Causory | Get Your Free Web Design & AI Consultation</title>
-        <meta name="description" content="Ready to transform your business with custom web design or AI automation? Contact Causory for a free consultation. Call (619) 300-8337 or email hello@causory.com. Response within 24 hours." />
+        <meta name="description" content="Ready to transform your business with custom web design or AI automation? Contact Causory for a free consultation. Call (619) 300-8337 or email info@causory.com. Response within 24 hours." />
         <meta name="keywords" content="contact web designer, free consultation, web design quote, AI consulting inquiry, website project inquiry, get started" />
         <link rel="canonical" href="https://causory.com/contact" />
       </Helmet>
@@ -34,7 +34,7 @@ const Contact: React.FC = () => {
                   <div className="contact-icon">✉️</div>
                   <div>
                     <h5>Email</h5>
-                    <a href="mailto:hello@causory.com">hello@causory.com</a>
+                    <a href="mailto:info@causory.com">info@causory.com</a>
                   </div>
                 </div>
                 <div className="contact-item">
