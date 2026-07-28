@@ -6,9 +6,9 @@ const Recovery: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Website Design for Addiction Recovery Centers | Causory</title>
-        <meta name="description" content="Compassionate, conversion-optimized websites for addiction treatment facilities and recovery centers. Crisis-ready features, admissions tools, and hope-centered design that guides families toward healing and recovery." />
-        <meta name="keywords" content="recovery center website design, addiction treatment website, rehab facility web design, recovery center marketing, substance abuse treatment website, dual diagnosis web design, admissions website design" />
+        <title>Website Design & AI Voice Assistant for Recovery Centers San Diego | Causory</title>
+        <meta name="description" content="Websites and 24/7 AI voice assistants for San Diego addiction treatment facilities and recovery centers. Answer crisis calls any hour with AI phone system, admissions tools, and hope-centered design." />
+        <meta name="keywords" content="recovery center website design San Diego, AI voice assistant recovery center, AI phone system addiction treatment, rehab facility web design, recovery center marketing, substance abuse treatment website, AI crisis hotline, dual diagnosis web design, admissions website design" />
         <link rel="canonical" href="https://causory.com/recovery" />
       </Helmet>
 
@@ -16,9 +16,9 @@ const Recovery: React.FC = () => {
         <div className="recovery-overlay"></div>
         <div className="container">
           <div className="niche-content">
-            <h2 className="section-title scroll-animate">Websites for Recovery & Wellness Centers</h2>
+            <h2 className="section-title scroll-animate">Websites & AI Voice Assistants for San Diego Recovery Centers</h2>
             <p className="niche-intro scroll-animate delay-1">
-              Your website can be the bridge between struggle and hope. We create digital spaces that inspire healing and guide people toward recovery.
+              Your website can be the bridge between struggle and hope. We create digital spaces that inspire healing and guide people toward recovery. Never miss a crisis call with our <Link to="/ai-consulting" style={{color: '#fff', textDecoration: 'underline'}}>24/7 AI voice assistant</Link> that answers calls and connects families to help any hour.
             </p>
 
             <div className="niche-grid">
@@ -36,6 +36,8 @@ const Recovery: React.FC = () => {
               <div className="niche-features scroll-animate slide-right delay-3">
                 <h4>Specialized Features:</h4>
                 <ul>
+                  <li>✓ <Link to="/ai-consulting" style={{color: '#fff', textDecoration: 'underline'}}>AI voice assistant</Link> for 24/7 crisis call handling</li>
+                  <li>✓ <Link to="/ai-consulting" style={{color: '#fff', textDecoration: 'underline'}}>AI phone system</Link> that verifies insurance and schedules assessments</li>
                   <li>✓ 24/7 crisis hotline integration and prominent placement</li>
                   <li>✓ Addiction assessment tools and questionnaires</li>
                   <li>✓ Insurance verification and admissions processes</li>

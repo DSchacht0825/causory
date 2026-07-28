@@ -6,9 +6,9 @@ const Therapists: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Web Design for Therapists & Mental Health Professionals | Causory</title>
-        <meta name="description" content="HIPAA-compliant websites designed specifically for therapists, counselors, and mental health professionals. Secure booking, teletherapy integration, and compassionate design that builds trust with clients seeking mental health support." />
-        <meta name="keywords" content="therapist web design, mental health website design, therapy practice website, HIPAA compliant websites, counselor website design, psychologist web design, teletherapy website, therapy booking system" />
+        <title>Web Design & AI Voice Assistant for Therapists San Diego | Causory</title>
+        <meta name="description" content="HIPAA-compliant websites and AI voice assistants for San Diego therapists and mental health professionals. Never miss a call during sessions with 24/7 AI phone system, secure booking, and compassionate design." />
+        <meta name="keywords" content="therapist web design San Diego, AI voice assistant therapist, AI phone system therapy practice, mental health website design, therapy practice website, HIPAA compliant websites, counselor website design, psychologist web design, AI booking system therapist, teletherapy website" />
         <link rel="canonical" href="https://causory.com/therapists" />
       </Helmet>
 
@@ -16,9 +16,9 @@ const Therapists: React.FC = () => {
         <div className="therapist-overlay"></div>
         <div className="container">
           <div className="niche-content">
-            <h2 className="section-title scroll-animate">Websites for Mental Health Professionals</h2>
+            <h2 className="section-title scroll-animate">Websites & AI Voice Assistants for San Diego Therapists</h2>
             <p className="niche-intro scroll-animate delay-1">
-              Building trust online starts with a website that reflects the safety and professionalism your clients need.
+              Building trust online starts with a website that reflects the safety and professionalism your clients need. Never miss a call during sessions with our <Link to="/ai-consulting" style={{color: '#fff', textDecoration: 'underline'}}>HIPAA-compliant AI voice assistant</Link> that answers calls 24/7.
             </p>
 
             <div className="niche-grid">
@@ -36,6 +36,8 @@ const Therapists: React.FC = () => {
               <div className="niche-features scroll-animate slide-right delay-3">
                 <h4>What's Included:</h4>
                 <ul>
+                  <li>✓ <Link to="/ai-consulting" style={{color: '#fff', textDecoration: 'underline'}}>AI voice assistant</Link> that answers calls during sessions 24/7</li>
+                  <li>✓ <Link to="/ai-consulting" style={{color: '#fff', textDecoration: 'underline'}}>AI booking system</Link> for automatic appointment scheduling</li>
                   <li>✓ HIPAA-compliant contact forms and intake processes</li>
                   <li>✓ Secure client portal integration options</li>
                   <li>✓ Appointment booking with encrypted scheduling</li>

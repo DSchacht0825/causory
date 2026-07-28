@@ -6,9 +6,9 @@ const Nonprofits: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Affordable Web Design for Nonprofit Organizations | Causory</title>
-        <meta name="description" content="Mission-driven websites for nonprofits with secure donation platforms, volunteer management, and impact storytelling that inspires action. Professional, affordable web design that amplifies your cause and drives meaningful change." />
-        <meta name="keywords" content="nonprofit web design, charity website design, nonprofit website development, donation website design, volunteer management website, nonprofit marketing, mission-driven web design, affordable nonprofit websites" />
+        <title>Web Design & AI Assistant for San Diego Nonprofits | Causory</title>
+        <meta name="description" content="Affordable websites and AI chat assistants for San Diego nonprofits. Mission-driven design with secure donation platforms, volunteer management, AI automation, and impact storytelling that drives change." />
+        <meta name="keywords" content="nonprofit web design San Diego, AI assistant nonprofit, AI chatbot charity, charity website design, nonprofit website development, donation website design, volunteer management website, nonprofit marketing, mission-driven web design, affordable nonprofit websites San Diego" />
         <link rel="canonical" href="https://causory.com/nonprofits" />
       </Helmet>
 
@@ -16,9 +16,9 @@ const Nonprofits: React.FC = () => {
         <div className="nonprofit-overlay"></div>
         <div className="container">
           <div className="niche-content">
-            <h2 className="section-title scroll-animate">Websites for Nonprofit Organizations</h2>
+            <h2 className="section-title scroll-animate">Websites & AI Assistants for San Diego Nonprofits</h2>
             <p className="niche-intro scroll-animate delay-1">
-              Your mission deserves a digital presence that inspires action and drives meaningful change in your community.
+              Your mission deserves a digital presence that inspires action and drives meaningful change in your community. Engage supporters 24/7 with our <Link to="/ai-consulting" style={{color: '#fff', textDecoration: 'underline'}}>AI chat assistants</Link> that answer questions and help volunteers connect with your cause.
             </p>
 
             <div className="niche-grid">
@@ -36,6 +36,8 @@ const Nonprofits: React.FC = () => {
               <div className="niche-features scroll-animate slide-right delay-3">
                 <h4>Purpose-Built Features:</h4>
                 <ul>
+                  <li>✓ <Link to="/ai-consulting" style={{color: '#fff', textDecoration: 'underline'}}>AI chat assistant</Link> to engage supporters and answer questions 24/7</li>
+                  <li>✓ <Link to="/ai-consulting" style={{color: '#fff', textDecoration: 'underline'}}>AI automation</Link> for volunteer coordination and donor communication</li>
                   <li>✓ Secure donation processing and recurring giving options</li>
                   <li>✓ Volunteer registration and opportunity management</li>
                   <li>✓ Event calendar and fundraiser promotion</li>
