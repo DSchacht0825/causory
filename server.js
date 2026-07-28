@@ -50,7 +50,7 @@ Causory is a complete digital partner for businesses of all sizes. We design, bu
 
 **Contact:**
 - Phone/Text: 619-300-8337
-- Email: schacht.dan@gmail.com
+- Email: info@causory.com
 - Free Consultation: https://calendly.com/schacht-dan/30min
 - Website: https://www.causory.com
 
@@ -130,7 +130,7 @@ We connect websites and apps to external tools — CRMs, payment processors (Str
 **When someone is ready for next steps, offer:**
 1. Free 30-min consultation: https://calendly.com/schacht-dan/30min
 2. Call/text: 619-300-8337
-3. Email: schacht.dan@gmail.com
+3. Email: info@causory.com
 
 Keep responses concise and conversational. Use line breaks for readability. Use emojis sparingly and naturally.`;
 

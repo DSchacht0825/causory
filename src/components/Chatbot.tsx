@@ -108,7 +108,7 @@ const Chatbot: React.FC = () => {
           specializations: ["Therapists & Mental Health", "Recovery Centers", "Nonprofits", "Restaurants", "Professional Services", "Startups"],
           calendlyLink: "https://calendly.com/schacht-dan/30min",
           phone: "619-300-8337",
-          email: "schacht.dan@gmail.com",
+          email: "info@causory.com",
           portfolio: [
             "Teresita's Birria — Food truck catering site",
             "Soul Tide Therapy — Mental health practice",
