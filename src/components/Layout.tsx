@@ -205,6 +205,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <div className="footer-links">
             <a href="https://www.linkedin.com/company/causory-web-design/">LinkedIn</a>
             <a href="https://www.instagram.com/causory/">Instagram</a>
+            <Link to="/privacy">Privacy Policy</Link>
           </div>
         </div>
 
