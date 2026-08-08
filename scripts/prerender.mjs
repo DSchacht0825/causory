@@ -79,10 +79,13 @@ async function main() {
     server.close();
   }
 
+  // Flat <route>.html files + Vercel's cleanUrls (vercel.json) map /about ->
+  // /about.html. Directory-style /about/index.html was tried first but
+  // Vercel's static resolver didn't pick it up for extensionless paths.
   for (const [route, html] of Object.entries(snapshots)) {
     const outPath = route === '/'
       ? path.join(buildDir, 'index.html')
-      : path.join(buildDir, route, 'index.html');
+      : path.join(buildDir, `${route.slice(1)}.html`);
     await fs.mkdir(path.dirname(outPath), { recursive: true });
     await fs.writeFile(outPath, html);
   }
