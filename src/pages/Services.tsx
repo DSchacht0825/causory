@@ -9,7 +9,7 @@ const Services: React.FC = () => {
         <title>Our Services | Conversion-Focused Websites, Speed, SEO & AI | Causory</title>
         <meta name="description" content="See how Causory builds websites that convert, load fast, rank on Google, and never miss a call — with AI phone systems and chat assistants built in." />
         <meta name="keywords" content="web design services, conversion optimized websites, fast loading websites, SEO web design, AI phone system, AI chat assistant, San Diego web design agency" />
-        <link rel="canonical" href="https://www.causory.com/services" />
+        <link rel="canonical" href="https://causory.com/services" />
       </Helmet>
 
       <section id="services-page" className="about">

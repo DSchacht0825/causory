@@ -7,7 +7,7 @@ const Privacy: React.FC = () => {
       <Helmet>
         <title>Privacy Policy | Causory</title>
         <meta name="description" content="Causory's privacy policy: what information we collect, how we use it, and how to contact us with questions." />
-        <link rel="canonical" href="https://www.causory.com/privacy" />
+        <link rel="canonical" href="https://causory.com/privacy" />
       </Helmet>
 
       <section id="privacy" className="about">

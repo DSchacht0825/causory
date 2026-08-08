@@ -46,7 +46,7 @@ const Home: React.FC = () => {
         <title>Causory | Web Design, Web Apps, AI Systems & Dashboards | San Diego</title>
         <meta name="description" content="Causory is your complete digital partner — custom websites, progressive web apps with SQL databases, web dashboards, AI phone systems, and e-commerce. 5-star rated. Serving businesses nationwide from San Diego, CA." />
         <meta name="keywords" content="web design San Diego, progressive web app developer, SQL database web app, web dashboard development, AI phone system, custom web application, e-commerce development, therapist website design, nonprofit web design, recovery center website, web app developer San Diego" />
-        <link rel="canonical" href="https://www.causory.com" />
+        <link rel="canonical" href="https://causory.com/" />
       </Helmet>
 
       {/* Hero Section */}
