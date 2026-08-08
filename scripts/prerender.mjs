@@ -6,7 +6,14 @@ import http from 'http';
 import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import puppeteer from 'puppeteer';
+
+// Vercel's build container is missing shared libs the stock Puppeteer
+// Chromium needs (libnspr4.so etc). @sparticuz/chromium ships a build
+// packaged for exactly that constrained environment; use it there, and
+// plain puppeteer's bundled browser for local builds.
+const onVercel = Boolean(process.env.VERCEL);
+const puppeteer = onVercel ? (await import('puppeteer-core')).default : (await import('puppeteer')).default;
+const chromium = onVercel ? (await import('@sparticuz/chromium')).default : null;
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const buildDir = path.join(__dirname, '..', 'build');
@@ -58,10 +65,18 @@ function startServer() {
 
 async function main() {
   const server = await startServer();
-  const browser = await puppeteer.launch({
-    headless: true,
-    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
-  });
+  const browser = await puppeteer.launch(
+    onVercel
+      ? {
+          headless: true,
+          args: chromium.args,
+          executablePath: await chromium.executablePath(),
+        }
+      : {
+          headless: true,
+          args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
+        }
+  );
   const snapshots = {};
 
   try {
