@@ -28,7 +28,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild": "node scripts/prerender.mjs",
+    "postbuild": "npx puppeteer browsers install chrome && node scripts/prerender.mjs",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
