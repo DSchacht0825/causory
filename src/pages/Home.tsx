@@ -90,19 +90,19 @@ const Home: React.FC = () => {
               <div className="service-icon">🎨</div>
               <h3 className="service-title">Websites That Sell</h3>
               <p className="service-description">Sites designed to convert visitors into customers—not just look pretty. More clicks, more calls, more sales.</p>
-              <Link to="/services" className="service-link">Learn More →</Link>
+              <Link to="/services#conversion" className="service-link">Learn More →</Link>
             </div>
             <div className="service-card scroll-animate roll-up delay-2">
               <div className="service-icon">⚡</div>
               <h3 className="service-title">Fast-Loading Sites</h3>
               <p className="service-description">Slow sites lose customers. We build lightning-fast pages that keep visitors engaged and ready to buy.</p>
-              <Link to="/services" className="service-link">Learn More →</Link>
+              <Link to="/services#speed" className="service-link">Learn More →</Link>
             </div>
             <div className="service-card scroll-animate slide-right delay-3">
               <div className="service-icon">📈</div>
               <h3 className="service-title">Get Found on Google</h3>
               <p className="service-description">Show up when customers search for what you offer. More visibility = more leads walking through your door.</p>
-              <Link to="/services" className="service-link">Learn More →</Link>
+              <Link to="/services#seo" className="service-link">Learn More →</Link>
             </div>
             <div className="service-card scroll-animate fade-in delay-4">
               <div className="service-icon">🤖</div>

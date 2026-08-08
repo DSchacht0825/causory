@@ -8,6 +8,7 @@ import AIConsulting from './pages/AIConsulting';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Portfolio from './pages/Portfolio';
+import Services from './pages/Services';
 import Therapists from './pages/Therapists';
 import Recovery from './pages/Recovery';
 import Nonprofits from './pages/Nonprofits';
@@ -30,6 +31,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/therapists" element={<Therapists />} />
           <Route path="/recovery" element={<Recovery />} />
           <Route path="/nonprofits" element={<Nonprofits />} />
