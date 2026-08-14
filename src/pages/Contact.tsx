@@ -49,7 +49,7 @@ const Contact: React.FC = () => {
               <div className="contact-form-container">
                 <form 
                   className="contact-form"
-                  action="https://formspree.io/f/mpwjlqkd"
+                  action="https://formspree.io/f/mkjwzkgn"
                   method="POST"
                 >
                   <div className="form-row">

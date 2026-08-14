@@ -52,10 +52,9 @@ const Chatbot: React.FC = () => {
       setTimeout(() => {
         addBotMessage(
           "Hi! I'm Causory AI 👋 I can help you with:\n\n" +
-          "🌐 Custom websites & web design\n" +
-          "📱 Progressive web apps + SQL databases\n" +
-          "📊 Web dashboards & analytics\n" +
-          "🤖 AI phone systems & automation\n" +
+          "🌐 Website as a Service — design, hosting & SEO for one flat fee\n" +
+          "📈 Ongoing SEO & content\n" +
+          "🤖 AI chatbot add-on\n" +
           "🛒 E-commerce stores\n\n" +
           "What kind of project are you thinking about?"
         );
@@ -94,18 +93,16 @@ const Chatbot: React.FC = () => {
         conversationHistory: messages.slice(-6),
         companyInfo: {
           name: "Causory",
-          tagline: "Your Complete Digital Partner",
+          tagline: "Website as a Service",
           services: [
+            "Website as a Service (design, hosting, security & SEO — flat monthly fee)",
             "Custom Websites",
-            "Progressive Web Apps (PWAs) with SQL Databases",
-            "Web-Based Dashboards & Analytics",
-            "AI Phone Systems & Voice Assistants",
-            "AI Chatbots & Automation",
             "E-Commerce Stores",
-            "SEO & Google Visibility",
+            "Ongoing SEO & Google Visibility",
+            "AI Chatbot Add-On",
             "API Integrations"
           ],
-          specializations: ["Therapists & Mental Health", "Recovery Centers", "Nonprofits", "Restaurants", "Professional Services", "Startups"],
+          specializations: ["General Contractors & Remodeling", "HVAC, Plumbing & Electrical", "Cleaning, Landscaping & Maintenance", "Roofing & Restoration", "Home Service Businesses"],
           calendlyLink: "https://calendly.com/schacht-dan/30min",
           phone: "619-300-8337",
           email: "info@causory.com",

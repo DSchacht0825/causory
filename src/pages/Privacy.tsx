@@ -20,7 +20,7 @@ const Privacy: React.FC = () => {
               </p>
 
               <p>
-                Causory ("Causory," "we," "us," or "our") provides web design, web application, and AI consulting services. This policy explains what information we collect through causory.com, how we use it, and the choices you have.
+                Causory ("Causory," "we," "us," or "our") provides Website as a Service (WaaS) — website design, hosting, and SEO — along with an optional AI chatbot add-on. This policy explains what information we collect through causory.com, how we use it, and the choices you have.
               </p>
 
               <div className="about-section" style={{ marginTop: '2rem' }}>

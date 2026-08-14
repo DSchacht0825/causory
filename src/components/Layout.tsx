@@ -60,7 +60,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               "@type": "LocalBusiness",
               "name": "Causory",
               "image": "https://causory.com/causory.png",
-              "description": "San Diego's leading AI assistant, AI booking system, and web design agency. Custom websites and intelligent automation for businesses throughout San Diego County.",
+              "description": "Website as a Service (WaaS) — custom-designed websites with hosting, security, and ongoing SEO for one flat monthly fee. Based in San Diego, serving businesses nationwide.",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "San Diego",
@@ -103,12 +103,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 }
               ],
               "serviceType": [
-                "AI Assistant Development",
-                "AI Booking System",
+                "Website as a Service",
+                "Home Service Business Websites",
+                "Managed Website Subscription",
                 "Web Design",
-                "Web Development",
-                "AI Automation",
-                "Chatbot Development"
+                "SEO Services",
+                "AI Chatbot Add-On"
               ],
               "sameAs": [
                 "https://www.linkedin.com/company/causory-web-design/",
@@ -166,15 +166,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <div className="nav-content">
             <div className="nav-links-left desktop-only">
               <Link to="/">Home</Link>
+              <Link to="/home-services">Trades</Link>
+              <Link to="/pricing">Pricing</Link>
               <Link to="/portfolio">Portfolio</Link>
             </div>
             <div className="nav-logo">
               <Link to="/">
-                <img src="/causory.png" alt="Causory Web Design & AI Solutions" style={{height: '60px'}} />
+                <img src="/causory.png" alt="Causory Website as a Service" style={{height: '60px'}} />
               </Link>
             </div>
             <div className="nav-links-right desktop-only">
-              <Link to="/ai-consulting">AI Consulting</Link>
               <Link to="/about">About</Link>
               <Link to="/contact">Contact</Link>
             </div>
@@ -191,8 +192,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <div className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`}>
             <div className="mobile-menu-links">
               <Link to="/" onClick={closeMobileMenu}>Home</Link>
+              <Link to="/home-services" onClick={closeMobileMenu}>Trades</Link>
+              <Link to="/pricing" onClick={closeMobileMenu}>Pricing</Link>
               <Link to="/portfolio" onClick={closeMobileMenu}>Portfolio</Link>
-              <Link to="/ai-consulting" onClick={closeMobileMenu}>AI Consulting</Link>
               <Link to="/about" onClick={closeMobileMenu}>About</Link>
               <Link to="/contact" onClick={closeMobileMenu}>Contact</Link>
             </div>
@@ -206,7 +208,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <div className="footer-content">
           <div className="footer-brand">
             <h4>Causory</h4>
-            <p>Premium Web Design & Development</p>
+            <p>Website as a Service</p>
           </div>
 
           <div className="footer-links">

@@ -4,36 +4,32 @@ import { Helmet } from 'react-helmet';
 
 const faqs = [
   {
-    q: "What services does Causory offer?",
-    a: "Causory is a full-service digital agency offering custom website design, progressive web apps (PWAs) with SQL databases, web-based dashboards, AI phone systems, AI chatbots, e-commerce stores, SEO, and API integrations. We handle your entire digital presence under one roof."
+    q: "What is Website as a Service (WaaS)?",
+    a: "It's a custom-designed website launched with a one-time setup fee, then kept hosted, secure, and supported through a flat $200/mo Website Care Plan — instead of a big upfront project with no ongoing support, or a bare-bones monthly builder that skips the custom design work."
   },
   {
-    q: "Can you build a web app with a database?",
-    a: "Yes. We build progressive web apps backed by real SQL databases (PostgreSQL, MySQL). These apps work offline, support user accounts, sync data in real time, and can be installed on any device — no App Store required. Great for businesses that need custom software without the cost of native mobile development."
+    q: "What's included in the $200/month Website Care Plan?",
+    a: "Secure hosting, SSL certificate, website updates, security monitoring, daily backups, content changes, technical support, performance optimization, and uptime monitoring — the same Website Care Plan on every tier."
   },
   {
-    q: "Do you build web dashboards and data visualization tools?",
-    a: "Yes. We build custom browser-based dashboards that display real-time KPIs, charts, and reports. Features include role-based access control, multi-user support, automated CSV/PDF exports, and REST API connections to your existing data sources."
+    q: "How does the setup fee plus monthly plan work?",
+    a: "The setup fee is a one-time cost due at kickoff that covers your custom design and build. The $200/mo Website Care Plan starts at launch and keeps your site hosted, secure, and updated. See the full breakdown on our pricing page."
   },
   {
-    q: "Do you build websites for therapists and mental health professionals?",
-    a: "Yes — it's one of our specialties. We build HIPAA-aware websites for therapists, psychologists, and mental health practices with secure online booking, teletherapy integration, and content that builds trust with potential clients."
+    q: "Do you build websites for home service businesses?",
+    a: "Yes — it's our focus. We build sites for general contractors, HVAC/plumbing/electrical companies, cleaning and landscaping businesses, and roofing/restoration companies, with service-area pages and quote request forms built in."
   },
   {
-    q: "Do you offer AI phone systems for businesses?",
-    a: "Yes. Our AI phone systems answer calls 24/7, book appointments, handle FAQs, and qualify leads automatically — so you never miss a call, even outside business hours. It integrates directly with your calendar and CRM."
+    q: "Do you offer an AI chatbot for my website?",
+    a: "Yes — it's included at no extra cost on our Authority plan. It's trained on your business to answer FAQs and capture leads 24/7. See how it works on our pricing page."
   },
   {
     q: "Do you work with clients outside San Diego?",
     a: "Absolutely. While we're based in San Diego, CA, we work with businesses across the United States. Our entire process is remote-friendly — discovery, design, development, and launch all happen online."
   },
   {
-    q: "How long does it take to build a website?",
-    a: "A standard marketing website typically takes 2–4 weeks from kickoff to launch. Progressive web apps, dashboards, and e-commerce stores vary based on complexity. We always provide a clear timeline during your free consultation."
-  },
-  {
-    q: "Do you build websites for nonprofits?",
-    a: "Yes. We have extensive experience with nonprofits and community organizations. We offer affordable builds with donation platforms, volunteer management, and storytelling designed to help you grow your mission and reach."
+    q: "How long does it take to launch?",
+    a: "Most sites launch in 2–4 weeks from kickoff, depending on the plan and how quickly we get content and feedback from you. After launch, your site stays live and actively maintained through the Website Care Plan."
   }
 ];
 
@@ -43,9 +39,9 @@ const Home: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Causory | Web Design, Web Apps, AI Systems & Dashboards | San Diego</title>
-        <meta name="description" content="Causory is your complete digital partner — custom websites, progressive web apps with SQL databases, web dashboards, AI phone systems, and e-commerce. 5-star rated. Serving businesses nationwide from San Diego, CA." />
-        <meta name="keywords" content="web design San Diego, progressive web app developer, SQL database web app, web dashboard development, AI phone system, custom web application, e-commerce development, therapist website design, nonprofit web design, recovery center website, web app developer San Diego" />
+        <title>Causory | Website as a Service for Home Service Businesses | San Diego</title>
+        <meta name="description" content="Causory is Website as a Service for home service businesses: a custom-designed website with a setup fee, then a flat $200/mo Website Care Plan for hosting, security, and support. Serving businesses nationwide from San Diego, CA." />
+        <meta name="keywords" content="website as a service, home service business website, contractor website design, HVAC website design, plumber website design, cleaning company website, roofing website design, managed website subscription San Diego, website care plan" />
         <link rel="canonical" href="https://causory.com/" />
       </Helmet>
 
@@ -53,24 +49,22 @@ const Home: React.FC = () => {
       <section className="hero">
         <div className="hero-content show">
           <h1 className="hero-title animate-fade-in-up">
-            Your Complete
+            Website as a
             <span className="hero-accent">
-              Digital Partner
+              Service
             </span>
           </h1>
           <p className="hero-description animate-fade-in-up delay-200">
-            We design, build, and automate your entire digital presence — from stunning websites and custom web apps to AI phone systems, real-time dashboards, and e-commerce stores. One team, end-to-end.
+            A custom-designed website for a one-time setup fee, then a flat $200/mo Website Care Plan for hosting, security, and support — built for home service businesses.
           </p>
           <div className="hero-pills animate-fade-in-up delay-300">
-            <span className="hero-pill">🌐 Web Design</span>
-            <span className="hero-pill">📱 Web Apps</span>
-            <span className="hero-pill">🤖 AI Systems</span>
-            <span className="hero-pill">📊 Dashboards</span>
-            <span className="hero-pill">🛒 E-Commerce</span>
+            <span className="hero-pill">Custom Design</span>
+            <span className="hero-pill">Hosting &amp; Security</span>
+            <span className="hero-pill">SEO Built In</span>
           </div>
           <div className="hero-buttons animate-fade-in-up delay-400">
-            <Link to="/portfolio" className="btn-primary">
-              View Our Work
+            <Link to="/pricing" className="btn-primary">
+              See Pricing
             </Link>
             <Link to="/contact" className="btn-secondary">
               Start a Project
@@ -105,53 +99,66 @@ const Home: React.FC = () => {
               <Link to="/services#seo" className="service-link">Learn More →</Link>
             </div>
             <div className="service-card scroll-animate fade-in delay-4">
-              <div className="service-icon">🤖</div>
-              <h3 className="service-title">AI That Answers Your Phone</h3>
-              <p className="service-description">Never miss a call again. Our AI books appointments and captures leads 24/7—even at 2am.</p>
-              <Link to="/ai-consulting" className="service-link">See How It Works →</Link>
+              <div className="service-icon">💳</div>
+              <h3 className="service-title">Setup Fee + $200/mo Care Plan</h3>
+              <p className="service-description">One setup fee to launch, then design, hosting, security, and support — all included in one flat monthly plan.</p>
+              <Link to="/pricing" className="service-link">See Pricing →</Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* What We Build Section */}
+      {/* Pricing Teaser Section */}
+      <section className="cta">
+        <div className="cta-content">
+          <h3 className="cta-title animate-fade-in-up">Website as a Service, From $700 + $200/mo</h3>
+          <p className="cta-description animate-fade-in-up delay-200">
+            A setup fee to launch, then a flat $200/mo Website Care Plan for hosting, security, and support. Add the AI chatbot on Authority.
+          </p>
+          <Link to="/pricing" className="cta-button animate-scale-in delay-400">
+            See Plans &amp; Pricing
+          </Link>
+        </div>
+      </section>
+
+      {/* What's Included Section */}
       <section className="capabilities">
         <div className="container">
-          <h2 className="section-title scroll-animate">What We Build</h2>
+          <h2 className="section-title scroll-animate">What's Included</h2>
           <p className="section-intro scroll-animate delay-1">
-            Beyond beautiful websites — we engineer full-stack digital tools that run your business.
+            Not a one-time build — a website that's actively managed through your Website Care Plan.
           </p>
 
           <div className="capabilities-featured">
             <div className="capability-featured-card pwa-card scroll-animate slide-left delay-2">
-              <div className="cap-badge pwa-badge">Progressive Web Apps</div>
-              <div className="cap-icon">📱</div>
-              <h3>App-Like Experiences, Zero Downloads</h3>
-              <p>We build PWAs that work offline, load instantly, and feel like native apps — no App Store required. Backed by SQL databases for real, persistent data that scales with your business.</p>
+              <div className="cap-badge pwa-badge">Website Care Plan</div>
+              <div className="cap-icon">🌐</div>
+              <h3>One Site, Fully Managed</h3>
+              <p>A custom-designed website with hosting, SSL, and daily backups handled for you. Mobile-first and fast-loading, kept current with ongoing updates and security monitoring through your Website Care Plan.</p>
               <ul className="cap-features">
-                <li><span className="cap-check">✓</span> Works offline on any device</li>
-                <li><span className="cap-check">✓</span> SQL database integration (PostgreSQL, MySQL)</li>
-                <li><span className="cap-check">✓</span> Push notifications & home screen install</li>
-                <li><span className="cap-check">✓</span> Secure user accounts & data sync</li>
+                <li><span className="cap-check">✓</span> Custom design, not a template</li>
+                <li><span className="cap-check">✓</span> Hosting, SSL &amp; daily backups included</li>
+                <li><span className="cap-check">✓</span> Content changes handled for you</li>
+                <li><span className="cap-check">✓</span> Mobile-first, fast-loading pages</li>
               </ul>
               <div className="cap-tags">
-                <span>React</span><span>PostgreSQL</span><span>Service Workers</span><span>Node.js</span>
+                <span>Setup Fee + Monthly</span><span>$200/mo Care Plan</span><span>Every Tier</span>
               </div>
             </div>
 
             <div className="capability-featured-card dashboard-card scroll-animate slide-right delay-2">
-              <div className="cap-badge dashboard-badge">Web Dashboards</div>
-              <div className="cap-icon">📊</div>
-              <h3>Data That Tells Your Story</h3>
-              <p>Custom web-based dashboards that transform your raw data into clear, actionable insights. Real-time charts, KPI tracking, and filterable reports — all in your browser, accessible anywhere.</p>
+              <div className="cap-badge dashboard-badge">SEO Built In</div>
+              <div className="cap-icon">📈</div>
+              <h3>Built to Get Found on Google</h3>
+              <p>Every site launches with an on-page SEO foundation. Growth and Authority plans add Google Business Profile integration and advanced SEO optimization, so visibility keeps improving instead of fading after launch.</p>
               <ul className="cap-features">
-                <li><span className="cap-check purple">✓</span> Real-time data visualization & charts</li>
-                <li><span className="cap-check purple">✓</span> Custom KPI & metrics tracking</li>
-                <li><span className="cap-check purple">✓</span> Role-based access & multi-user support</li>
-                <li><span className="cap-check purple">✓</span> CSV / PDF exports & automated reports</li>
+                <li><span className="cap-check purple">✓</span> On-page SEO foundation from day one</li>
+                <li><span className="cap-check purple">✓</span> Google Business Profile integration (Growth+)</li>
+                <li><span className="cap-check purple">✓</span> Advanced SEO optimization (Authority)</li>
+                <li><span className="cap-check purple">✓</span> Performance optimization</li>
               </ul>
               <div className="cap-tags">
-                <span>React</span><span>SQL</span><span>Chart.js</span><span>REST API</span>
+                <span>Local SEO</span><span>On-Page SEO</span><span>Performance</span>
               </div>
             </div>
           </div>
@@ -163,19 +170,19 @@ const Home: React.FC = () => {
               <p>Conversion-focused sites built to rank on Google and turn visitors into customers.</p>
             </div>
             <div className="capability-sub-card scroll-animate zoom-rotate delay-2">
-              <div className="cap-sub-icon">🛒</div>
-              <h4>E-Commerce Stores</h4>
-              <p>High-converting online stores with seamless checkout and inventory management.</p>
+              <div className="cap-sub-icon">📋</div>
+              <h4>Quote &amp; Request Forms</h4>
+              <p>Online quote/request forms connected to your inbox, built for how home service leads actually convert.</p>
             </div>
-            <div className="capability-sub-card scroll-animate zoom-rotate delay-3">
+            <Link to="/pricing#chatbot" className="capability-sub-card scroll-animate zoom-rotate delay-3">
               <div className="cap-sub-icon">🤖</div>
-              <h4>AI Automation</h4>
-              <p>Smart phone systems, chatbots, and booking tools that run your business 24/7.</p>
-            </div>
+              <h4>AI Chatbot</h4>
+              <p>An AI chat assistant, trained on your business, that captures leads while you're offline. Included on Authority.</p>
+            </Link>
             <div className="capability-sub-card scroll-animate zoom-rotate delay-4">
-              <div className="cap-sub-icon">🔗</div>
-              <h4>API Integrations</h4>
-              <p>Connect your CRM, payment processors, scheduling tools, and more in one system.</p>
+              <div className="cap-sub-icon">📸</div>
+              <h4>Branding Photography</h4>
+              <p>Professional headshots and business branding photography to build instant trust. Included on Authority.</p>
             </div>
           </div>
         </div>
@@ -194,7 +201,7 @@ const Home: React.FC = () => {
               <div className="why-icon">💰</div>
               <h3>More Sales, Not Just Clicks</h3>
               <p>
-                A pretty website means nothing if it doesn't bring in customers. We design every page to guide visitors toward booking, buying, or calling you. Our clients see 150% more leads within 3 months.
+                A pretty website means nothing if it doesn't bring in customers. We design every page to guide visitors toward requesting a quote, booking, or calling you.
               </p>
             </div>
 
@@ -202,7 +209,7 @@ const Home: React.FC = () => {
               <div className="why-icon">📱</div>
               <h3>Works on Every Device</h3>
               <p>
-                60% of your customers are on their phones. We build sites that look great and work perfectly whether someone's on a laptop, tablet, or smartphone—so you never lose a sale.
+                Most of your customers are on their phones searching for a fix right now. We build sites that look great and work perfectly on any device—so you never lose a lead.
               </p>
             </div>
 
@@ -218,7 +225,7 @@ const Home: React.FC = () => {
               <div className="why-icon">🤖</div>
               <h3>Never Miss a Lead</h3>
               <p>
-                Add <Link to="/ai-consulting" style={{color: '#fff', textDecoration: 'underline'}}>AI phone answering</Link> to capture calls 24/7. Customers get instant responses and you get booked appointments—even while you sleep.
+                The <Link to="/pricing#chatbot" style={{color: '#fff', textDecoration: 'underline'}}>AI chatbot</Link>, included on Authority, captures visitors 24/7. They get instant answers and you get qualified leads—even while you sleep.
               </p>
             </div>
           </div>
@@ -259,7 +266,7 @@ const Home: React.FC = () => {
               <div className="process-content">
                 <h3>Development & Integration</h3>
                 <p>
-                  Once designs are approved, our San Diego developers build your site using modern, scalable technology. We implement advanced features like <Link to="/ai-consulting" style={{color: '#fff', textDecoration: 'underline'}}>AI voice assistants, AI phone systems, chat assistants, and booking systems</Link>, e-commerce functionality, and custom integrations with your existing tools. Every element is built mobile-first, rigorously tested across devices and browsers, and optimized for San Diego local search and AI voice integration.
+                  Once designs are approved, our San Diego developers build your site using modern, scalable technology. We wire up quote/request forms, service-area pages, and custom integrations with your existing tools, plus the <Link to="/pricing#chatbot" style={{color: '#fff', textDecoration: 'underline'}}>AI chatbot</Link> if you're on the Authority plan. Every element is built mobile-first, rigorously tested across devices and browsers, and optimized for local search.
                 </p>
               </div>
             </div>
@@ -269,7 +276,7 @@ const Home: React.FC = () => {
               <div className="process-content">
                 <h3>Launch & Growth</h3>
                 <p>
-                  Launch day is just the beginning. We provide comprehensive training, detailed analytics setup, and performance monitoring. You'll receive ongoing support and optimization recommendations to continuously improve results. We track key metrics and provide insights to help you maximize your website's impact and ROI over time.
+                  Launch day is just the beginning. We provide comprehensive training, detailed analytics setup, and performance monitoring. Your Website Care Plan keeps the site hosted, secure, and updated, with ongoing support to help you maximize its impact over time.
                 </p>
               </div>
             </div>
@@ -280,59 +287,43 @@ const Home: React.FC = () => {
       {/* Industries We Serve Section */}
       <section className="industries">
         <div className="container">
-          <h2 className="section-title scroll-animate">Industries We Serve</h2>
+          <h2 className="section-title scroll-animate">Home Service Trades We Serve</h2>
           <p className="section-intro scroll-animate delay-1">
-            We specialize in creating tailored digital solutions for specific industries, understanding the unique challenges and opportunities each sector faces.
+            We focus on home service businesses — understanding the way your customers search and the pages that turn that search into a booked job.
           </p>
 
           <div className="industries-grid">
-            <Link to="/therapists" className="industry-card scroll-animate zoom-rotate delay-1">
-              <div className="industry-icon">🧠</div>
-              <h3>Therapists & Mental Health</h3>
+            <Link to="/home-services" className="industry-card scroll-animate zoom-rotate delay-1">
+              <div className="industry-icon">🔨</div>
+              <h3>General Contractors &amp; Remodeling</h3>
               <p>
-                HIPAA-compliant websites with secure booking, teletherapy integration, and content that builds trust with potential clients seeking mental health support.
+                Project galleries, service pages by trade, and a quote request built for jobs that take real research before someone commits.
               </p>
             </Link>
 
-            <Link to="/recovery" className="industry-card scroll-animate zoom-rotate delay-2">
-              <div className="industry-icon">🌟</div>
-              <h3>Recovery Centers</h3>
+            <Link to="/home-services" className="industry-card scroll-animate zoom-rotate delay-2">
+              <div className="industry-icon">🌡️</div>
+              <h3>HVAC, Plumbing &amp; Electrical</h3>
               <p>
-                Compassionate, conversion-optimized websites for addiction treatment facilities with admissions tools and resources that guide families through difficult decisions.
+                Emergency-ready design with click-to-call up front, service-area pages, and maintenance-plan pages that build repeat business.
               </p>
             </Link>
 
-            <Link to="/nonprofits" className="industry-card scroll-animate zoom-rotate delay-3">
-              <div className="industry-icon">❤️</div>
-              <h3>Nonprofits</h3>
+            <Link to="/home-services" className="industry-card scroll-animate zoom-rotate delay-3">
+              <div className="industry-icon">🧹</div>
+              <h3>Cleaning, Landscaping &amp; Maintenance</h3>
               <p>
-                Affordable, impactful websites with donation platforms, volunteer management, and storytelling that inspires action and drives your mission forward.
+                Recurring-service pages, easy online booking requests, and review-forward design that turns one job into a standing contract.
               </p>
             </Link>
 
-            <div className="industry-card scroll-animate zoom-rotate delay-4">
-              <div className="industry-icon">🏢</div>
-              <h3>Professional Services</h3>
+            <Link to="/home-services" className="industry-card scroll-animate zoom-rotate delay-4">
+              <div className="industry-icon">🏠</div>
+              <h3>Roofing &amp; Restoration</h3>
               <p>
-                Sophisticated websites for consultants, lawyers, accountants, and coaches that establish authority and generate high-quality leads.
+                Insurance-claim-friendly content, storm/emergency response messaging, and before/after galleries that show the quality of the work.
               </p>
-            </div>
-
-            <div className="industry-card scroll-animate zoom-rotate delay-5">
-              <div className="industry-icon">🛍️</div>
-              <h3>E-Commerce</h3>
-              <p>
-                High-converting online stores with seamless checkout experiences, inventory management, and AI-powered product recommendations.
-              </p>
-            </div>
-
-            <div className="industry-card scroll-animate zoom-rotate delay-6">
-              <div className="industry-icon">🚀</div>
-              <h3>Startups & Tech</h3>
-              <p>
-                Modern, scalable web applications with custom functionality, API integrations, and automation that helps you move fast and scale efficiently.
-              </p>
-            </div>
+            </Link>
           </div>
         </div>
       </section>

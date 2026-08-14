@@ -6,9 +6,9 @@ const About: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>About Causory | Professional Web Design & AI Consulting Team</title>
-        <meta name="description" content="Learn about Causory's mission to transform businesses through intelligent web design and AI automation. We create stunning websites and implement AI solutions that amplify human potential across the United States." />
-        <meta name="keywords" content="about causory, web design team, AI consulting company, digital transformation experts, business automation specialists, web development agency" />
+        <title>About Causory | Website as a Service Team</title>
+        <meta name="description" content="Learn about Causory's mission: Website as a Service for home service businesses — a custom-designed website with a setup fee, then a flat $200/mo Website Care Plan, so your site never goes stale after launch." />
+        <meta name="keywords" content="about causory, website as a service company, home service business web design, web design team, managed website subscription, web development agency" />
         <link rel="canonical" href="https://causory.com/about" />
       </Helmet>
 
@@ -19,58 +19,57 @@ const About: React.FC = () => {
             <h2 className="section-title scroll-animate">About Causory</h2>
             <div className="about-text">
               <p className="about-intro">
-                At Causory, we blend stunning web design with intelligent AI solutions to transform how businesses work and connect.
+                At Causory, we believe a website shouldn't start going stale the day it launches — so we built Website as a Service.
               </p>
 
               <p>
-                In today's digital landscape, success requires more than a beautiful website—it demands <strong>intelligent systems</strong> that work alongside your team. We're passionate about two things: creating websites that captivate audiences and implementing AI solutions that amplify human potential.
+                Most web design is a one-time transaction: you pay a large upfront fee, get a site, and it slowly falls behind as plugins age, content stops updating, and SEO stalls. We think that model is broken. <strong>Website as a Service</strong> starts with a setup fee that covers your custom design and launch, then bundles hosting, security, and support into a flat $200/mo Website Care Plan — so your site is actively maintained, not abandoned at launch.
               </p>
 
               <p>
-                Our mission is simple yet powerful: help businesses harness the full potential of modern technology. Whether it's building a website that converts visitors into customers or deploying AI automation that saves hours of manual work, we believe technology should <strong>empower people</strong>, not replace them. Every solution we create is designed to enhance your team's capabilities while maintaining the human touch that makes your business unique.
+                Our mission is simple: give home service businesses a website that keeps working for them. A setup fee that's far below a traditional agency project, and no guessing what a "quick update" will cost — just a predictable monthly investment in a site that gets better over time.
               </p>
 
               <div className="about-grid">
                 <div className="about-section">
-                  <h4>🤖 AI Consulting & Automation</h4>
+                  <h4>🌐 Website as a Service</h4>
                   <ul>
-                    <li><strong>Intelligent Workflow Automation</strong> – Replace repetitive tasks with smart AI systems that learn and adapt</li>
-                    <li><strong>Custom AI Integration</strong> – Seamlessly integrate ChatGPT, Claude, and other AI tools into your existing processes</li>
-                    <li><strong>Team Training & Enablement</strong> – Hands-on coaching to help your team use AI confidently and effectively</li>
-                    <li><strong>AI Strategy & Roadmapping</strong> – Identify high-impact opportunities for AI in your business</li>
-                    <li><strong>Content & Marketing Automation</strong> – AI-powered systems for content creation, social media, and campaigns</li>
+                    <li><strong>Custom Website Design</strong> – Beautiful, conversion-focused sites that capture your brand's essence</li>
+                    <li><strong>Hosting, Security &amp; Backups</strong> – Fast, reliable hosting with SSL and daily backups included</li>
+                    <li><strong>SEO Built In</strong> – On-page foundation plus Google Business Profile and advanced SEO on higher tiers</li>
+                    <li><strong>Website Care Plan</strong> – Content changes and technical support handled for you, month after month</li>
+                    <li><strong>Home Service Focus</strong> – Service-area pages, quote forms, and trust signals built for trades</li>
                   </ul>
                 </div>
 
                 <div className="about-section">
-                  <h4>🎨 Web Design & Development</h4>
+                  <h4>🤖 AI Chatbot</h4>
                   <ul>
-                    <li><strong>Custom Website Design</strong> – Beautiful, modern sites that capture your brand's essence</li>
-                    <li><strong>Responsive Development</strong> – Flawless experiences across desktop, tablet, and mobile</li>
-                    <li><strong>SEO & Performance</strong> – Lightning-fast, optimized sites that rank well and convert visitors</li>
-                    <li><strong>Brand Strategy</strong> – Visual identity that resonates with your audience</li>
-                    <li><strong>E-commerce Solutions</strong> – Online stores that drive sales and delight customers</li>
+                    <li><strong>24/7 Availability</strong> – Answers visitor questions any time your business is closed</li>
+                    <li><strong>Trained On Your Business</strong> – Configured on your actual services, pricing, and FAQs</li>
+                    <li><strong>Lead Capture</strong> – Collects contact info and hands off warm leads to your team</li>
+                    <li><strong>Included on Authority</strong> – At no extra cost on our Authority plan</li>
                   </ul>
                 </div>
               </div>
 
               <div className="about-section" style={{marginTop: '3rem'}}>
-                <h4>⚡ Our Process: Human-Centered Technology</h4>
+                <h4>⚡ Our Process: Built Once, Maintained Forever</h4>
                 <p>
-                  Every project starts with deep discovery—understanding your unique challenges, goals, and vision. For web projects, we craft designs that tell your story. For AI consulting, we map your workflows to find automation opportunities that save time without sacrificing quality.
+                  Every project starts with deep discovery — understanding your business, your customers, and what actually needs to be on the site. We design and launch in 2-4 weeks, then the subscription kicks in: monthly updates, security patches, SEO content, and reporting, so the site keeps improving long after launch.
                 </p>
                 <p style={{marginTop: '1rem'}}>
-                  We believe the best solutions combine human creativity with machine efficiency. Our AI implementations don't replace your team—they <strong>amplify their capabilities</strong>, freeing them to focus on strategic, creative work that truly requires human insight. Similarly, our websites aren't just pretty—they're strategic tools designed to convert visitors and support your business goals.
+                  Our websites aren't just pretty — they're strategic tools designed to convert visitors and support your business goals, backed by a team that's still actively working on your site next month, and the month after that.
                 </p>
               </div>
 
               <div className="about-why">
                 <h4>🚀 Why Causory?</h4>
                 <p>
-                  We're not just designers or developers—we're <strong>strategic partners</strong> in your growth. Whether you need a website that converts or AI systems that streamline operations, we bring both technical expertise and business acumen. We understand that every business is unique, which is why we customize every solution to fit your specific needs, budget, and timeline.
+                  We're not just designers — we're a <strong>long-term partner</strong> in your website's growth. We bring both technical expertise and business acumen, and we customize every plan to fit your specific needs, budget, and timeline.
                 </p>
                 <p style={{marginTop: '1rem'}}>
-                  Our clients choose us because we speak their language, deliver measurable results, and stay committed long after launch. From small businesses to growing enterprises, we help organizations work smarter, reach more people, and achieve their goals through intelligent technology and beautiful design.
+                  Our clients choose us because we speak their language, deliver measurable results, and stay committed long after launch. From small businesses to growing enterprises, we help organizations reach more people and achieve their goals through a website that never stops being maintained.
                 </p>
               </div>
 

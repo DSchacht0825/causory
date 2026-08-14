@@ -4,37 +4,33 @@ import { Helmet } from 'react-helmet';
 import './App.css';
 import Layout from './components/Layout';
 import Home from './pages/Home';
-import AIConsulting from './pages/AIConsulting';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Portfolio from './pages/Portfolio';
 import Services from './pages/Services';
-import Therapists from './pages/Therapists';
-import Recovery from './pages/Recovery';
-import Nonprofits from './pages/Nonprofits';
+import Pricing from './pages/Pricing';
+import HomeServices from './pages/HomeServices';
 import Privacy from './pages/Privacy';
 
 function App() {
   return (
     <Router>
       <Helmet>
-        <title>Causory | Professional Web Design & AI Automation Services</title>
-        <meta name="description" content="Transform your business with custom web design, intelligent AI automation, and cutting-edge digital solutions. We build stunning websites and implement AI-powered systems that drive growth for businesses across the United States." />
-        <meta name="keywords" content="web design, AI consulting, website development, AI automation, custom websites, AI integration, business automation, chatbot development, web development, AI solutions, digital transformation" />
+        <title>Causory | Website as a Service for Home Service Businesses</title>
+        <meta name="description" content="Causory is Website as a Service for home service businesses — contractors, HVAC, cleaning, roofing, and more. A setup fee to launch, then a flat monthly Website Care Plan for hosting, security, and support." />
+        <meta name="keywords" content="website as a service, home service business website, contractor website design, HVAC website design, cleaning company website, roofing website design, managed website subscription, small business website design and hosting" />
         <link rel="canonical" href="https://causory.com/" />
       </Helmet>
 
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/ai-consulting" element={<AIConsulting />} />
+          <Route path="/pricing" element={<Pricing />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/therapists" element={<Therapists />} />
-          <Route path="/recovery" element={<Recovery />} />
-          <Route path="/nonprofits" element={<Nonprofits />} />
+          <Route path="/home-services" element={<HomeServices />} />
           <Route path="/privacy" element={<Privacy />} />
         </Routes>
       </Layout>

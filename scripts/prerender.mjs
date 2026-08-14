@@ -21,14 +21,12 @@ const PORT = 5657;
 
 const ROUTES = [
   '/',
-  '/ai-consulting',
+  '/pricing',
+  '/home-services',
   '/about',
   '/contact',
   '/portfolio',
   '/services',
-  '/therapists',
-  '/recovery',
-  '/nonprofits',
   '/privacy',
 ];
 
