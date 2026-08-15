@@ -9,7 +9,10 @@
     <!-- Primary Meta Tags -->
     <title>Causory | Website as a Service for Home Service Businesses</title>
     <meta name="title" content="Causory | Website as a Service for Home Service Businesses" />
-    <meta name="description" content="Causory is Website as a Service for home service businesses — contractors, HVAC, cleaning, roofing, and more. A setup fee to launch, then a flat monthly Website Care Plan for hosting, security, and support." />
+    <!-- No static meta description here: every route (via App.tsx's default
+         Helmet or its own page-level Helmet) renders exactly one at runtime
+         and in the prerendered snapshot. A static tag here would duplicate it,
+         since React Helmet only manages tags it renders itself. -->
     <meta name="keywords" content="website as a service, home service business website, contractor website design, HVAC website design, cleaning company website, roofing website design, managed website subscription, small business website design and hosting" />
     <meta name="author" content="Causory" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
