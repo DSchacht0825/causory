@@ -119,7 +119,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 "ratingValue": "5.0",
                 "bestRating": "5",
                 "worstRating": "1",
-                "ratingCount": "2"
+                "ratingCount": "10"
               },
               "review": [
                 {
