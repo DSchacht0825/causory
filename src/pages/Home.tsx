@@ -43,6 +43,17 @@ const Home: React.FC = () => {
         <meta name="description" content="Causory is Website as a Service for home service businesses: a custom-designed website with a setup fee, then a flat $200/mo Website Care Plan for hosting, security, and support. Serving businesses nationwide from San Diego, CA." />
         <meta name="keywords" content="website as a service, home service business website, contractor website design, HVAC website design, plumber website design, cleaning company website, roofing website design, managed website subscription San Diego, website care plan" />
         <link rel="canonical" href="https://causory.com/" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((f) => ({
+              '@type': 'Question',
+              name: f.q,
+              acceptedAnswer: { '@type': 'Answer', text: f.a },
+            })),
+          })}
+        </script>
       </Helmet>
 
       {/* Hero Section */}
@@ -334,10 +345,10 @@ const Home: React.FC = () => {
           <h2 className="section-title scroll-animate">Recent Projects</h2>
           <div className="portfolio-grid">
             {[
-              { id: 1, image: "image-1.jpg", title: "Food Truck Catering Site", type: "Web Design & Development" },
-              { id: 2, image: "image-2.jpg", title: "12 Step Journey Website", type: "Recovery & Wellness Platform" },
-              { id: 4, image: "image-4.jpg", title: "Therapy & Wellness Center", type: "Mental Health & Healing" },
-              { id: 5, image: "image-5.jpg", title: "Youth Empowerment Initiative", type: "Community Outreach & Prevention" }
+              { id: 1, image: "image-1.jpg", title: "Teresita's Birria", type: "Food Truck Catering" },
+              { id: 3, image: "image-3.jpg", title: "Casandra's Cleaning", type: "Professional Cleaning Services" },
+              { id: 4, image: "image-4.jpg", title: "M&M Lawn Service", type: "Lawn Care & Landscaping" },
+              { id: 6, image: "image-6.jpg", title: "You and I Organize", type: "Home Organizing & Cleaning" }
             ].map((project, index) => (
               <div key={project.id} className={`portfolio-item scroll-animate zoom-rotate delay-${index + 1}`}>
                 <div className="portfolio-image">

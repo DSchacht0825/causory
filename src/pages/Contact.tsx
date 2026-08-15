@@ -87,14 +87,13 @@ const Contact: React.FC = () => {
                   </div>
                   
                   <div className="form-group">
-                    <label htmlFor="budget">Project Budget</label>
+                    <label htmlFor="budget">Which plan are you interested in?</label>
                     <select id="budget" name="budget" required>
-                      <option value="">Select your budget range</option>
-                      <option value="Under $5,000">Under $5,000</option>
-                      <option value="$5,000 - $10,000">$5,000 - $10,000</option>
-                      <option value="$10,000 - $25,000">$10,000 - $25,000</option>
-                      <option value="$25,000 - $50,000">$25,000 - $50,000</option>
-                      <option value="$50,000+">$50,000+</option>
+                      <option value="">Select a plan</option>
+                      <option value="Launch ($700 setup + $200/mo)">Launch ($700 setup + $200/mo)</option>
+                      <option value="Growth ($1,000 setup + $200/mo)">Growth ($1,000 setup + $200/mo)</option>
+                      <option value="Authority ($1,400 setup + $200/mo)">Authority ($1,400 setup + $200/mo)</option>
+                      <option value="Not sure yet">Not sure yet — help me choose</option>
                     </select>
                   </div>
                   
@@ -122,7 +121,7 @@ const Contact: React.FC = () => {
                   </div>
                   
                   <input type="hidden" name="_subject" value="New Causory Contact Form Submission" />
-                  <input type="hidden" name="_next" value="http://localhost:3000/contact?success=true" />
+                  <input type="hidden" name="_next" value="https://causory.com/contact?success=true" />
                   
                   <button type="submit" className="submit-button">
                     Send Message
