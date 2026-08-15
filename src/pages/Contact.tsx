@@ -15,7 +15,7 @@ const Contact: React.FC = () => {
         <div className="contact-overlay"></div>
         <div className="container">
           <div className="contact-content">
-            <h2 className="section-title scroll-animate">Let's Create Something Amazing Together</h2>
+            <h1 className="section-title scroll-animate">Let's Create Something Amazing Together</h1>
             <p className="contact-intro">
               Ready to transform your vision into a digital masterpiece? We're here to bring your story to life.
             </p>

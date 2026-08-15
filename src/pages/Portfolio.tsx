@@ -14,7 +14,7 @@ const Portfolio: React.FC = () => {
 
       <section id="portfolio" className="portfolio" style={{paddingTop: '8rem'}}>
         <div className="container">
-          <h2 className="section-title scroll-animate">Our Portfolio</h2>
+          <h1 className="section-title scroll-animate">Our Portfolio</h1>
           <p className="portfolio-intro">
             Explore our recent work across therapy practices, recovery centers, nonprofits, and more.
           </p>

@@ -1,6 +1,12 @@
 {
   "outputDirectory": "build",
   "cleanUrls": true,
+  "redirects": [
+    { "source": "/therapists", "destination": "/home-services", "permanent": true },
+    { "source": "/recovery", "destination": "/home-services", "permanent": true },
+    { "source": "/ai-consulting", "destination": "/pricing", "permanent": true },
+    { "source": "/nonprofits", "destination": "/", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]

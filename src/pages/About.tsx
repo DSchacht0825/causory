@@ -16,7 +16,7 @@ const About: React.FC = () => {
         <div className="about-overlay"></div>
         <div className="container">
           <div className="about-content">
-            <h2 className="section-title scroll-animate">About Causory</h2>
+            <h1 className="section-title scroll-animate">About Causory</h1>
             <div className="about-text">
               <p className="about-intro">
                 At Causory, we believe a website shouldn't start going stale the day it launches — so we built Website as a Service.

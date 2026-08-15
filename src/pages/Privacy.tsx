@@ -13,7 +13,7 @@ const Privacy: React.FC = () => {
       <section id="privacy" className="about">
         <div className="container">
           <div className="about-content">
-            <h2 className="section-title scroll-animate">Privacy Policy</h2>
+            <h1 className="section-title scroll-animate">Privacy Policy</h1>
             <div className="about-text">
               <p className="about-intro">
                 Effective date: July 9, 2026

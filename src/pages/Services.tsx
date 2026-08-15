@@ -15,7 +15,7 @@ const Services: React.FC = () => {
       <section id="services-page" className="about">
         <div className="container">
           <div className="about-content">
-            <h2 className="section-title scroll-animate">Our Services</h2>
+            <h1 className="section-title scroll-animate">Our Services</h1>
             <div className="about-text">
               <p className="about-intro">
                 Website as a Service: a one-time setup fee to launch, then everything below bundled into a flat $200/mo Website Care Plan — not a site that starts going stale the day it launches.
