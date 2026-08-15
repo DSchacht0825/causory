@@ -304,7 +304,7 @@ const Home: React.FC = () => {
           </p>
 
           <div className="industries-grid">
-            <Link to="/home-services" className="industry-card scroll-animate zoom-rotate delay-1">
+            <Link to="/home-services/contractors" className="industry-card scroll-animate zoom-rotate delay-1">
               <div className="industry-icon">🔨</div>
               <h3>General Contractors &amp; Remodeling</h3>
               <p>
@@ -312,7 +312,7 @@ const Home: React.FC = () => {
               </p>
             </Link>
 
-            <Link to="/home-services" className="industry-card scroll-animate zoom-rotate delay-2">
+            <Link to="/home-services/hvac-plumbing-electrical" className="industry-card scroll-animate zoom-rotate delay-2">
               <div className="industry-icon">🌡️</div>
               <h3>HVAC, Plumbing &amp; Electrical</h3>
               <p>
@@ -320,7 +320,7 @@ const Home: React.FC = () => {
               </p>
             </Link>
 
-            <Link to="/home-services" className="industry-card scroll-animate zoom-rotate delay-3">
+            <Link to="/home-services/cleaning-landscaping" className="industry-card scroll-animate zoom-rotate delay-3">
               <div className="industry-icon">🧹</div>
               <h3>Cleaning, Landscaping &amp; Maintenance</h3>
               <p>
@@ -328,7 +328,7 @@ const Home: React.FC = () => {
               </p>
             </Link>
 
-            <Link to="/home-services" className="industry-card scroll-animate zoom-rotate delay-4">
+            <Link to="/home-services/roofing-restoration" className="industry-card scroll-animate zoom-rotate delay-4">
               <div className="industry-icon">🏠</div>
               <h3>Roofing &amp; Restoration</h3>
               <p>

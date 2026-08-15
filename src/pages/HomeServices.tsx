@@ -85,16 +85,16 @@ const HomeServices: React.FC = () => {
 
             <div className="niche-grid">
               <div className="niche-info scroll-animate slide-left delay-2">
-                <h4>🔨 General Contractors &amp; Remodeling</h4>
+                <h4><Link to="/home-services/contractors" style={{color: '#fff'}}>🔨 General Contractors &amp; Remodeling</Link></h4>
                 <p>Project galleries, service pages by trade (kitchens, additions, remodels), and a quote request built for jobs that take real research before someone commits.</p>
 
-                <h4>🌡️ HVAC, Plumbing &amp; Electrical</h4>
+                <h4><Link to="/home-services/hvac-plumbing-electrical" style={{color: '#fff'}}>🌡️ HVAC, Plumbing &amp; Electrical</Link></h4>
                 <p>Emergency-ready design with click-to-call up front, service-area pages, and maintenance-plan pages that turn one-time repairs into recurring customers.</p>
 
-                <h4>🧹 Cleaning, Landscaping &amp; Maintenance</h4>
+                <h4><Link to="/home-services/cleaning-landscaping" style={{color: '#fff'}}>🧹 Cleaning, Landscaping &amp; Maintenance</Link></h4>
                 <p>Recurring-service pages, easy online booking requests, and review-forward design — the trust signals that turn a one-time clean into a standing contract.</p>
 
-                <h4>🏠 Roofing &amp; Restoration</h4>
+                <h4><Link to="/home-services/roofing-restoration" style={{color: '#fff'}}>🏠 Roofing &amp; Restoration</Link></h4>
                 <p>Insurance-claim-friendly content, storm/emergency response messaging, and before/after galleries that show the quality of the work, not just describe it.</p>
               </div>
 

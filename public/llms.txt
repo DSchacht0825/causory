@@ -8,7 +8,11 @@ Based in San Diego, CA. Serves home service businesses nationwide — the entire
 
 - [Pricing](https://causory.com/pricing): Launch ($700 setup + $200/mo), Growth ($1,000 setup + $200/mo, most popular), and Authority ($1,400 setup + $200/mo) — full breakdown of what's included on each tier.
 - [Services](https://causory.com/services): what's bundled into every plan — conversion-focused design, fast hosting, built-in SEO, and the AI chatbot add-on included on Authority.
-- [Home Services](https://causory.com/home-services): details specific to contractors, HVAC, plumbing, electrical, cleaning, landscaping, roofing, and restoration companies.
+- [Home Services](https://causory.com/home-services): overview for contractors, HVAC, plumbing, electrical, cleaning, landscaping, roofing, and restoration companies, with dedicated pages per trade:
+  - [Contractors & Remodelers](https://causory.com/home-services/contractors)
+  - [HVAC, Plumbing & Electrical](https://causory.com/home-services/hvac-plumbing-electrical)
+  - [Cleaning, Landscaping & Maintenance](https://causory.com/home-services/cleaning-landscaping)
+  - [Roofing & Restoration](https://causory.com/home-services/roofing-restoration)
 
 ## Company
 
