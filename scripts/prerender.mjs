@@ -28,6 +28,7 @@ const ROUTES = [
   '/portfolio',
   '/services',
   '/privacy',
+  '/terms',
 ];
 
 const MIME = {

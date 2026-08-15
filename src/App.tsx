@@ -11,6 +11,7 @@ import Services from './pages/Services';
 import Pricing from './pages/Pricing';
 import HomeServices from './pages/HomeServices';
 import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/home-services" element={<HomeServices />} />
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
         </Routes>
       </Layout>
     </Router>

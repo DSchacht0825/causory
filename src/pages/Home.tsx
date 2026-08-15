@@ -341,7 +341,7 @@ const Home: React.FC = () => {
             ].map((project, index) => (
               <div key={project.id} className={`portfolio-item scroll-animate zoom-rotate delay-${index + 1}`}>
                 <div className="portfolio-image">
-                  <img src={`/${project.image}`} alt={`${project.title} - ${project.type} by Causory Web Design`} />
+                  <img src={`/${project.image}`} alt={`${project.title} - ${project.type} by Causory Web Design`} width={1200} height={685} loading="lazy" />
                 </div>
                 <div className="portfolio-overlay">
                   <h4>{project.title}</h4>

@@ -7,8 +7,8 @@ const Portfolio: React.FC = () => {
     <>
       <Helmet>
         <title>Web Design Portfolio | Causory Projects & Case Studies</title>
-        <meta name="description" content="Explore Causory's portfolio of custom websites for therapy practices, recovery centers, nonprofits, and businesses nationwide. See real results from our web design and AI consulting projects." />
-        <meta name="keywords" content="web design portfolio, website examples, case studies, therapy website design, nonprofit web design, recovery center websites, custom website projects" />
+        <meta name="description" content="See real websites Causory has designed and built — from home service businesses like cleaning, lawn care, and landscaping companies to local restaurants and nonprofits across San Diego and beyond." />
+        <meta name="keywords" content="web design portfolio, website examples, case studies, contractor website portfolio, home service business website examples, cleaning company website design, landscaping website design, custom website projects" />
         <link rel="canonical" href="https://causory.com/portfolio" />
       </Helmet>
 
@@ -16,7 +16,7 @@ const Portfolio: React.FC = () => {
         <div className="container">
           <h1 className="section-title scroll-animate">Our Portfolio</h1>
           <p className="portfolio-intro">
-            Explore our recent work across therapy practices, recovery centers, nonprofits, and more.
+            Explore our recent work — from home service businesses like cleaning and landscaping companies to local restaurants and nonprofits.
           </p>
           <div className="portfolio-grid">
             {[
@@ -31,7 +31,7 @@ const Portfolio: React.FC = () => {
                 {project.url ? (
                   <a href={project.url} target="_blank" rel="noopener noreferrer" className="portfolio-link">
                     <div className="portfolio-image">
-                      <img src={`/${project.image}`} alt={`${project.title} - ${project.type} by Causory Web Design`} />
+                      <img src={`/${project.image}`} alt={`${project.title} - ${project.type} by Causory Web Design`} width={1200} height={685} loading="lazy" />
                     </div>
                     <div className="portfolio-overlay">
                       <h4>{project.title}</h4>
@@ -41,7 +41,7 @@ const Portfolio: React.FC = () => {
                 ) : (
                   <>
                     <div className="portfolio-image">
-                      <img src={`/${project.image}`} alt={`${project.title} - ${project.type} by Causory Web Design`} />
+                      <img src={`/${project.image}`} alt={`${project.title} - ${project.type} by Causory Web Design`} width={1200} height={685} loading="lazy" />
                     </div>
                     <div className="portfolio-overlay">
                       <h4>{project.title}</h4>

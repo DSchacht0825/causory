@@ -167,12 +167,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div className="nav-links-left desktop-only">
               <Link to="/">Home</Link>
               <Link to="/home-services">Trades</Link>
+              <Link to="/services">Services</Link>
               <Link to="/pricing">Pricing</Link>
               <Link to="/portfolio">Portfolio</Link>
             </div>
             <div className="nav-logo">
               <Link to="/">
-                <img src="/causory.png" alt="Causory Website as a Service" style={{height: '60px'}} />
+                <img src="/causory.png" alt="Causory Website as a Service" width={76} height={60} style={{height: '60px'}} />
               </Link>
             </div>
             <div className="nav-links-right desktop-only">
@@ -193,6 +194,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div className="mobile-menu-links">
               <Link to="/" onClick={closeMobileMenu}>Home</Link>
               <Link to="/home-services" onClick={closeMobileMenu}>Trades</Link>
+              <Link to="/services" onClick={closeMobileMenu}>Services</Link>
               <Link to="/pricing" onClick={closeMobileMenu}>Pricing</Link>
               <Link to="/portfolio" onClick={closeMobileMenu}>Portfolio</Link>
               <Link to="/about" onClick={closeMobileMenu}>About</Link>
@@ -215,6 +217,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <a href="https://www.linkedin.com/company/causory-web-design/">LinkedIn</a>
             <a href="https://www.instagram.com/causory/">Instagram</a>
             <Link to="/privacy">Privacy Policy</Link>
+            <Link to="/terms">Terms of Service</Link>
           </div>
         </div>
 
