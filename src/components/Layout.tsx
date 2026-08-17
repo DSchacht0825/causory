@@ -169,7 +169,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <Link to="/home-services">Trades</Link>
               <Link to="/services">Services</Link>
               <Link to="/pricing">Pricing</Link>
-              <Link to="/portfolio">Portfolio</Link>
             </div>
             <div className="nav-logo">
               <Link to="/">
@@ -177,6 +176,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               </Link>
             </div>
             <div className="nav-links-right desktop-only">
+              <Link to="/portfolio">Portfolio</Link>
               <Link to="/about">About</Link>
               <Link to="/contact">Contact</Link>
             </div>
