@@ -3336,3 +3336,33 @@ html {
     font-size: 1.05rem;
   }
 }
+
+/* Logo wordmark (nav + footer) */
+.nav-logo a {
+  display: inline-block;
+  line-height: 0;
+}
+
+.nav-logo-img {
+  display: block;
+  width: 220px;
+  height: auto;
+}
+
+.footer-logo-img {
+  display: block;
+  width: 180px;
+  height: auto;
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .nav-logo-img {
+    width: 170px;
+  }
+
+  .footer-logo-img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

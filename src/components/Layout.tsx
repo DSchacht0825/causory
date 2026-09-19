@@ -172,7 +172,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </div>
             <div className="nav-logo">
               <Link to="/">
-                <img src="/causory.png" alt="Causory Website as a Service" width={76} height={60} style={{height: '60px'}} />
+                <img src="/causory-wordmark.png" alt="Causory Website as a Service" width={220} height={24} className="nav-logo-img" />
               </Link>
             </div>
             <div className="nav-links-right desktop-only">
@@ -209,7 +209,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-brand">
-            <h4>Causory</h4>
+            <img src="/causory-wordmark.png" alt="Causory" width={180} height={20} className="footer-logo-img" loading="lazy" />
             <p>Website as a Service</p>
           </div>
 
