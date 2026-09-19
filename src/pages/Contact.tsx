@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
+import { useLocation } from 'react-router-dom';
 
 type SubmitStatus = 'idle' | 'submitting' | 'success' | 'error';
 
 const Contact: React.FC = () => {
   const [status, setStatus] = useState<SubmitStatus>('idle');
+  // Which homepage CTA sent them here (router state, so the URL stays clean)
+  const source = (useLocation().state as { source?: string } | null)?.source ?? 'contact-page';
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -42,9 +45,9 @@ const Contact: React.FC = () => {
         <div className="contact-overlay"></div>
         <div className="container">
           <div className="contact-content">
-            <h1 className="section-title scroll-animate">Let's Create Something Amazing Together</h1>
+            <h1 className="section-title scroll-animate">Let's see what your website could be doing for you</h1>
             <p className="contact-intro">
-              Ready to transform your vision into a digital masterpiece? We're here to bring your story to life.
+              Tell us a little about your business. We'll show you what's possible, with a concept of your new website so you can see the difference. No awkward sales pitch.
             </p>
 
             <div className="contact-grid">
@@ -71,13 +74,16 @@ const Contact: React.FC = () => {
                     <p>Within 24 hours</p>
                   </div>
                 </div>
+                <p className="contact-note">
+                  Prefer to just talk it through? Call or text us. You'll get a real person, not a sales script.
+                </p>
               </div>
 
               <div className="contact-form-container">
                 {status === 'success' ? (
                   <div className="contact-success" role="status">
                     <h4>Message sent!</h4>
-                    <p>Thanks for reaching out — we'll get back to you within 24 hours. You can also call or text (619) 300-8337 in the meantime.</p>
+                    <p>Thanks for telling us about your business. We'll get back to you within 24 hours with what we're seeing. You can also call or text (619) 300-8337 in the meantime.</p>
                   </div>
                 ) : (
                   <form className="contact-form" onSubmit={handleSubmit}>
@@ -89,78 +95,47 @@ const Contact: React.FC = () => {
                       </p>
                     )}
 
-                    <div className="form-row">
-                      <div className="form-group">
-                        <label htmlFor="firstName">First Name</label>
-                        <input type="text" id="firstName" name="firstName" required />
-                      </div>
-                      <div className="form-group">
-                        <label htmlFor="lastName">Last Name</label>
-                        <input type="text" id="lastName" name="lastName" required />
-                      </div>
+                    <div className="form-group">
+                      <label htmlFor="businessName">Business name</label>
+                      <input type="text" id="businessName" name="businessName" autoComplete="organization" required />
                     </div>
 
                     <div className="form-group">
-                      <label htmlFor="email">Email Address</label>
-                      <input type="email" id="email" name="_replyto" required />
+                      <label htmlFor="currentWebsite">
+                        Current website <span className="form-optional">(if you have one)</span>
+                      </label>
+                      <input type="text" id="currentWebsite" name="currentWebsite" placeholder="yourbusiness.com" autoComplete="url" />
                     </div>
 
                     <div className="form-group">
-                      <label htmlFor="phone">Phone Number</label>
-                      <input type="tel" id="phone" name="phone" />
-                    </div>
-
-                    <div className="form-group">
-                      <label htmlFor="projectType">Project Type</label>
-                      <select id="projectType" name="projectType" required>
-                        <option value="">Select a project type</option>
-                        <option value="New Website Design">New Website Design</option>
-                        <option value="Website Redesign">Website Redesign</option>
-                        <option value="Website Care Plan / Support">Website Care Plan / Support</option>
-                        <option value="Branding & Identity">Branding & Identity</option>
-                        <option value="SEO & Marketing">SEO & Marketing</option>
-                        <option value="Other">Other</option>
-                      </select>
-                    </div>
-
-                    <div className="form-group">
-                      <label htmlFor="budget">Which plan are you interested in?</label>
-                      <select id="budget" name="budget" required>
-                        <option value="">Select a plan</option>
-                        <option value="Launch ($700 setup + $200/mo)">Launch ($700 setup + $200/mo)</option>
-                        <option value="Growth ($1,000 setup + $200/mo)">Growth ($1,000 setup + $200/mo)</option>
-                        <option value="Authority ($1,400 setup + $200/mo)">Authority ($1,400 setup + $200/mo)</option>
-                        <option value="Not sure yet">Not sure yet — help me choose</option>
-                      </select>
-                    </div>
-
-                    <div className="form-group">
-                      <label htmlFor="timeline">Desired Timeline</label>
-                      <select id="timeline" name="timeline" required>
-                        <option value="">When do you need this completed?</option>
-                        <option value="ASAP (Rush project)">ASAP (Rush project)</option>
-                        <option value="Within 1 month">Within 1 month</option>
-                        <option value="2-3 months">2-3 months</option>
-                        <option value="3-6 months">3-6 months</option>
-                        <option value="Flexible timeline">Flexible timeline</option>
-                      </select>
-                    </div>
-
-                    <div className="form-group">
-                      <label htmlFor="message">Tell us about your project</label>
+                      <label htmlFor="goal">What's the #1 thing you'd like your website to do better?</label>
                       <textarea
-                        id="message"
-                        name="message"
-                        rows={4}
-                        placeholder="Share your vision, goals, and any specific requirements..."
+                        id="goal"
+                        name="goal"
+                        rows={3}
+                        placeholder="More calls, look more professional, show up on Google..."
                         required
                       ></textarea>
                     </div>
 
-                    <input type="hidden" name="_subject" value="New Causory Contact Form Submission" />
+                    <div className="form-row">
+                      <div className="form-group">
+                        <label htmlFor="email">Email</label>
+                        <input type="email" id="email" name="_replyto" autoComplete="email" required />
+                      </div>
+                      <div className="form-group">
+                        <label htmlFor="phone">
+                          Phone <span className="form-optional">(optional)</span>
+                        </label>
+                        <input type="tel" id="phone" name="phone" autoComplete="tel" />
+                      </div>
+                    </div>
+
+                    <input type="hidden" name="_subject" value="New Causory Website Concept Request" />
+                    <input type="hidden" name="source" value={source} />
 
                     <button type="submit" className="submit-button" disabled={status === 'submitting'}>
-                      {status === 'submitting' ? 'Sending...' : 'Send Message'}
+                      {status === 'submitting' ? 'Sending...' : 'Show Me What\'s Possible →'}
                     </button>
                   </form>
                 )}
