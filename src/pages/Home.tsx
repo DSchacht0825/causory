@@ -246,7 +246,7 @@ const Home: React.FC = () => {
             ))}
           </div>
 
-          <div className="section-cta scroll-animate">
+          <div className="section-cta">
             <Link to="/contact" state={{ source: 'home-pain' }} className="cta-button">
               Fix My Website →
             </Link>
@@ -270,7 +270,7 @@ const Home: React.FC = () => {
 
           <p className="feeling-closer scroll-animate delay-2">That's what we build.</p>
 
-          <div className="section-cta scroll-animate">
+          <div className="section-cta">
             <Link to="/contact" state={{ source: 'home-feeling' }} className="cta-button">
               Let's Build Something That Works
             </Link>
@@ -394,7 +394,7 @@ const Home: React.FC = () => {
             We focus on home service businesses. We know how your customers search and which pages turn that search into a booked job.
           </p>
 
-          <div className="industries-grid">
+          <div className="industries-grid industries-grid-4">
             <Link to="/home-services/contractors" className="industry-card scroll-animate zoom-rotate delay-1">
               <div className="industry-icon">🔨</div>
               <h3>General Contractors &amp; Remodeling</h3>
