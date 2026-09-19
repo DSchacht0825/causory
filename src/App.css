@@ -3603,3 +3603,95 @@ html {
     max-width: 900px;
   }
 }
+
+/* ===== Audience switch: "I have a website" / "I don't have one yet" ===== */
+.audience-switch {
+  text-align: center;
+  margin: 0 auto 2.75rem;
+}
+
+.audience-switch-label {
+  margin: 0 0 0.75rem;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.audience-toggle {
+  display: inline-flex;
+  gap: 0.25rem;
+  padding: 0.35rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 9999px;
+}
+
+.audience-toggle button {
+  padding: 0.7rem 1.4rem;
+  border: none;
+  border-radius: 9999px;
+  background: transparent;
+  color: #e5e7eb;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.audience-toggle button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.audience-toggle button[aria-pressed='true'] {
+  background: linear-gradient(to right, #3b82f6, #7c3aed);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.35);
+}
+
+.audience-toggle button:focus-visible {
+  outline: 2px solid #bfdbfe;
+  outline-offset: 2px;
+}
+
+/* Content that swaps with the toggle fades in (not scroll-triggered, since
+   the scroll observer only runs on route change) */
+@keyframes swap-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.swap-in {
+  animation: swap-in 0.45s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .swap-in {
+    animation: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .audience-switch {
+    margin-bottom: 2rem;
+  }
+
+  .audience-toggle {
+    flex-direction: column;
+    width: 100%;
+    max-width: 340px;
+    border-radius: 1.5rem;
+  }
+
+  .audience-toggle button {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    line-height: 1.25;
+  }
+}

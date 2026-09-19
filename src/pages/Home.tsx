@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 const faqs = [
@@ -51,6 +51,68 @@ const painPoints = [
     body: "You're running a business. You shouldn't have to become a web designer, SEO expert, copywriter and tech support person too.",
   },
 ];
+
+type Audience = 'existing' | 'new';
+
+const audienceCopy: Record<Audience, {
+  heroLead: string;
+  heroCta: string;
+  problemTitle: string;
+  scenarioQuestion: string;
+  scenario: string[];
+  punch: string;
+  pains: { icon: string; title: string; body: string }[];
+  painCta: string;
+  feelingTitle: string;
+  conceptTitle: string;
+}> = {
+  existing: {
+    heroLead: "If your site is outdated, slow, or doesn't clearly tell people why they should hire you, you're probably losing calls to competitors who simply look more trustworthy online.",
+    heroCta: 'Show Me What My Website Is Missing',
+    problemTitle: "Your work isn't the problem. Your website might be.",
+    scenarioQuestion: 'Does your website actually help you get hired?',
+    scenario: [
+      'Someone needs a plumber. They Google it. They find you and three competitors.',
+      "In about 30 seconds they're deciding who looks trustworthy, professional, and easy to contact.",
+    ],
+    punch: 'Your website is either helping you win that customer, or helping someone else win them.',
+    pains: painPoints,
+    painCta: 'Fix My Website →',
+    feelingTitle: 'Imagine not worrying about your website anymore.',
+    conceptTitle: 'See what your business could look like before committing.',
+  },
+  new: {
+    heroLead: "If customers Google you and find nothing, or just a Facebook page, they're probably calling a competitor who looks more established online.",
+    heroCta: 'Show Me What My Website Could Look Like',
+    problemTitle: "Your work speaks for itself. Customers just can't see it yet.",
+    scenarioQuestion: 'What happens when someone Googles your business?',
+    scenario: [
+      'A neighbor gives them your name. Before they call, they look you up.',
+      "They find a listing or a Facebook page, and no website. Your competitor's site shows their work, their service area and a big call button.",
+    ],
+    punch: "A website turns \"I heard you're good\" into a booked job.",
+    pains: [
+      {
+        icon: '📣',
+        title: '"I get all my work by word of mouth."',
+        body: 'Referrals still Google you before they call. A real website makes sure what they find matches how good you actually are.',
+      },
+      {
+        icon: '📱',
+        title: '"I\'m just on Facebook or Google."',
+        body: "Those aren't yours. You can't control how they look, and they can't show your services, your service area and your best work the way a real website can.",
+      },
+      {
+        icon: '🤔',
+        title: '"I don\'t know where to start."',
+        body: "That's exactly what we're for. Tell us about your business and we handle the design, the words, the hosting and the tech.",
+      },
+    ],
+    painCta: 'Show Me My Website Concept →',
+    feelingTitle: 'Imagine being easy to find and easy to trust.',
+    conceptTitle: "You've built the reputation. See the website it deserves before you commit.",
+  },
+};
 
 const feelings = [
   'You send someone your website and you\'re proud of it.',
@@ -171,6 +233,18 @@ const GoogleG: React.FC = () => (
 const Home: React.FC = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
+  // /?start=new (for outreach links) opens on the "no website yet" version.
+  // Client-side only: the prerendered HTML and canonical stay the default.
+  const { search } = useLocation();
+  const [audience, setAudience] = useState<Audience>(
+    new URLSearchParams(search).get('start') === 'new' ? 'new' : 'existing'
+  );
+  useEffect(() => {
+    if (new URLSearchParams(search).get('start') === 'new') setAudience('new');
+  }, [search]);
+  const c = audienceCopy[audience];
+  const src = (name: string) => (audience === 'new' ? `${name}-new` : name);
+
   return (
     <>
       <Helmet>
@@ -201,14 +275,14 @@ const Home: React.FC = () => {
             </span>
           </h1>
           <p className="hero-description animate-fade-in-up delay-200">
-            If your site is outdated, slow, or doesn't clearly tell people why they should hire you, you're probably losing calls to competitors who simply look more trustworthy online.
+            {c.heroLead}
           </p>
           <p className="hero-subline animate-fade-in-up delay-200">
             Causory builds custom websites for home service businesses that turn searches into calls.
           </p>
           <div className="hero-buttons animate-fade-in-up delay-300">
-            <Link to="/contact" state={{ source: 'home-hero' }} className="btn-primary">
-              Show Me What My Website Is Missing
+            <Link to="/contact" state={{ source: src('home-hero') }} className="btn-primary">
+              {c.heroCta}
             </Link>
             <Link to="/portfolio" className="btn-secondary">
               See Our Work
@@ -227,18 +301,33 @@ const Home: React.FC = () => {
       {/* Problem + pain points */}
       <section className="why-choose problem">
         <div className="container">
-          <h2 className="section-title scroll-animate">Your work isn't the problem. Your website might be.</h2>
-
-          <div className="scenario scroll-animate delay-1">
-            <p className="scenario-question">Does your website actually help you get hired?</p>
-            <p>Someone needs a plumber. They Google it. They find you and three competitors.</p>
-            <p>In about 30 seconds they're deciding who looks trustworthy, professional, and easy to contact.</p>
-            <p className="scenario-punch">Your website is either helping you win that customer, or helping someone else win them.</p>
+          <div className="audience-switch scroll-animate">
+            <p className="audience-switch-label">Which sounds like you?</p>
+            <div className="audience-toggle" role="group" aria-label="Which sounds like you?">
+              <button type="button" aria-pressed={audience === 'existing'} onClick={() => setAudience('existing')}>
+                I have a website that isn't working
+              </button>
+              <button type="button" aria-pressed={audience === 'new'} onClick={() => setAudience('new')}>
+                I don't have a website yet
+              </button>
+            </div>
           </div>
 
-          <div className="pain-grid">
-            {painPoints.map((p, i) => (
-              <div key={p.title} className={`why-item pain-card scroll-animate ${cardAnimations[i]} delay-${i + 1}`}>
+          <h2 className="section-title scroll-animate">{c.problemTitle}</h2>
+
+          <div className="scenario scroll-animate delay-1">
+            <div key={audience} className="swap-in">
+              <p className="scenario-question">{c.scenarioQuestion}</p>
+              {c.scenario.map((line) => (
+                <p key={line}>{line}</p>
+              ))}
+              <p className="scenario-punch">{c.punch}</p>
+            </div>
+          </div>
+
+          <div className="pain-grid scroll-animate delay-2">
+            {c.pains.map((p, i) => (
+              <div key={`${audience}-${p.title}`} className="why-item pain-card swap-in" style={{ animationDelay: `${i * 0.08}s` }}>
                 <div className="why-icon">{p.icon}</div>
                 <h3>{p.title}</h3>
                 <p>{p.body}</p>
@@ -247,8 +336,8 @@ const Home: React.FC = () => {
           </div>
 
           <div className="section-cta">
-            <Link to="/contact" state={{ source: 'home-pain' }} className="cta-button">
-              Fix My Website →
+            <Link to="/contact" state={{ source: src('home-pain') }} className="cta-button">
+              {c.painCta}
             </Link>
           </div>
         </div>
@@ -257,7 +346,7 @@ const Home: React.FC = () => {
       {/* Transformation */}
       <section className="feeling">
         <div className="container">
-          <h2 className="section-title scroll-animate">Imagine not worrying about your website anymore.</h2>
+          <h2 className="section-title scroll-animate">{c.feelingTitle}</h2>
 
           <ul className="feeling-list scroll-animate delay-1">
             {feelings.map((f) => (
@@ -271,7 +360,7 @@ const Home: React.FC = () => {
           <p className="feeling-closer scroll-animate delay-2">That's what we build.</p>
 
           <div className="section-cta">
-            <Link to="/contact" state={{ source: 'home-feeling' }} className="cta-button">
+            <Link to="/contact" state={{ source: src('home-feeling') }} className="cta-button">
               Let's Build Something That Works
             </Link>
           </div>
@@ -435,11 +524,11 @@ const Home: React.FC = () => {
         <div className="container">
           <div className="concept-card scroll-animate zoom-rotate">
             <span className="concept-badge">See it before you commit</span>
-            <h2 className="concept-title">See what your business could look like before committing.</h2>
+            <h2 className="concept-title">{c.conceptTitle}</h2>
             <p className="concept-body">
               Tell us about your business. We'll create a concept for your new website so you can actually see the difference. If you love the direction, we'll talk about building it. No awkward sales pitch.
             </p>
-            <Link to="/contact" state={{ source: 'home-concept' }} className="cta-button">
+            <Link to="/contact" state={{ source: src('home-concept') }} className="cta-button">
               Build My Free Website Concept →
             </Link>
             <p className="concept-fineprint">
@@ -486,7 +575,7 @@ const Home: React.FC = () => {
         <div className="cta-content">
           <h3 className="cta-title animate-fade-in-up">Let's make your website work as hard as you do.</h3>
           <p className="cta-description animate-fade-in-up delay-200">Tell us about your business and we'll show you what's possible.</p>
-          <Link to="/contact" state={{ source: 'home-final' }} className="cta-button animate-scale-in delay-400">
+          <Link to="/contact" state={{ source: src('home-final') }} className="cta-button animate-scale-in delay-400">
             Let's Fix Your Website →
           </Link>
         </div>

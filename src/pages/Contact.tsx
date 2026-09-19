@@ -102,9 +102,9 @@ const Contact: React.FC = () => {
 
                     <div className="form-group">
                       <label htmlFor="currentWebsite">
-                        Current website <span className="form-optional">(if you have one)</span>
+                        Website or Facebook page <span className="form-optional">(if you have one)</span>
                       </label>
-                      <input type="text" id="currentWebsite" name="currentWebsite" placeholder="yourbusiness.com" autoComplete="url" />
+                      <input type="text" id="currentWebsite" name="currentWebsite" placeholder="yourbusiness.com or facebook.com/yourbusiness" autoComplete="url" />
                     </div>
 
                     <div className="form-group">
@@ -113,7 +113,7 @@ const Contact: React.FC = () => {
                         id="goal"
                         name="goal"
                         rows={3}
-                        placeholder="More calls, look more professional, show up on Google..."
+                        placeholder="More calls, look more professional, show up on Google (or: I need a first website)..."
                         required
                       ></textarea>
                     </div>
