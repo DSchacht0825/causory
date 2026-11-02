@@ -60,7 +60,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               "@type": "LocalBusiness",
               "name": "Causory",
               "image": "https://causory.com/causory.png",
-              "description": "Website as a Service (WaaS) — custom-designed websites with hosting, security, and ongoing SEO for one flat monthly fee. Based in San Diego, serving businesses nationwide.",
+              "description": "Website as a Service (WaaS) — custom-designed websites with hosting, security, and ongoing SEO for one flat monthly fee. Based in San Diego, serving North County (Oceanside, Carlsbad, Vista, Escondido) and businesses nationwide.",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "San Diego",
@@ -100,6 +100,18 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 {
                   "@type": "City",
                   "name": "Solana Beach"
+                },
+                {
+                  "@type": "City",
+                  "name": "Oceanside"
+                },
+                {
+                  "@type": "City",
+                  "name": "Vista"
+                },
+                {
+                  "@type": "City",
+                  "name": "Escondido"
                 }
               ],
               "serviceType": [
@@ -211,6 +223,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <div className="footer-brand">
             <img src="/causory-wordmark.png" alt="Causory" width={180} height={20} className="footer-logo-img" loading="lazy" />
             <p>Website as a Service</p>
+            <p className="footer-areas">
+              Web design in{' '}
+              <Link to="/web-design/oceanside">Oceanside</Link> ·{' '}
+              <Link to="/web-design/carlsbad">Carlsbad</Link> ·{' '}
+              <Link to="/web-design/vista">Vista</Link> ·{' '}
+              <Link to="/web-design/escondido">Escondido</Link>
+            </p>
           </div>
 
           <div className="footer-links">

@@ -6,3 +6,7 @@ cmds = ["npm install --production=false"]
 
 [start]
 cmd = "node server.js"
+
+# Railway only runs server.js; skip the Chrome download that puppeteer does on install
+[variables]
+PUPPETEER_SKIP_DOWNLOAD = "true"

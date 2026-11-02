@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: "Do you work with clients outside San Diego?",
-    a: "Absolutely. While we're based in San Diego, CA, we work with businesses across the United States. Our entire process is remote-friendly — discovery, design, development, and launch all happen online."
+    a: "Absolutely. We're based in San Diego, CA, and work with many home service businesses across North County (Oceanside, Carlsbad, Vista, Escondido), plus clients across the United States. Our entire process is remote-friendly — discovery, design, development, and launch all happen online."
   },
   {
     q: "How long does it take to launch?",
@@ -248,9 +248,9 @@ const Home: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Causory | Website as a Service for Home Service Businesses | San Diego</title>
-        <meta name="description" content="Causory is Website as a Service for home service businesses: a custom-designed website with a setup fee, then a flat $200/mo Website Care Plan for hosting, security, and support. Serving businesses nationwide from San Diego, CA." />
-        <meta name="keywords" content="website as a service, home service business website, contractor website design, HVAC website design, plumber website design, cleaning company website, roofing website design, managed website subscription San Diego, website care plan" />
+        <title>Contractor & Home Service Websites | Oceanside & San Diego | Causory</title>
+        <meta name="description" content="Custom websites that get contractors, HVAC, plumbing, cleaning, and roofing pros more calls. $700 setup + $200/mo for hosting, SEO, and support. See a free concept first." />
+        <meta name="keywords" content="website as a service, home service business website, contractor website design, HVAC website design, plumber website design, cleaning company website, roofing website design, managed website subscription San Diego, web design Oceanside, web designer North County, website care plan" />
         <link rel="canonical" href="https://causory.com/" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -516,6 +516,12 @@ const Home: React.FC = () => {
               </p>
             </Link>
           </div>
+
+          <p className="section-intro scroll-animate delay-1" style={{ marginTop: '2.5rem' }}>
+            Based in San Diego and working with trades across North County, including{' '}
+            <Link to="/web-design/oceanside">Oceanside</Link>, <Link to="/web-design/carlsbad">Carlsbad</Link>,{' '}
+            <Link to="/web-design/vista">Vista</Link>, and <Link to="/web-design/escondido">Escondido</Link>.
+          </p>
         </div>
       </section>
 

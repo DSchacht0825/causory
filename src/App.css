@@ -2252,6 +2252,22 @@ html {
   box-shadow: 0 8px 30px rgba(59, 130, 246, 0.4);
 }
 
+.footer-areas {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.footer-areas a {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-areas a:hover {
+  color: white;
+}
+
 .footer-links {
   display: flex;
   justify-content: flex-end;

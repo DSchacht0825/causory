@@ -12,8 +12,26 @@ import { fileURLToPath } from 'url';
 // packaged for exactly that constrained environment; use it there, and
 // plain puppeteer's bundled browser for local builds.
 const onVercel = Boolean(process.env.VERCEL);
-const puppeteer = onVercel ? (await import('puppeteer-core')).default : (await import('puppeteer')).default;
-const chromium = onVercel ? (await import('@sparticuz/chromium')).default : null;
+
+// The static site is served from Vercel. The Railway service only runs
+// server.js (the /api/chat backend), so it has no use for prerendered HTML and
+// its Node/Chromium setup can't run this step. Skip cleanly instead of failing
+// the Railway build.
+if (process.env.RAILWAY_ENVIRONMENT || process.env.RAILWAY_PROJECT_ID) {
+  console.log('Skipping prerender on Railway.');
+  process.exit(0);
+}
+
+let puppeteer;
+let chromium = null;
+try {
+  puppeteer = onVercel ? (await import('puppeteer-core')).default : (await import('puppeteer')).default;
+  chromium = onVercel ? (await import('@sparticuz/chromium')).default : null;
+} catch (err) {
+  // Missing/incompatible browser deps (e.g. older Node): never fail the build.
+  console.error('Prerender dependencies unavailable, shipping client-rendered build as-is:', err.message);
+  process.exit(0);
+}
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const buildDir = path.join(__dirname, '..', 'build');
@@ -27,6 +45,10 @@ const ROUTES = [
   '/home-services/hvac-plumbing-electrical',
   '/home-services/cleaning-landscaping',
   '/home-services/roofing-restoration',
+  '/web-design/oceanside',
+  '/web-design/carlsbad',
+  '/web-design/vista',
+  '/web-design/escondido',
   '/about',
   '/contact',
   '/portfolio',

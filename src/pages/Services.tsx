@@ -56,6 +56,18 @@ const Services: React.FC = () => {
                   <li>Local SEO to rank for "near me" searches</li>
                   <li>Google Business Profile integration on Growth &amp; Authority</li>
                 </ul>
+                <p style={{ marginTop: '1rem' }}>
+                  Every trade searches differently. See how we approach it for{' '}
+                  <Link to="/home-services/contractors" style={{ textDecoration: 'underline' }}>contractors and remodelers</Link>,{' '}
+                  <Link to="/home-services/hvac-plumbing-electrical" style={{ textDecoration: 'underline' }}>HVAC, plumbing, and electrical</Link>,{' '}
+                  <Link to="/home-services/cleaning-landscaping" style={{ textDecoration: 'underline' }}>cleaning and landscaping</Link>, and{' '}
+                  <Link to="/home-services/roofing-restoration" style={{ textDecoration: 'underline' }}>roofing and restoration</Link>.
+                  Locally, we work with businesses in{' '}
+                  <Link to="/web-design/oceanside" style={{ textDecoration: 'underline' }}>Oceanside</Link>,{' '}
+                  <Link to="/web-design/carlsbad" style={{ textDecoration: 'underline' }}>Carlsbad</Link>,{' '}
+                  <Link to="/web-design/vista" style={{ textDecoration: 'underline' }}>Vista</Link>, and{' '}
+                  <Link to="/web-design/escondido" style={{ textDecoration: 'underline' }}>Escondido</Link>.
+                </p>
               </div>
 
               <div id="all-inclusive" className="about-section">

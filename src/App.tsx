@@ -14,6 +14,7 @@ import Contractors from './pages/Contractors';
 import HvacPlumbingElectrical from './pages/HvacPlumbingElectrical';
 import CleaningLandscaping from './pages/CleaningLandscaping';
 import RoofingRestoration from './pages/RoofingRestoration';
+import CityPage from './pages/CityPage';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 
@@ -40,6 +41,7 @@ function App() {
           <Route path="/home-services/hvac-plumbing-electrical" element={<HvacPlumbingElectrical />} />
           <Route path="/home-services/cleaning-landscaping" element={<CleaningLandscaping />} />
           <Route path="/home-services/roofing-restoration" element={<RoofingRestoration />} />
+          <Route path="/web-design/:city" element={<CityPage />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
         </Routes>

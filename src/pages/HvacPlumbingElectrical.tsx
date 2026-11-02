@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import RelatedLinks from '../components/RelatedLinks';
 
 const faqs = [
   {
@@ -117,6 +118,9 @@ const HvacPlumbingElectrical: React.FC = () => {
                 ))}
               </div>
             </div>
+
+            <RelatedLinks currentTrade="hvac-plumbing-electrical" />
+
 
             <div className="niche-cta" style={{textAlign: 'center', marginTop: '4rem'}}>
               <h3 style={{fontSize: '1.8rem', marginBottom: '1rem', color: '#fff'}}>Never Lose an Emergency Call to a Slow Website Again</h3>
