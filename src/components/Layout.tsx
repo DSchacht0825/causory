@@ -123,7 +123,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 "AI Chatbot Add-On"
               ],
               "sameAs": [
-                "https://www.linkedin.com/company/causory-web-design/",
+                "https://www.linkedin.com/company/causory/",
                 "https://www.instagram.com/causory/"
               ],
               "aggregateRating": {
@@ -233,7 +233,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </div>
 
           <div className="footer-links">
-            <a href="https://www.linkedin.com/company/causory-web-design/">LinkedIn</a>
+            <a href="https://www.linkedin.com/company/causory/">LinkedIn</a>
             <a href="https://www.instagram.com/causory/">Instagram</a>
             <Link to="/privacy">Privacy Policy</Link>
             <Link to="/terms">Terms of Service</Link>
